@@ -1,3 +1,14 @@
+# Bitacora Pet
+
+### Proyecto final Curso Desarrollo Web de Coderhouse. Página web de Bitacora Pet.
+#### Bitacora Pet: software multiplataforma para la bitacora de animales.
+Bitacora Pet es una app que centraliza en un solo lugar el cuidado integral de las mascotas. Permite registrar historial médico, compras, paseos y rutinas, con recordatorios inteligentes que evitan olvidos y reducen el estrés.
+
+Diseñada para ser simple, accesible y confiable, ayuda a dueños de mascotas a organizarse y garantizar el bienestar de sus animales día a día.
+
+
+
+
 # Actividad 1
 
 ## Prototipado y conceptos básicos de HTML
