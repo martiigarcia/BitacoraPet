@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h2, p {
+    margin: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #b589ef;
+}
+
+ul li {
+    float: left;
+}
+
+ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul li a:hover:not(.active) {
+    background-color: #2c2c76;
+}
+
+ul li a.active {
+    background-color: #862df1;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 4rem 1rem 2rem;
+    color: #000000; /* Para que el texto se vea bien sobre la imagen */
+    background-image: url('../images/mascotas4.jpg'); /* ruta de tu imagen */
+    /*background-size: cover; !* hace que cubra todo el ancho *!*/
+    /*background-position: center; !* centra la imagen *!*/
+    /*background-repeat: no-repeat; !* evita que se repita *!*/
+    /*background-attachment: fixed;*/
+    background-size: 100% 100%;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    color: #666;
+    font-size: 1rem;
+}
