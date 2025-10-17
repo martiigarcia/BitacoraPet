@@ -1,3 +1,27 @@
+/*Version original de seccion de pets para elegir mascota*/
+/*.pets {*/
+/*    display: flex;*/
+/*    gap: 15px;*/
+/*    justify-content: center;*/
+/*    padding: 20px 0;*/
+/*}*/
+
+/*.pet {*/
+/*    border: 1px solid #bbb;*/
+/*    background: #fff;*/
+/*    border-radius: 50%;*/
+/*    width: 70px;*/
+/*    height: 70px;*/
+/*    cursor: pointer;*/
+/*    font-weight: 600;*/
+/*    box-shadow: none;*/
+/*}*/
+
+/*.pet.active {*/
+/*    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);*/
+/*}*/
+
+/*Version IA con los efectos que le pedi* que agregue cuandos se haga hover y click*/
 .pets {
     display: flex;
     gap: 15px;
@@ -14,11 +38,34 @@
     cursor: pointer;
     font-weight: 600;
     box-shadow: none;
+    transition: all 0.25s ease;
+    transform: translateY(0);
 }
 
-.pet.active {
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+/* Efecto hover: sombra y leve separación */
+.pet:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    transform: translateY(-5px) scale(1.05);
 }
+
+/* Efecto click: color de fondo y ligera animación */
+.pet:active {
+    background-color: #6c23c5; /* verde suave */
+    color: white;
+    transform: scale(0.95);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Efecto para el botón seleccionado permanentemente */
+.pet.active {
+    background-color: #efe5ff;
+    color: #6c23c5;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-color: #e0ceff;
+}
+
+
+
 
 
 .main-pet {
