@@ -1,0 +1,93 @@
+/* Breadcrumb */
+.breadcrumb {
+    padding: 1rem 2rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #555;
+}
+
+.breadcrumb a.active {
+    background: #f2f2f2;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+}
+
+/* Contenido del main */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 30px 40px;
+    gap: 40px;
+}
+
+/*titulo "Calendario de vacunacion"*/
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.2rem;
+}
+
+/*Subtitulo de "Calendario vacunacion de mascotas*/
+.subtitle {
+    color: #6b6b6b;
+    margin-bottom: 2rem;
+}
+
+
+/* Cartas de veterinarias */
+.vac-section {
+    flex: 1;
+}
+
+.vac-section h2 {
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    background: #fff;
+    width: 360px;
+}
+
+
+.card-image {
+    width: 60px;
+    height: 60px;
+    /*background-color: #e21f1f;*/
+    background-image: url("https://i0.wp.com/puppis.blog/wp-content/uploads/2022/04/%C2%BFPor-que-es-importante-que-vacunemos-a-los-cachorros_-min.jpg?resize=900%2C600&ssl=1");
+    background-size: cover; /* hace que cubra todo el ancho */
+    background-position: center; /* centra la imagen */
+    background-repeat: no-repeat; /* evita que se repita */
+    border-radius: 6px;
+    margin-right: 15px;
+}
+
+.card-content h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.card-content p {
+    font-size: 13px;
+    color: #666;
+}
