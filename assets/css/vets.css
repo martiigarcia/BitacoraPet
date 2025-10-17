@@ -1,16 +1,3 @@
-/* Breadcrumb: home->vets */
-.breadcrumb {
-    padding: 15px 40px;
-    font-size: 14px;
-    color: #666;
-}
-
-.breadcrumb a {
-    text-decoration: none;
-    color: #666;
-}
-
-
 .main-container {
     display: flex;
     justify-content: space-between;
@@ -71,6 +58,8 @@
     font-size: 13px;
     color: #666;
 }
+
+
 
 /* Calendario */
 .calendar-section {

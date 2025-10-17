@@ -5,6 +5,9 @@
     <title>Pet Detail</title>
     <link rel="stylesheet" href="../../assets/css/footer.css">
     <link rel="stylesheet" href="../../assets/css/navbar.css">
+    <link rel="stylesheet" href="../../assets/css/breadcrum-navegacion.css">
+    <link rel="stylesheet" href="../../assets/css/pet-form-detail.css">
+
 </head>
 <body style=" margin: 0;padding: 0;">
 
@@ -15,7 +18,7 @@
             <li>
                 <a href="../../index.html" class="active">Bitacora Pet</a>
             </li>
-<!--            <li><a href="../home.html">Home</a></li>-->
+            <li><a href="../pets/my-pets-home.html">Mis mascotas</a></li>
             <li><a href="../vet/vets.html">Veterinarias</a></li>
             <li><a href="../vaccination/vaccination-calendar.html">Calendario de vacunaciones</a></li>
             <li style="float:right"><a href="../auth/login.html">Salir</a></li>
@@ -23,13 +26,68 @@
     </nav>
 </header>
 
+<!-- Breadcrumb -->
+<nav class="breadcrumb">
+    <a href="../../index.html">Home</a>
+    <span>/</span>
+    <a href="../pets/my-pets-home.html">Mis mascotas</a>
+    <span>/</span>
+    <a class="active">Datos de mascota</a>
+</nav>
 
-<main>
-    <section>
-        <h2>Datos de mi mascota</h2>
-        <p>Contenido de la sección principal.</p>
-    </section>
+<main class="main-container">
+    <h2>Datos de mi mascota</h2>
 
+    <div class="form-container">
+        <form class="pet-form">
+
+            <label for="pet-name">Nombre:</label>
+            <input type="text" id="pet-name" name="pet-name" value="Mora">
+
+            <!--            Deberian ser dropdowns con los tipos de animales permitidos-->
+            <label for="pet-type">Tipo de animal:</label>
+            <input type="text" id="pet-type" name="pet-type" value="Perro">
+
+            <!--            Deberian ser dropdowns dinamicos con las razas de animales permitidos segun el tipod e animal seleccionado previamente-->
+            <label for="pet-breed">Raza del animal:</label>
+            <input type="text" id="pet-breed" name="pet-breed" value="Bulldog">
+
+            <!--            radiobutton en algun momento-->
+            <label for="pet-gender">Género:</label>
+            <input type="text" id="pet-gender" name="pet-gender" value="Hembra">
+
+            <!--            formato dd/mm/aaaa tengo que armar selectores para esto tipo DatePicker-->
+            <label for="pet-birthdate">Fecha de nacimiento:</label>
+            <input type="date" id="pet-birthdate" name="pet-birthdate" value="2023-12-23">
+
+            <label for="pet-adoption">Fecha de adopción:</label>
+            <input type="date" id="pet-adoption" name="pet-adoption" value="2024-02-02">
+
+            <!--            Esto en algun momento deberia ser dinamico y depende de que estado este mostrar una cosa u otra-->
+            <div class="toggle">
+                <input type="checkbox" id="deactivate">
+                <label for="deactivate">Desactivar</label>
+                <span class="tooltip">La información de la mascota seguirá guardada pero no se verá su información en el menú principal ni opciones de selección.</span>
+            </div>
+
+
+            <!--            En esta instancia solo va a rerigirir a Mis mascotas, en algun moemtno deberia mostrar una alerta o algo asi (y guardar datos)-->
+            <button type="submit" class="btn-primary">Actualizar datos</button>
+        </form>
+
+        <div class="image-section">
+            <div class="image-box"
+                 style="background-image: url('https://cvlacolina.com/wp-content/uploads/2021/02/Blog_WeCanLa_Colina_Veterinarios_0040_F.jpg')"
+            ></div>
+            <button class="btn-secondary">Cambiar imagen</button>
+            <p class="hint">Suba una nueva imagen desde la galería</p>
+        </div>
+    </div>
+
+    <div class="delete-section">
+        <button class="btn-delete">Eliminar mascota 🗑</button>
+        <p class="delete-hint">Si se elimina no se podrá recuperar la mascota</p>
+    </div>
 </main>
 
 <!-- Footer -->
