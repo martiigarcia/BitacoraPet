@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>My Pets</title>
-    <link rel="stylesheet" href="../../assets/css/footer.css">
-    <link rel="stylesheet" href="../../assets/css/navbar.css">
-    <link rel="stylesheet" href="../../assets/css/breadcrum-navegacion.css">
-    <link rel="stylesheet" href="../../assets/css/my-pets.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+<!--    <link rel="stylesheet" href="../../assets/css/footer.css">-->
+<!--    <link rel="stylesheet" href="../../assets/css/navbar.css">-->
+<!--    <link rel="stylesheet" href="../../assets/css/breadcrum-navegacion.css">-->
+<!--    <link rel="stylesheet" href="../../assets/css/my-pets.css">-->
 
 
 </head>
@@ -17,9 +22,9 @@
     <nav>
         <ul>
             <li>
-                <a href="../../index.html" class="active">Bitacora Pet</a>
+                <a href="../../index.html" >Bitacora Pet</a>
             </li>
-            <li><a href="../pets/my-pets-home.html">Mis mascotas</a></li>
+            <li><a href="../pets/my-pets-home.html" class="active">Mis mascotas</a></li>
             <li><a href="../vet/vets.html">Veterinarias</a></li>
             <li><a href="../vaccination/vaccination-calendar.html">Calendario de vacunaciones</a></li>
             <li style="float:right"><a href="../auth/login.html">Salir</a></li>
@@ -27,16 +32,22 @@
     </nav>
 </header>
 
-
-<!-- Breadcrumb -->
-<nav class="breadcrumb">
-    <a href="../../index.html">Home</a>
-    <span>/</span>
-    <a class="active">Mis mascotas</a>
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Mis mascotas</li>
+    </ol>
 </nav>
 
+<!-- Breadcrumb -->
+<!--<nav class="breadcrumb">-->
+<!--    -->
+<!--    <span>/</span>-->
+<!--    <a class="active"></a>-->
+<!--</nav>-->
 
-<main class="main-container">
+
+<main >
 
     <!--    aca esto lo habia empezado con avatars pero me gusto mas con boton-->
 
@@ -56,8 +67,8 @@
     </section>
 
     <!-- Imagen y nombre de la mascota seleccionada -->
-    <section class="hero">
-        <h2>Mora</h2>
+    <section class="hero-pet">
+        <h1>Mora</h1>
     </section>
 
     <section class="main-cards">
@@ -114,6 +125,9 @@
         </div>
     </div>
 </footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
 </body>
 </html>

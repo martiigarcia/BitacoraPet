@@ -1,4 +1,27 @@
-/*Version original de seccion de pets para elegir mascota*/
+/*!*Version original de seccion de pets para elegir mascota*!*/
+/*!*.pets {*!*/
+/*!*    display: flex;*!*/
+/*!*    gap: 15px;*!*/
+/*!*    justify-content: center;*!*/
+/*!*    padding: 20px 0;*!*/
+/*!*}*!*/
+
+/*!*.pet {*!*/
+/*!*    border: 1px solid #bbb;*!*/
+/*!*    background: #fff;*!*/
+/*!*    border-radius: 50%;*!*/
+/*!*    width: 70px;*!*/
+/*!*    height: 70px;*!*/
+/*!*    cursor: pointer;*!*/
+/*!*    font-weight: 600;*!*/
+/*!*    box-shadow: none;*!*/
+/*!*}*!*/
+
+/*!*.pet.active {*!*/
+/*!*    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);*!*/
+/*!*}*!*/
+
+/*!*Version IA con los efectos que le pedi* que agregue cuandos se haga hover y click*!*/
 /*.pets {*/
 /*    display: flex;*/
 /*    gap: 15px;*/
@@ -15,204 +38,181 @@
 /*    cursor: pointer;*/
 /*    font-weight: 600;*/
 /*    box-shadow: none;*/
+/*    transition: all 0.25s ease;*/
+/*    transform: translateY(0);*/
 /*}*/
 
+/*!* Efecto hover: sombra y leve separación *!*/
+/*.pet:hover {*/
+/*    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);*/
+/*    transform: translateY(-5px) scale(1.05);*/
+/*}*/
+
+/*!* Efecto click: color de fondo y ligera animación *!*/
+/*.pet:active {*/
+/*    background-color: #6c23c5; !* verde suave *!*/
+/*    color: white;*/
+/*    transform: scale(0.95);*/
+/*    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);*/
+/*}*/
+
+/*!* Efecto para el botón seleccionado permanentemente *!*/
 /*.pet.active {*/
+/*    background-color: #efe5ff;*/
+/*    color: #6c23c5;*/
 /*    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);*/
+/*    border-color: #e0ceff;*/
 /*}*/
 
-/*Version IA con los efectos que le pedi* que agregue cuandos se haga hover y click*/
-.pets {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    padding: 20px 0;
-}
-
-.pet {
-    border: 1px solid #bbb;
-    background: #fff;
-    border-radius: 50%;
-    width: 70px;
-    height: 70px;
-    cursor: pointer;
-    font-weight: 600;
-    box-shadow: none;
-    transition: all 0.25s ease;
-    transform: translateY(0);
-}
-
-/* Efecto hover: sombra y leve separación */
-.pet:hover {
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
-    transform: translateY(-5px) scale(1.05);
-}
-
-/* Efecto click: color de fondo y ligera animación */
-.pet:active {
-    background-color: #6c23c5; /* verde suave */
-    color: white;
-    transform: scale(0.95);
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* Efecto para el botón seleccionado permanentemente */
-.pet.active {
-    background-color: #efe5ff;
-    color: #6c23c5;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    border-color: #e0ceff;
-}
 
 
 
 
+/*.main-pet {*/
+/*    text-align: center;*/
+/*    !*padding: 40px 0;*!*/
+/*    background-color: #f0f0f0;*/
+/*}*/
 
-.main-pet {
-    text-align: center;
-    /*padding: 40px 0;*/
-    background-color: #f0f0f0;
-}
+/*!*.pet-image {*!*/
+/*!*    !*width: 200px;*!*!*/
+/*!*    !*height: 200px;*!*!*/
+/*!*    background-image: url('../images/mascotas4.jpg');*!*/
+/*!*    !*background-size: cover;*!*!*/
+/*!*    background-position: center; !* centra la imagen *!*!*/
+/*!*    background-repeat: no-repeat; !* evita que se repita *!*!*/
+/*!*    !*background-attachment: fixed;*!*!*/
+/*!*    background-size: 100% 100%;*!*/
+/*!*    margin: 0 auto 15px;*!*/
+/*!*    display: flex;*!*/
+/*!*    align-items: center;*!*/
+/*!*    justify-content: center;*!*/
+/*!*    font-size: 40px;*!*/
+/*!*    border-radius: 10px;*!*/
+/*!*}*!*/
 
-/*.pet-image {*/
-/*    !*width: 200px;*!*/
-/*    !*height: 200px;*!*/
-/*    background-image: url('../images/mascotas4.jpg');*/
-/*    !*background-size: cover;*!*/
-/*    background-position: center; !* centra la imagen *!*/
+
+/*!*!* Hero fecho para el index *!*!*/
+/*.hero {*/
+/*    text-align: center;*/
+/*    padding: 4rem 1rem 2rem;*/
+/*    color: #000000; !* Para que el texto se vea bien sobre la imagen *!*/
+/*    background-image: url('https://cvlacolina.com/wp-content/uploads/2021/02/Blog_WeCanLa_Colina_Veterinarios_0040_F.jpg'); !* ruta de tu imagen *!*/
+/*    background-size: cover; !* hace que cubra todo el ancho *!*/
+/*    background-position: top; !* centra la imagen *!*/
 /*    background-repeat: no-repeat; !* evita que se repita *!*/
 /*    !*background-attachment: fixed;*!*/
-/*    background-size: 100% 100%;*/
-/*    margin: 0 auto 15px;*/
+/*    !*background-size: 100% 100%;*!*/
+/*    height: 500px;*/
+/*    opacity: 0.5;*/
+/*}*/
+
+/*.hero h1 {*/
+/*    font-size: 2rem;*/
+/*    margin-bottom: 0.5rem;*/
+/*    opacity: 1;*/
+/*    color: #000000;*/
+
+/*}*/
+
+/*!*.main-container {*!*/
+/*!*    display: flex;*!*/
+/*!*    justify-content: space-between;*!*/
+/*!*    align-items: flex-start;*!*/
+/*!*    padding: 30px 40px;*!*/
+/*!*    gap: 40px;*!*/
+/*!*}*!*/
+
+
+/*!*!* Cartas de mascotas *!*!*/
+/*!*.pets-section {*!*/
+/*!*    flex: 1;*!*/
+/*!*}*!*/
+
+/*!*.pets-section h2 {*!*/
+/*!*    font-size: 26px;*!*/
+/*!*    margin-bottom: 5px;*!*/
+/*!*}*!*/
+
+
+/*!*.avatar {*!*/
+/*!*    vertical-align: middle;*!*/
+/*!*    width: 100px;*!*/
+/*!*    height: 100px;*!*/
+/*!*    border-radius: 50%;*!*/
+/*!*    background-size: cover; !* hace que cubra todo el ancho *!*!*/
+/*!*    background-position: center; !* centra la imagen *!*!*/
+/*!*    background-repeat: no-repeat; !* evita que se repita *!*!*/
+/*!*}*!*/
+
+
+/*!*!* Main cards *!*!*/
+/*.main-cards {*/
 /*    display: flex;*/
-/*    align-items: center;*/
 /*    justify-content: center;*/
-/*    font-size: 40px;*/
-/*    border-radius: 10px;*/
+/*    gap: 2rem;*/
+/*    flex-wrap: wrap;*/
+/*    padding: 2rem;*/
+/*}*/
+
+/*.card {*/
+/*    border: 1px solid #ccc;*/
+/*    border-radius: 8px;*/
+/*    width: 280px;*/
+/*    text-align: center;*/
+/*    padding: 1.5rem;*/
+/*    transition: transform 0.3s ease;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*!* Esto es para los enlaces dentro del a->card para que no cambien su forma y color *!*/
+/*.card,*/
+/*.card:link,*/
+/*.card:visited,*/
+/*.card:hover,*/
+/*.card:active {*/
+/*    text-decoration: none; !* para que no se subraye *!*/
+/*    color: inherit; !* para que el color quede igual y no cambie cuando se clickea *!*/
+/*}*/
+
+/*!* Efecto para cuando se pasa por encima de a -> card para que aparezca una sombrita y se mueva *!*/
+/*.card:hover {*/
+/*    transform: translateY(-5px);*/
+/*    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);*/
 /*}*/
 
 
-/*!* Hero fecho para el index *!*/
-.hero {
-    text-align: center;
-    padding: 4rem 1rem 2rem;
-    color: #000000; /* Para que el texto se vea bien sobre la imagen */
-    background-image: url('https://cvlacolina.com/wp-content/uploads/2021/02/Blog_WeCanLa_Colina_Veterinarios_0040_F.jpg'); /* ruta de tu imagen */
-    background-size: cover; /* hace que cubra todo el ancho */
-    background-position: top; /* centra la imagen */
-    background-repeat: no-repeat; /* evita que se repita */
-    /*background-attachment: fixed;*/
-    /*background-size: 100% 100%;*/
-    height: 500px;
-    opacity: 0.5;
-}
-
-.hero h1 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-    opacity: 1;
-    color: #000000;
-
-}
-
-/*.main-container {*/
-/*    display: flex;*/
-/*    justify-content: space-between;*/
-/*    align-items: flex-start;*/
-/*    padding: 30px 40px;*/
-/*    gap: 40px;*/
-/*}*/
-
-
-/*!* Cartas de mascotas *!*/
-/*.pets-section {*/
-/*    flex: 1;*/
-/*}*/
-
-/*.pets-section h2 {*/
-/*    font-size: 26px;*/
-/*    margin-bottom: 5px;*/
-/*}*/
-
-
-/*.avatar {*/
-/*    vertical-align: middle;*/
-/*    width: 100px;*/
-/*    height: 100px;*/
-/*    border-radius: 50%;*/
+/*.card-image-vet {*/
+/*    color: #ba0069;*/
+/*    width: 100%;*/
+/*    height: 150px;*/
+/*    border-radius: 6px;*/
+/*    margin-bottom: 1rem;*/
+/*    background-image: url("../images/vet.jpg");*/
 /*    background-size: cover; !* hace que cubra todo el ancho *!*/
 /*    background-position: center; !* centra la imagen *!*/
 /*    background-repeat: no-repeat; !* evita que se repita *!*/
 /*}*/
 
+/*.card-image-vac {*/
+/*    width: 100%;*/
+/*    height: 150px;*/
+/*    border-radius: 6px;*/
+/*    margin-bottom: 1rem;*/
+/*    background-image: url("https://i0.wp.com/puppis.blog/wp-content/uploads/2022/04/%C2%BFPor-que-es-importante-que-vacunemos-a-los-cachorros_-min.jpg?resize=900%2C600&ssl=1");*/
+/*    background-size: cover; !* hace que cubra todo el ancho *!*/
+/*    background-position: center; !* centra la imagen *!*/
+/*    background-repeat: no-repeat; !* evita que se repita *!*/
+/*}*/
 
-/*!* Main cards *!*/
-.main-cards {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    padding: 2rem;
-}
+/*.card h2 {*/
+/*    font-size: 1.2rem;*/
+/*    margin-bottom: 0.3rem;*/
+/*    color: #ba0069;*/
+/*}*/
 
-.card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    width: 280px;
-    text-align: center;
-    padding: 1.5rem;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-
-/* Esto es para los enlaces dentro del a->card para que no cambien su forma y color */
-.card,
-.card:link,
-.card:visited,
-.card:hover,
-.card:active {
-    text-decoration: none; /* para que no se subraye */
-    color: inherit; /* para que el color quede igual y no cambie cuando se clickea */
-}
-
-/* Efecto para cuando se pasa por encima de a -> card para que aparezca una sombrita y se mueva */
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-
-.card-image-vet {
-    color: #ba0069;
-    width: 100%;
-    height: 150px;
-    border-radius: 6px;
-    margin-bottom: 1rem;
-    background-image: url("../images/vet.jpg");
-    background-size: cover; /* hace que cubra todo el ancho */
-    background-position: center; /* centra la imagen */
-    background-repeat: no-repeat; /* evita que se repita */
-}
-
-.card-image-vac {
-    width: 100%;
-    height: 150px;
-    border-radius: 6px;
-    margin-bottom: 1rem;
-    background-image: url("https://i0.wp.com/puppis.blog/wp-content/uploads/2022/04/%C2%BFPor-que-es-importante-que-vacunemos-a-los-cachorros_-min.jpg?resize=900%2C600&ssl=1");
-    background-size: cover; /* hace que cubra todo el ancho */
-    background-position: center; /* centra la imagen */
-    background-repeat: no-repeat; /* evita que se repita */
-}
-
-.card h2 {
-    font-size: 1.2rem;
-    margin-bottom: 0.3rem;
-    color: #ba0069;
-}
-
-.card p {
-    font-size: 0.95rem;
-    /*color: #666;*/
-    color: #ba0069;
-}
+/*.card p {*/
+/*    font-size: 0.95rem;*/
+/*    !*color: #666;*!*/
+/*    color: #ba0069;*/
+/*}*/

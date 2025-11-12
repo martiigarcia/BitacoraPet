@@ -1,118 +1,118 @@
-.main-container {
-    display: flex;
-    flex-direction: column; /* ✅ Coloca todo en columnas (no en filas) */
-    align-items: center;
-    padding: 30px 40px;
-    gap: 40px;
-}
+/*.main-container {*/
+/*    display: flex;*/
+/*    flex-direction: column; !* ✅ Coloca todo en columnas (no en filas) *!*/
+/*    align-items: center;*/
+/*    padding: 30px 40px;*/
+/*    gap: 40px;*/
+/*}*/
 
-h2 {
-    font-size: 24px;
-    align-self: flex-start;
-}
+/*h2 {*/
+/*    font-size: 24px;*/
+/*    align-self: flex-start;*/
+/*}*/
 
-/* Dos columnas solo aquí */
-.form-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-    gap: 50px;
-}
+/*!* Dos columnas solo aquí *!*/
+/*.form-container {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: flex-start;*/
+/*    width: 100%;*/
+/*    gap: 50px;*/
+/*}*/
 
-.pet-form {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    gap: 10px;
-}
+/*.pet-form {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    width: 50%;*/
+/*    gap: 10px;*/
+/*}*/
 
-.pet-form label {
-    font-weight: bold;
-    font-size: 14px;
-}
+/*.pet-form label {*/
+/*    font-weight: bold;*/
+/*    font-size: 14px;*/
+/*}*/
 
-.pet-form input {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-}
+/*.pet-form input {*/
+/*    padding: 8px;*/
+/*    border: 1px solid #ccc;*/
+/*    border-radius: 6px;*/
+/*}*/
 
-.toggle {
-    margin-top: 10px;
-}
+/*.toggle {*/
+/*    margin-top: 10px;*/
+/*}*/
 
-.toggle input {
-    margin-right: 5px;
-}
+/*.toggle input {*/
+/*    margin-right: 5px;*/
+/*}*/
 
-.tooltip {
-    display: block;
-    font-size: 12px;
-    color: #777;
-    margin-left: 22px;
-}
+/*.tooltip {*/
+/*    display: block;*/
+/*    font-size: 12px;*/
+/*    color: #777;*/
+/*    margin-left: 22px;*/
+/*}*/
 
-.btn-primary {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 6px;
-    margin-top: 15px;
-    cursor: pointer;
-}
+/*.btn-primary {*/
+/*    background-color: #333;*/
+/*    color: white;*/
+/*    border: none;*/
+/*    padding: 10px;*/
+/*    border-radius: 6px;*/
+/*    margin-top: 15px;*/
+/*    cursor: pointer;*/
+/*}*/
 
-.image-section {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+/*.image-section {*/
+/*    width: 40%;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*}*/
 
-.image-box {
-    width: 100%;
-    height: 280px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    /*background-image: url("https://media.istockphoto.com/id/1503385646/es/foto/retrato-divertido-y-feliz-perro-cachorro-shiba-inu-asom%C3%A1ndose-detr%C3%A1s-de-una-pancarta-azul.jpg?s=612x612&w=0&k=20&c=mMZ1Dvy0J8iNpF2boWkL8bo45vYYPi_AvZ1aYr9oO8w=");*/
-    background-size: cover; /* hace que cubra todo el ancho */
-    background-position: center; /* centra la imagen */
-    background-repeat: no-repeat; /* evita que se repita */
-}
+/*.image-box {*/
+/*    width: 100%;*/
+/*    height: 280px;*/
+/*    border: 1px solid #ccc;*/
+/*    border-radius: 8px;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    font-weight: bold;*/
+/*    !*background-image: url("https://media.istockphoto.com/id/1503385646/es/foto/retrato-divertido-y-feliz-perro-cachorro-shiba-inu-asom%C3%A1ndose-detr%C3%A1s-de-una-pancarta-azul.jpg?s=612x612&w=0&k=20&c=mMZ1Dvy0J8iNpF2boWkL8bo45vYYPi_AvZ1aYr9oO8w=");*!*/
+/*    background-size: cover; !* hace que cubra todo el ancho *!*/
+/*    background-position: center; !* centra la imagen *!*/
+/*    background-repeat: no-repeat; !* evita que se repita *!*/
+/*}*/
 
-.btn-secondary {
-    margin-top: 10px;
-    background: #f5f5f5;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    padding: 8px 12px;
-    cursor: pointer;
-}
+/*.btn-secondary {*/
+/*    margin-top: 10px;*/
+/*    background: #f5f5f5;*/
+/*    border: 1px solid #ccc;*/
+/*    border-radius: 6px;*/
+/*    padding: 8px 12px;*/
+/*    cursor: pointer;*/
+/*}*/
 
-.hint {
-    font-size: 12px;
-    color: #666;
-    margin-top: 5px;
-}
+/*.hint {*/
+/*    font-size: 12px;*/
+/*    color: #666;*/
+/*    margin-top: 5px;*/
+/*}*/
 
-.delete-section {
-    text-align: center;
-}
+/*.delete-section {*/
+/*    text-align: center;*/
+/*}*/
 
-.btn-delete {
-    background: none;
-    border: none;
-    color: #000;
-    font-weight: bold;
-    cursor: pointer;
-}
+/*.btn-delete {*/
+/*    background: none;*/
+/*    border: none;*/
+/*    color: #000;*/
+/*    font-weight: bold;*/
+/*    cursor: pointer;*/
+/*}*/
 
-.delete-hint {
-    font-size: 12px;
-    color: #777;
-}
+/*.delete-hint {*/
+/*    font-size: 12px;*/
+/*    color: #777;*/
+/*}*/
