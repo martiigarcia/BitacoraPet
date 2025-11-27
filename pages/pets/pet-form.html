@@ -1,92 +1,202 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Pet Detail</title>-->
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"-->
+<!--          rel="stylesheet"-->
+<!--          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"-->
+<!--          crossorigin="anonymous">-->
+<!--    <link rel="stylesheet" href="../../assets/css/styles-ORIGINAL.css">-->
+<!--&lt;!&ndash;    <link rel="stylesheet" href="../../assets/css/footer.css">&ndash;&gt;-->
+<!--&lt;!&ndash;    <link rel="stylesheet" href="../../assets/css/navbar.css">&ndash;&gt;-->
+<!--&lt;!&ndash;    <link rel="stylesheet" href="../../assets/css/breadcrum-navegacion.css">&ndash;&gt;-->
+<!--&lt;!&ndash;    <link rel="stylesheet" href="../../assets/css/pet-form-detail.css">&ndash;&gt;-->
+
+<!--</head>-->
+<!--<body style=" margin: 0;padding: 0;">-->
+
+
+<!--<header>-->
+<!--    <nav>-->
+<!--        <ul>-->
+<!--            <li>-->
+<!--                <a href="../../index.html" class="active">Bitacora Pet</a>-->
+<!--            </li>-->
+<!--            <li><a href="../pets/my-pets-home.html">Mis mascotas</a></li>-->
+<!--            <li><a href="../vet/vets.html">Veterinarias</a></li>-->
+<!--            <li><a href="../vaccination/vaccination-calendar.html">Calendario de vacunaciones</a></li>-->
+<!--            <li style="float:right"><a href="../auth/login.html">Salir</a></li>-->
+<!--        </ul>-->
+<!--    </nav>-->
+<!--</header>-->
+
+<!--&lt;!&ndash; Breadcrumb &ndash;&gt;-->
+<!--<nav class="breadcrumb">-->
+<!--    <a href="../../index.html">Home</a>-->
+<!--    <span>/</span>-->
+<!--    <a href="../pets/my-pets-home.html">Mis mascotas</a>-->
+<!--    <span>/</span>-->
+<!--    <a class="active">Datos de mascota</a>-->
+<!--</nav>-->
+
+<!--<main class="main-container">-->
+<!--    <h2>Registrar nueva mascota</h2>-->
+
+<!--    <div class="form-container">-->
+<!--        <form class="pet-form">-->
+
+<!--            <label for="pet-name">Nombre:</label>-->
+<!--            <input type="text" id="pet-name" name="pet-name" value="Pichicho">-->
+
+<!--            &lt;!&ndash;            Deberian ser dropdowns con los tipos de animales permitidos&ndash;&gt;-->
+<!--            <label for="pet-type">Tipo de animal:</label>-->
+<!--            <input type="text" id="pet-type" name="pet-type" value="Perro">-->
+
+<!--            &lt;!&ndash;            Deberian ser dropdowns dinamicos con las razas de animales permitidos segun el tipod e animal seleccionado previamente&ndash;&gt;-->
+<!--            <label for="pet-breed">Raza del animal:</label>-->
+<!--            <input type="text" id="pet-breed" name="pet-breed" value="Bulldog">-->
+
+<!--            &lt;!&ndash;            radiobutton en algun momento&ndash;&gt;-->
+<!--            <label for="pet-gender">Género:</label>-->
+<!--            <input type="text" id="pet-gender" name="pet-gender" value="Macho">-->
+
+<!--            &lt;!&ndash;            formato dd/mm/aaaa tengo que armar selectores para esto tipo DatePicker&ndash;&gt;-->
+<!--            <label for="pet-birthdate">Fecha de nacimiento:</label>-->
+<!--            <input type="date" id="pet-birthdate" name="pet-birthdate" value="2023-12-23">-->
+
+<!--            <label for="pet-adoption">Fecha de adopción:</label>-->
+<!--            <input type="date" id="pet-adoption" name="pet-adoption" value="2024-02-02">-->
+
+<!--            &lt;!&ndash;            Esto en algun momento deberia ser dinamico y depende de que estado este mostrar una cosa u otra&ndash;&gt;-->
+<!--            <div class="toggle">-->
+<!--                <input type="checkbox" id="deactivate">-->
+<!--                <label for="deactivate">Desactivar</label>-->
+<!--                <span class="tooltip">La información de la mascota seguirá guardada pero no se verá su información en el menú principal ni opciones de selección.</span>-->
+<!--            </div>-->
+
+
+<!--            &lt;!&ndash;            En esta instancia solo va a rerigirir a Mis mascotas, en algun moemtno deberia mostrar una alerta o algo asi (y guardar datos)&ndash;&gt;-->
+<!--            <button type="submit" class="btn-primary" onclick="window.alert('Guardando..')">Guardar datos</button>-->
+<!--        </form>-->
+
+<!--        <div class="image-section">-->
+<!--            <div class="image-box"-->
+<!--                 style="background-image: url('https://media.istockphoto.com/id/1503385646/es/foto/retrato-divertido-y-feliz-perro-cachorro-shiba-inu-asom%C3%A1ndose-detr%C3%A1s-de-una-pancarta-azul.jpg?s=612x612&w=0&k=20&c=mMZ1Dvy0J8iNpF2boWkL8bo45vYYPi_AvZ1aYr9oO8w=')"-->
+<!--            ></div>-->
+<!--            <button class="btn-secondary">Cambiar imagen</button>-->
+<!--            <p class="hint">Suba una nueva imagen desde la galería</p>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <div class="delete-section">-->
+<!--        <button class="btn-delete">Eliminar mascota 🗑</button>-->
+<!--        <p class="delete-hint">Si se elimina no se podrá recuperar la mascota</p>-->
+<!--    </div>-->
+<!--</main>-->
+
+<!--&lt;!&ndash; Footer &ndash;&gt;-->
+<!--<footer class="footer">-->
+<!--    <div class="footer-column">-->
+<!--        <div class="footer-brand">-->
+<!--            <h2>Bitacora Pet</h2>-->
+<!--            <h2>Martina Garcia</h2>-->
+<!--        </div>-->
+<!--        <div class="footer-right">-->
+<!--            <div>-->
+<!--                <h2>Curso Desarrollo Web</h2>-->
+<!--                <h2>Coderhouse 2025</h2>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</footer>-->
+
+
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>-->
+
+<!--</body>-->
+<!--</html>-->
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Pet Detail</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-          crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Mascota - Bitacora Pet</title>
     <link rel="stylesheet" href="../../assets/css/styles.css">
-<!--    <link rel="stylesheet" href="../../assets/css/footer.css">-->
-<!--    <link rel="stylesheet" href="../../assets/css/navbar.css">-->
-<!--    <link rel="stylesheet" href="../../assets/css/breadcrum-navegacion.css">-->
-<!--    <link rel="stylesheet" href="../../assets/css/pet-form-detail.css">-->
-
 </head>
-<body style=" margin: 0;padding: 0;">
-
-
+<body>
 <header>
-    <nav>
+    <nav class="navbar">
         <ul>
-            <li>
-                <a href="../../index.html" class="active">Bitacora Pet</a>
-            </li>
+            <li><a href="../../index.html">Bitacora Pet</a></li>
             <li><a href="../pets/my-pets-home.html">Mis mascotas</a></li>
             <li><a href="../vet/vets.html">Veterinarias</a></li>
             <li><a href="../vaccination/vaccination-calendar.html">Calendario de vacunaciones</a></li>
-            <li style="float:right"><a href="../auth/login.html">Salir</a></li>
+            <li class="navbar-right"><a href="../auth/login.html">Salir</a></li>
         </ul>
     </nav>
 </header>
 
-<!-- Breadcrumb -->
-<nav class="breadcrumb">
-    <a href="../../index.html">Home</a>
-    <span>/</span>
-    <a href="../pets/my-pets-home.html">Mis mascotas</a>
-    <span>/</span>
-    <a class="active">Datos de mascota</a>
-</nav>
-
-<main class="main-container">
-    <h2>Registrar nueva mascota</h2>
+<main>
+    <nav class="breadcrumb">
+        <a href="../../index.html">Home</a>
+        <span>/</span>
+        <a href="../pets/my-pets-home.html">Mis mascotas</a>
+        <span>/</span>
+        <a class="active">Registrar mascota</a>
+    </nav>
 
     <div class="form-container">
+        <h2 class="section-title">Registrar nueva mascota</h2>
+        <div class="image-section">
+            <div class="image-box" style="background-image: url('https://media.istockphoto.com/id/1503385646/es/foto/retrato-divertido-y-feliz-perro-cachorro-shiba-inu-asom%C3%A1ndose-detr%C3%A1s-de-una-pancarta-azul.jpg?s=612x612&w=0&k=20&c=mMZ1Dvy0J8iNpF2boWkL8bo45vYYPi_AvZ1aYr9oO8w=')"></div>
+            <button class="btn btn-outline">Cambiar imagen</button>
+            <p class="hint">Suba una nueva imagen desde la galería</p>
+        </div>
+
         <form class="pet-form">
+            <div class="form-group">
+                <label for="pet-name">Nombre:</label>
+                <input type="text" id="pet-name" name="pet-name" value="Pichicho">
+            </div>
 
-            <label for="pet-name">Nombre:</label>
-            <input type="text" id="pet-name" name="pet-name" value="Pichicho">
+            <div class="form-group">
+                <label for="pet-type">Tipo de animal:</label>
+                <input type="text" id="pet-type" name="pet-type" value="Perro">
+            </div>
 
-            <!--            Deberian ser dropdowns con los tipos de animales permitidos-->
-            <label for="pet-type">Tipo de animal:</label>
-            <input type="text" id="pet-type" name="pet-type" value="Perro">
+            <div class="form-group">
+                <label for="pet-breed">Raza del animal:</label>
+                <input type="text" id="pet-breed" name="pet-breed" value="Bulldog">
+            </div>
 
-            <!--            Deberian ser dropdowns dinamicos con las razas de animales permitidos segun el tipod e animal seleccionado previamente-->
-            <label for="pet-breed">Raza del animal:</label>
-            <input type="text" id="pet-breed" name="pet-breed" value="Bulldog">
+            <div class="form-group">
+                <label for="pet-gender">Género:</label>
+                <input type="text" id="pet-gender" name="pet-gender" value="Macho">
+            </div>
 
-            <!--            radiobutton en algun momento-->
-            <label for="pet-gender">Género:</label>
-            <input type="text" id="pet-gender" name="pet-gender" value="Macho">
+            <div class="form-group">
+                <label for="pet-birthdate">Fecha de nacimiento:</label>
+                <input type="date" id="pet-birthdate" name="pet-birthdate" value="2023-12-23">
+            </div>
 
-            <!--            formato dd/mm/aaaa tengo que armar selectores para esto tipo DatePicker-->
-            <label for="pet-birthdate">Fecha de nacimiento:</label>
-            <input type="date" id="pet-birthdate" name="pet-birthdate" value="2023-12-23">
+            <div class="form-group">
+                <label for="pet-adoption">Fecha de adopción:</label>
+                <input type="date" id="pet-adoption" name="pet-adoption" value="2024-02-02">
+            </div>
 
-            <label for="pet-adoption">Fecha de adopción:</label>
-            <input type="date" id="pet-adoption" name="pet-adoption" value="2024-02-02">
-
-            <!--            Esto en algun momento deberia ser dinamico y depende de que estado este mostrar una cosa u otra-->
-            <div class="toggle">
+            <div class="toggle-group">
                 <input type="checkbox" id="deactivate">
                 <label for="deactivate">Desactivar</label>
                 <span class="tooltip">La información de la mascota seguirá guardada pero no se verá su información en el menú principal ni opciones de selección.</span>
             </div>
 
-
-            <!--            En esta instancia solo va a rerigirir a Mis mascotas, en algun moemtno deberia mostrar una alerta o algo asi (y guardar datos)-->
-            <button type="submit" class="btn-primary" onclick="window.alert('Guardando..')">Guardar datos</button>
+            <button type="submit" class="btn btn-primary" onclick="window.alert('Guardando..')">Guardar datos</button>
         </form>
 
-        <div class="image-section">
-            <div class="image-box"
-                 style="background-image: url('https://media.istockphoto.com/id/1503385646/es/foto/retrato-divertido-y-feliz-perro-cachorro-shiba-inu-asom%C3%A1ndose-detr%C3%A1s-de-una-pancarta-azul.jpg?s=612x612&w=0&k=20&c=mMZ1Dvy0J8iNpF2boWkL8bo45vYYPi_AvZ1aYr9oO8w=')"
-            ></div>
-            <button class="btn-secondary">Cambiar imagen</button>
-            <p class="hint">Suba una nueva imagen desde la galería</p>
-        </div>
+
     </div>
 
     <div class="delete-section">
@@ -95,24 +205,17 @@
     </div>
 </main>
 
-<!-- Footer -->
 <footer class="footer">
-    <div class="footer-column">
+    <div class="footer-content">
         <div class="footer-brand">
             <h2>Bitacora Pet</h2>
             <h2>Martina Garcia</h2>
         </div>
-        <div class="footer-right">
-            <div>
-                <h2>Curso Desarrollo Web</h2>
-                <h2>Coderhouse 2025</h2>
-            </div>
+        <div class="footer-info">
+            <h2>Curso Desarrollo Web</h2>
+            <h2>Coderhouse 2025</h2>
         </div>
     </div>
 </footer>
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-
 </body>
 </html>

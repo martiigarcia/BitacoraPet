@@ -1,33 +1,114 @@
 /***********************************************************************/
-/**************************    INDEX   ********************************/
+/**************************    VARIABLES & BASE   **********************/
 /***********************************************************************/
 
-body {
+:root {
+    --primary-color: #6c23c5;
+    --secondary-color: #ba0069;
+    --accent-color: #b589ef;
+    --text-color: #333;
+    --light-bg: #f9f9f9;
+    --border-color: #ddd;
+    --danger-color: #e21f1f;
+}
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/***********************************************************************/
+/**************************    NAVBAR   ********************************/
+/***********************************************************************/
+
+.navbar {
+    background-color: var(--accent-color);
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover:not(.active) {
+    background-color: #2c2c76;
+}
+
+.navbar a.active {
+    background-color: var(--primary-color);
+}
+
+.navbar-right {
+    float: right;
+}
+
+/***********************************************************************/
+/**************************    HERO SECTIONS   *************************/
+/***********************************************************************/
 
 .hero {
     text-align: center;
     padding: 4rem 1rem 2rem;
-    color: #000000; /* Para que el texto se vea bien sobre la imagen */
-    background-size: cover; /* hace que cubra todo el ancho */
-    background-repeat: no-repeat; /* evita que se repita */
-    opacity: 0.5;
-    background-image: url('../images/mascotas4.jpg'); /* ruta de tu imagen */
-    background-position: center; /* centra la imagen */
+    color: var(--text-color);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     height: 300px;
-    /*background-attachment: fixed;*/
-    /*background-size: 100% 100%;*/
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.7);
+}
 
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
 
 .hero h1 {
     font-size: 2rem;
     margin-bottom: 0.5rem;
-    opacity: 1;
-    color: #000000;
+    color: var(--text-color);
 }
 
 .hero p {
@@ -35,224 +116,184 @@ body {
     font-size: 1rem;
 }
 
-
-
-
-
-/***********************************************************************/
-/**************************    NAVBAR   ********************************/
-/***********************************************************************/
-
-
-h2, p {
-    margin: 10px;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #b589ef;
-}
-
-ul li {
-    float: left;
-}
-
-ul li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-ul li a:hover:not(.active) {
-    background-color: #2c2c76;
-}
-
-ul li a.active {
-    background-color: #862df1;
+.hero-pet {
+    height: 500px;
+    background-position: top;
 }
 
 /***********************************************************************/
-/**************************    BREADCRUMB   ********************************/
+/**************************    BREADCRUMB   ****************************/
 /***********************************************************************/
 
 .breadcrumb {
     padding: 1rem 2rem;
     font-size: 0.9rem;
     color: #555;
+    background-color: var(--light-bg);
 }
 
 .breadcrumb a {
     text-decoration: none;
     color: #555;
+    transition: color 0.3s ease;
 }
 
-.breadcrumb a.active {
+.breadcrumb a:hover {
+    color: var(--primary-color);
+}
+
+.breadcrumb .active {
     background: #cbb9f1;
     color: #000000;
     padding: 0.2rem 0.6rem;
     border-radius: 4px;
 }
 
-
-
-
 /***********************************************************************/
 /**************************    BUTTONS   ********************************/
 /***********************************************************************/
 
-.button {
+/*Este button-wrapper es para que el boton del login quede centrado*/
+.button-wrapper {
+    /* Dale un ancho para que el margen auto funcione */
+    width: 100%;
+    max-width: 200px;
+
+    /* Haz que el contenedor se centre dentro del formulario */
+    margin: 15px auto 0 auto;
+    /* El 15px es para el margen superior, el auto es para centrar */
+}
+
+.button-wrapper .btn-primary {
+    /* Asegúrate de que el botón ocupe todo el ancho de su contenedor */
+    width: 100%;
+}
+
+.btn {
     border: none;
     color: white;
-    padding: 16px 32px;
+    padding: 12px 24px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
-    transition-duration: 0.4s;
+    transition: all 0.3s ease;
     cursor: pointer;
+    border-radius: 4px;
 }
 
-.button1 {
-    background-color: white;
-    color: black;
-    border: 2px solid #8604aa;
-}
-
-.button1:hover {
-    background-color: #d455e3;
+.btn-primary {
+    background-color: var(--primary-color);
     color: white;
+
 }
 
-.button2 {
+.btn-primary:hover {
+    background-color: #2c2c76;
+}
+
+.btn-secondary {
     background-color: white;
     color: black;
-    border: 2px solid #ba0069;
+    border: 2px solid var(--secondary-color);
 }
 
-.button2:hover {
+.btn-secondary:hover {
     background-color: #fd63e8;
     color: white;
 }
 
-
-/***********************************************************************/
-/**************************    FOOTER   ********************************/
-/***********************************************************************/
-.footer {
-    margin-top: auto;
-    background: #fafafa;
-    padding: 2rem;
-    border-top: 1px solid #eee;
-}
-
-.footer-column {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 2rem;
-}
-
-.footer-brand h2 {
-    margin-bottom: 0.5rem;
-}
-
-.footer-brand h3 {
-    margin-bottom: 0.5rem;
-}
-
-.footer-right {
-    display: flex;
-    gap: 3rem;
-}
-
-.footer-right h4 {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-}
-
-.footer-right ul {
-    list-style: none;
-}
-
-.footer-right li {
-    color: #555;
-    font-size: 0.9rem;
-    margin-bottom: 0.3rem;
-}
-
-
-
-
-/***********************************************************************/
-/**************************    LOGIN   ********************************/
-/***********************************************************************/
-
-form {
-    border-radius: 5px;
-    padding: 20px;
-}
-
-label {display: block;}
-
-input[type=text], select {
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-input[type=password], select {
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-input[type=submit] {
-    width: 100%;
-    background-color: #6c23c5;
-    color: white;
-    padding: 14px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
+.btn-outline {
+    background: #f5f5f5;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 8px 12px;
     cursor: pointer;
+    color: var(--text-color);
 }
 
-input[type=submit]:hover {
-    background-color: #2c2c76;
+.btn-delete {
+    background: none;
+    border: none;
+    color: var(--danger-color);
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.5rem;
 }
 
-
-
-
-
-
-
 /***********************************************************************/
-/**************************    MY PETS   ********************************/
+/**************************    CARDS   *********************************/
 /***********************************************************************/
 
-.pets {
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    text-align: center;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: white;
+    text-decoration: none;
+    color: inherit;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+    width: 100%;
+    height: 300px;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card-image-vet {
+    background-image: url("../images/vet.jpg");
+}
+
+.card-image-vac {
+    background-image: url("https://i0.wp.com/puppis.blog/wp-content/uploads/2022/04/%C2%BFPor-que-es-importante-que-vacunemos-a-los-cachorros_-min.jpg?resize=900%2C600&ssl=1");
+}
+
+.card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+    color: var(--secondary-color);
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: var(--secondary-color);
+}
+
+/***********************************************************************/
+/**************************    PETS SECTION   **************************/
+/***********************************************************************/
+
+.pets-nav {
     display: flex;
     gap: 15px;
     justify-content: center;
     padding: 20px 0;
+    flex-wrap: wrap;
 }
 
-.pet {
+.pet-btn {
     border: 1px solid #bbb;
     background: #fff;
     border-radius: 50%;
@@ -260,222 +301,79 @@ input[type=submit]:hover {
     height: 70px;
     cursor: pointer;
     font-weight: 600;
-    box-shadow: none;
     transition: all 0.25s ease;
     transform: translateY(0);
 }
 
-/* Efecto hover: sombra y leve separación */
-.pet:hover {
+.pet-btn:hover {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
     transform: translateY(-5px) scale(1.05);
 }
 
-/* Efecto click: color de fondo y ligera animación */
-.pet:active {
-    background-color: #6c23c5; /* verde suave */
+.pet-btn:active {
+    background-color: var(--primary-color);
     color: white;
     transform: scale(0.95);
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Efecto para el botón seleccionado permanentemente */
-.pet.active {
+.pet-btn.active {
     background-color: #efe5ff;
-    color: #6c23c5;
+    color: var(--primary-color);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     border-color: #e0ceff;
 }
 
-.main-pet {
-    text-align: center;
-    /*padding: 40px 0;*/
-    background-color: #f0f0f0;
-}
-
-/*!*HERO PARA OTRA SECCION*!*/
-/*.hero-pet {*/
-/*    background-image: url('https://cvlacolina.com/wp-content/uploads/2021/02/Blog_WeCanLa_Colina_Veterinarios_0040_F.jpg'); !* ruta de tu imagen *!*/
-/*    background-position: top; !* centra la imagen *!*/
-/*    height: 500px;*/
-/*}*/
-
-
-/*!* Hero fecho para el index *!*/
-.hero-pet {
-    text-align: center;
-    padding: 4rem 1rem 2rem;
-    color: #000000; /* Para que el texto se vea bien sobre la imagen */
-    background-image: url('https://cvlacolina.com/wp-content/uploads/2021/02/Blog_WeCanLa_Colina_Veterinarios_0040_F.jpg'); /* ruta de tu imagen */
-    background-size: cover; /* hace que cubra todo el ancho */
-    background-position: top; /* centra la imagen */
-    background-repeat: no-repeat; /* evita que se repita */
-    /*background-attachment: fixed;*/
-    /*background-size: 100% 100%;*/
-    height: 500px;
-    opacity: 0.5;
-}
-
-.hero h1 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-    opacity: 1;
-    color: #000000;
-
-}
-
-
-/* Main cards */
-.main-cards {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    padding: 2rem;
-}
-
-.card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    width: 280px;
-    text-align: center;
-    padding: 1.5rem;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-
-
-/* Esto es para los enlaces dentro del a->card para que no cambien su forma y color */
-.card,
-.card:link,
-.card:visited,
-.card:hover,
-.card:active {
-    text-decoration: none; /* para que no se subraye */
-    color: inherit; /* para que el color quede igual y no cambie cuando se clickea */
-}
-
-/* Efecto para cuando se pasa por encima de a -> card para que aparezca una sombrita y se mueva */
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-
-.card-image-vet {
-    color: #ba0069;
-    width: 100%;
-    height: 150px;
-    border-radius: 6px;
-    margin-bottom: 1rem;
-    background-image: url("../images/vet.jpg");
-    background-size: cover; /* hace que cubra todo el ancho */
-    background-position: center; /* centra la imagen */
-    background-repeat: no-repeat; /* evita que se repita */
-}
-
-.card-image-vac {
-    width: 100%;
-    height: 150px;
-    border-radius: 6px;
-    margin-bottom: 1rem;
-    background-image: url("https://i0.wp.com/puppis.blog/wp-content/uploads/2022/04/%C2%BFPor-que-es-importante-que-vacunemos-a-los-cachorros_-min.jpg?resize=900%2C600&ssl=1");
-    background-size: cover; /* hace que cubra todo el ancho */
-    background-position: center; /* centra la imagen */
-    background-repeat: no-repeat; /* evita que se repita */
-}
-
-
-.card h2 {
-    font-size: 1.2rem;
-    margin-bottom: 0.3rem;
-    color: #ba0069;
-}
-
-.card p {
-    font-size: 0.95rem;
-    /*color: #666;*/
-    color: #ba0069;
-}
-
-
-
-
 /***********************************************************************/
-/**************************    PET FORM DETAIL   ********************************/
+/**************************    FORMS   *********************************/
 /***********************************************************************/
-.main-container {
-    flex-direction: column; /* ✅ Coloca todo en columnas (no en filas) */
-    align-items: center;
-    /*display: flex;*/
-    /*padding: 30px 40px;*/
-    /*gap: 40px;*/
-}
 
-/* Contenido del main DE OTRA SECCION */
-.main-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 30px 40px;
-    gap: 40px;
-}
-
-
-/* Dos columnas solo aquí */
 .form-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-    gap: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
 .pet-form {
     display: flex;
     flex-direction: column;
-    width: 50%;
-    gap: 10px;
+    gap: 1rem;
 }
 
-.pet-form label {
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
     font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
     font-size: 14px;
 }
 
-.pet-form input {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-}
-
-.toggle {
-    margin-top: 10px;
-}
-
-.toggle input {
-    margin-right: 5px;
+.toggle-group {
+    margin-top: 1rem;
 }
 
 .tooltip {
     display: block;
     font-size: 12px;
     color: #777;
-    margin-left: 22px;
-}
-
-.btn-primary {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 6px;
-    margin-top: 15px;
-    cursor: pointer;
+    margin-top: 0.5rem;
 }
 
 .image-section {
-    width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -484,115 +382,86 @@ input[type=submit]:hover {
 .image-box {
     width: 100%;
     height: 280px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    /*background-image: url("https://media.istockphoto.com/id/1503385646/es/foto/retrato-divertido-y-feliz-perro-cachorro-shiba-inu-asom%C3%A1ndose-detr%C3%A1s-de-una-pancarta-azul.jpg?s=612x612&w=0&k=20&c=mMZ1Dvy0J8iNpF2boWkL8bo45vYYPi_AvZ1aYr9oO8w=");*/
-    background-size: cover; /* hace que cubra todo el ancho */
-    background-position: center; /* centra la imagen */
-    background-repeat: no-repeat; /* evita que se repita */
-}
-
-.btn-secondary {
-    margin-top: 10px;
-    background: #f5f5f5;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    padding: 8px 12px;
-    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .hint {
     font-size: 12px;
     color: #666;
-    margin-top: 5px;
+    margin-top: 0.5rem;
+    text-align: center;
 }
 
 .delete-section {
     text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
 }
-
-.btn-delete {
-    background: none;
-    border: none;
-    color: #000;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.delete-hint {
-    font-size: 12px;
-    color: #777;
-}
-
-
-
-
-
 
 /***********************************************************************/
-/**************************    VACCUNE   ********************************/
+/**************************    VACCINATION & VETS   ********************/
 /***********************************************************************/
 
-
-/*titulo "Calendario de vacunacion"*/
-h2 {
+.section-title {
     font-size: 1.8rem;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.5rem;
 }
 
-/*Subtitulo de "Calendario vacunacion de mascotas*/
-.subtitle {
+.section-subtitle {
     color: #6b6b6b;
     margin-bottom: 2rem;
 }
 
-
-/* Cartas de veterinarias */
-.vac-section {
-    flex: 1;
+.vaccination-grid,
+.vets-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
-.vac-section h2 {
-    font-size: 26px;
-    margin-bottom: 5px;
-}
-
-.subtitle {
-    color: #777;
-    margin-bottom: 25px;
-}
-
-.cards-container {
+.vaccination-cards,
+.vets-cards {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1rem;
 }
 
-.card {
+.vaccination-card,
+.vet-card {
     display: flex;
     align-items: center;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     border-radius: 10px;
-    padding: 15px;
+    padding: 1rem;
     background: #fff;
-    width: 360px;
+    transition: transform 0.3s ease;
 }
 
+.vaccination-card:hover,
+.vet-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
 
-.card-image {
+.vaccination-card .card-image,
+.vet-card .card-image {
     width: 60px;
     height: 60px;
-    /*background-color: #e21f1f;*/
-    background-image: url("https://i0.wp.com/puppis.blog/wp-content/uploads/2022/04/%C2%BFPor-que-es-importante-que-vacunemos-a-los-cachorros_-min.jpg?resize=900%2C600&ssl=1");
-    background-size: cover; /* hace que cubra todo el ancho */
-    background-position: center; /* centra la imagen */
-    background-repeat: no-repeat; /* evita que se repita */
     border-radius: 6px;
-    margin-right: 15px;
+    margin-right: 1rem;
+    flex-shrink: 0;
 }
 
 .card-content h3 {
@@ -603,111 +472,149 @@ h2 {
 .card-content p {
     font-size: 13px;
     color: #666;
+    margin: 0.25rem 0 0 0;
 }
-
-
-
 
 /***********************************************************************/
-/**************************    VETS   ********************************/
+/**************************    CALENDAR   ******************************/
 /***********************************************************************/
-.main-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 30px 40px;
-    gap: 40px;
-}
 
-/* Cartas de veterinarias */
-.vets-section {
-    flex: 1;
-}
-
-.vets-section h2 {
-    font-size: 26px;
-    margin-bottom: 5px;
-}
-
-.subtitle {
-    color: #777;
-    margin-bottom: 25px;
-}
-
-.cards-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.card {
-    display: flex;
-    align-items: center;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 15px;
-    background: #fff;
-    width: 360px;
-}
-
-.card-image {
-    width: 60px;
-    height: 60px;
-    /*background-color: #e21f1f;*/
-    background-image: url("../images/vet.jpg");
-    background-size: cover; /* hace que cubra todo el ancho */
-    background-position: center; /* centra la imagen */
-    background-repeat: no-repeat; /* evita que se repita */
-    border-radius: 6px;
-    margin-right: 15px;
-}
-
-.card-content h3 {
-    margin: 0;
-    font-size: 16px;
-}
-
-.card-content p {
-    font-size: 13px;
-    color: #666;
-}
-
-
-
-/* Calendario */
 .calendar-section {
-    width: 360px;
-    text-align: center;
     background: #efe4ff;
-    padding: 20px;
+    padding: 1.5rem;
     border-radius: 8px;
+    height: 100%;
 }
 
 .calendar-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 1rem;
 }
 
 .calendar-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 5px;
-    margin-top: 10px;
+    gap: 4px;
 }
 
 .calendar-grid div {
     padding: 6px;
     font-size: 13px;
+    text-align: center;
+}
+
+.calendar-day {
     color: #333;
 }
 
-.today {
+.calendar-day.today {
     border: 1px solid #000;
     border-radius: 50%;
 }
 
 .calendar-date {
-    margin-top: 20px;
+    margin-top: 1rem;
     font-weight: bold;
+    text-align: center;
+}
+
+/***********************************************************************/
+/**************************    LOGIN   *********************************/
+/***********************************************************************/
+
+.login-container {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.login-form {
+    border-radius: 5px;
+    padding: 2rem;
+    background: var(--light-bg);
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/***********************************************************************/
+/**************************    FOOTER   ********************************/
+/***********************************************************************/
+
+.footer {
+    background: #fafafa;
+    padding: 2rem;
+    border-top: 1px solid #eee;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-brand h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.footer-info h2 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/***********************************************************************/
+/**************************    UTILITIES   *****************************/
+/***********************************************************************/
+
+.text-center {
+    text-align: center;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.hr-divider {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: 2rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .form-container,
+    .vaccination-grid,
+    .vets-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .navbar li {
+        float: none;
+        display: inline-block;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
 }
