@@ -1,287 +1,176 @@
-<!--<!DOCTYPE html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-<!--    <meta charset="UTF-8">-->
-<!--    <title>Vets</title>-->
-<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"-->
-<!--          rel="stylesheet"-->
-<!--          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"-->
-<!--          crossorigin="anonymous">-->
-<!--    <link rel="stylesheet" href="../../assets/css/styles-ORIGINAL.css">-->
-<!--&lt;!&ndash;    <link rel="stylesheet" href="../../assets/css/footer.css">&ndash;&gt;-->
-<!--&lt;!&ndash;    <link rel="stylesheet" href="../../assets/css/navbar.css">&ndash;&gt;-->
-<!--&lt;!&ndash;    <link rel="stylesheet" href="../../assets/css/vets.css">&ndash;&gt;-->
-<!--&lt;!&ndash;    <link rel="stylesheet" href="../../assets/css/breadcrum-navegacion.css">&ndash;&gt;-->
-
-<!--    <style>-->
-
-
-
-<!--    </style>-->
-<!--</head>-->
-<!--<body style=" margin: 0;padding: 0;">-->
-
-
-<!--<header>-->
-<!--    <nav>-->
-<!--        <ul>-->
-<!--            <li>-->
-<!--                <a href="../../index.html">Bitacora Pet</a>-->
-<!--            </li>-->
-<!--            <li><a href="../pets/my-pets-home.html">Mis mascotas</a></li>-->
-<!--            <li><a href="vets.html" class="active">Veterinarias</a></li>-->
-<!--            <li><a href="../vaccination/vaccination-calendar.html">Calendario de vacunaciones</a></li>-->
-<!--            <li style="float:right"><a href="../auth/login.html">Ingresar</a></li>-->
-<!--        </ul>-->
-<!--    </nav>-->
-<!--</header>-->
-
-<!--&lt;!&ndash; Breadcrumb &ndash;&gt;-->
-<!--<nav class="breadcrumb">-->
-<!--    <a href="../../index.html">Home</a>-->
-<!--    <span>/</span>-->
-<!--    <a class="active">Veterinarias</a>-->
-
-<!--</nav>-->
-
-
-<!--&lt;!&ndash; aca esto me quedo todo muy separado cuando esta la pantalla completa.-->
-<!--mejorar esto el espacio&ndash;&gt;-->
-<!--<main class="main-container">-->
-<!--    <section class="vets-section">-->
-<!--        <h2>Veterinarias</h2>-->
-<!--        <p class="subtitle">Veterinarias de turno hoy</p>-->
-
-<!--        <div class="cards-container">-->
-<!--            <div class="card">-->
-<!--                <div class="card-image"></div>-->
-<!--                <div class="card-content">-->
-<!--                    <h3>Rio vet</h3>-->
-<!--                    <p>Descripción de veterinaria</p>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="card">-->
-<!--                <div class="card-image"></div>-->
-<!--                <div class="card-content">-->
-<!--                    <h3>Arocena</h3>-->
-<!--                    <p>Descripción de veterinaria</p>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="card">-->
-<!--                <div class="card-image"></div>-->
-<!--                <div class="card-content">-->
-<!--                    <h3>Huellitas</h3>-->
-<!--                    <p>Descripción de veterinaria</p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </section>-->
-
-<!--    &lt;!&ndash; Calendario: mejorar este calendario a uno mas estetico &ndash;&gt;-->
-<!--    <aside class="calendar-section">-->
-<!--        <h3>Calendario</h3>-->
-<!--        <div class="calendar">-->
-<!--            <div class="calendar-header">-->
-<!--                <span>‹</span>-->
-<!--                <h4>Octubre 2025</h4>-->
-<!--                <span>›</span>-->
-<!--            </div>-->
-<!--            <div class="calendar-grid">-->
-<!--                <div>Lunes</div>-->
-<!--                <div>Martes</div>-->
-<!--                <div>Miércoles</div>-->
-<!--                <div>Jueves</div>-->
-<!--                <div>Viernes</div>-->
-<!--                <div>Sábado</div>-->
-<!--                <div>Domingo</div>-->
-<!--                <div class="empty"></div>-->
-<!--                <div class="empty"></div>-->
-<!--                <div class="empty"></div>-->
-<!--                <div class="empty"></div>-->
-<!--                <div class="empty"></div>-->
-<!--                <div>4</div>-->
-<!--                <div>5</div>-->
-<!--                <div>6</div>-->
-<!--                <div>7</div>-->
-<!--                <div>8</div>-->
-<!--                <div>9</div>-->
-<!--                <div>10</div>-->
-<!--                <div>11</div>-->
-<!--                <div>12</div>-->
-<!--                <div>13</div>-->
-<!--                <div>14</div>-->
-<!--                <div class="today">15</div>-->
-<!--                <div>16</div>-->
-<!--                <div>17</div>-->
-<!--                <div>18</div>-->
-<!--                <div>19</div>-->
-<!--                <div>20</div>-->
-<!--                <div>21</div>-->
-<!--                <div>22</div>-->
-<!--                <div>23</div>-->
-<!--                <div>24</div>-->
-<!--                <div>25</div>-->
-<!--                <div>26</div>-->
-<!--                <div>27</div>-->
-<!--                <div>28</div>-->
-<!--                <div>29</div>-->
-<!--                <div>30</div>-->
-<!--                <div>31</div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <p class="calendar-date">15 de Octubre de 2025</p>-->
-<!--    </aside>-->
-<!--</main>-->
-
-<!--&lt;!&ndash; Footer &ndash;&gt;-->
-<!--<footer class="footer">-->
-<!--    <div class="footer-column">-->
-<!--        <div class="footer-brand">-->
-<!--            <h2>Bitacora Pet</h2>-->
-<!--            <h2>Martina Garcia</h2>-->
-<!--        </div>-->
-<!--        <div class="footer-right">-->
-<!--            <div>-->
-<!--                <h2>Curso Desarrollo Web</h2>-->
-<!--                <h2>Coderhouse 2025</h2>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</footer>-->
-
-
-<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>-->
-
-<!--</body>-->
-<!--</html>-->
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../assets/images/logo2.png">
     <title>Veterinarias - Bitacora Pet</title>
-    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="../../assets/css/styles-bootstrap.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 <header>
-    <nav class="navbar">
-        <ul>
-            <li><a href="../../index.html">Bitacora Pet</a></li>
-            <li><a href="../pets/my-pets-home.html">Mis mascotas</a></li>
-            <li><a href="vets.html" class="active">Veterinarias</a></li>
-            <li><a href="../vaccination/vaccination-calendar.html">Calendario de vacunaciones</a></li>
-            <li class="navbar-right"><a href="../auth/login.html">Ingresar</a></li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white fw-bold" href="../../index.html">Bitacora Pet</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pets/my-pets-home.html">Mis mascotas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="vets.html">Veterinarias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../vaccination/vaccination-calendar.html">Calendario de vacunaciones</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../auth/login.html">Ingresar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 </header>
 
-<main>
-    <nav class="breadcrumb">
-        <a href="../../index.html">Home</a>
-        <span>/</span>
-        <a class="active">Veterinarias</a>
+<main class="flex-grow-1">
+    <nav class="breadcrumb-custom">
+        <div class="container">
+            <a href="../../index.html" class="text-decoration-none">Home</a>
+            <span class="mx-2">/</span>
+            <a class="active text-decoration-none">Veterinarias</a>
+        </div>
     </nav>
 
-    <div class="vets-grid">
-        <section class="vets-cards">
-            <h2 class="section-title">Veterinarias</h2>
-            <p class="section-subtitle">Veterinarias de turno hoy</p>
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-8">
+                <section>
+                    <h2 class="h3 fw-bold">Veterinarias</h2>
+                    <p class="text-muted mb-4">Veterinarias de turno hoy</p>
 
-            <div class="vet-card">
-                <div class="card-image"></div>
-                <div class="card-content">
-                    <h3>Rio vet</h3>
-                    <p>Descripción de veterinaria</p>
-                </div>
+                    <div class="vet-card-custom mb-3">
+                        <img src="../../assets/images/logo2.png"
+                             class="card-image-small"
+                             alt="Logo Huella perrito para item veterinaria">
+                        <div class="card-content">
+                            <h3 class="h6 fw-bold">Rio vet</h3>
+                            <p class="mb-0">Descripción de veterinaria</p>
+                        </div>
+                    </div>
+
+                    <div class="vet-card-custom mb-3">
+                        <img src="../../assets/images/logo2.png"
+                             class="card-image-small"
+                             alt="Logo Huella perrito para item veterinaria">
+                        <div class="card-content">
+                            <h3 class="h6 fw-bold">Arocena</h3>
+                            <p class="mb-0">Descripción de veterinaria</p>
+                        </div>
+                    </div>
+
+                    <div class="vet-card-custom mb-3">
+                        <img src="../../assets/images/logo2.png"
+                             class="card-image-small"
+                             alt="Logo Huella perrito para item veterinaria">
+                        <div class="card-content">
+                            <h3 class="h6 fw-bold">Huellitas</h3>
+                            <p class="mb-0">Descripción de veterinaria</p>
+                        </div>
+                    </div>
+                </section>
             </div>
 
-            <div class="vet-card">
-                <div class="card-image"></div>
-                <div class="card-content">
-                    <h3>Arocena</h3>
-                    <p>Descripción de veterinaria</p>
+            <div class="col-lg-4">
+                <div class="calendar-section-custom">
+                    <h3 class="h5 fw-bold mb-3">Calendario</h3>
+                    <div class="calendar">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <button class="btn btn-sm btn-outline-custom">‹</button>
+                            <h4 class="h6 mb-0">Octubre 2025</h4>
+                            <button class="btn btn-sm btn-outline-custom">›</button>
+                        </div>
+                        <div class="calendar-grid-custom">
+                            <div class="calendar-day">Lun</div>
+                            <div class="calendar-day">Mar</div>
+                            <div class="calendar-day">Mié</div>
+                            <div class="calendar-day">Jue</div>
+                            <div class="calendar-day">Vie</div>
+                            <div class="calendar-day">Sáb</div>
+                            <div class="calendar-day">Dom</div>
+                            <div class="empty"></div>
+                            <div class="empty"></div>
+                            <div class="empty"></div>
+                            <div class="empty"></div>
+                            <div class="empty"></div>
+                            <div class="calendar-day">4</div>
+                            <div class="calendar-day">5</div>
+                            <div class="calendar-day">6</div>
+                            <div class="calendar-day">7</div>
+                            <div class="calendar-day">8</div>
+                            <div class="calendar-day">9</div>
+                            <div class="calendar-day">10</div>
+                            <div class="calendar-day">11</div>
+                            <div class="calendar-day">12</div>
+                            <div class="calendar-day">13</div>
+                            <div class="calendar-day">14</div>
+                            <div class="calendar-day today">15</div>
+                            <div class="calendar-day">16</div>
+                            <div class="calendar-day">17</div>
+                            <div class="calendar-day">18</div>
+                            <div class="calendar-day">19</div>
+                            <div class="calendar-day">20</div>
+                            <div class="calendar-day">21</div>
+                            <div class="calendar-day">22</div>
+                            <div class="calendar-day">23</div>
+                            <div class="calendar-day">24</div>
+                            <div class="calendar-day">25</div>
+                            <div class="calendar-day">26</div>
+                            <div class="calendar-day">27</div>
+                            <div class="calendar-day">28</div>
+                            <div class="calendar-day">29</div>
+                            <div class="calendar-day">30</div>
+                            <div class="calendar-day">31</div>
+                        </div>
+                    </div>
+                    <p class="calendar-date mt-3">15 de Octubre de 2025</p>
                 </div>
             </div>
-
-            <div class="vet-card">
-                <div class="card-image"></div>
-                <div class="card-content">
-                    <h3>Huellitas</h3>
-                    <p>Descripción de veterinaria</p>
-                </div>
-            </div>
-        </section>
-
-        <aside class="calendar-section">
-            <h3>Calendario</h3>
-            <div class="calendar">
-                <div class="calendar-header">
-                    <span>‹</span>
-                    <h4>Octubre 2025</h4>
-                    <span>›</span>
-                </div>
-                <div class="calendar-grid">
-                    <div class="calendar-day">Lun</div>
-                    <div class="calendar-day">Mar</div>
-                    <div class="calendar-day">Mié</div>
-                    <div class="calendar-day">Jue</div>
-                    <div class="calendar-day">Vie</div>
-                    <div class="calendar-day">Sáb</div>
-                    <div class="calendar-day">Dom</div>
-                    <div class="empty"></div>
-                    <div class="empty"></div>
-                    <div class="empty"></div>
-                    <div class="empty"></div>
-                    <div class="empty"></div>
-                    <div class="calendar-day">4</div>
-                    <div class="calendar-day">5</div>
-                    <div class="calendar-day">6</div>
-                    <div class="calendar-day">7</div>
-                    <div class="calendar-day">8</div>
-                    <div class="calendar-day">9</div>
-                    <div class="calendar-day">10</div>
-                    <div class="calendar-day">11</div>
-                    <div class="calendar-day">12</div>
-                    <div class="calendar-day">13</div>
-                    <div class="calendar-day">14</div>
-                    <div class="calendar-day today">15</div>
-                    <div class="calendar-day">16</div>
-                    <div class="calendar-day">17</div>
-                    <div class="calendar-day">18</div>
-                    <div class="calendar-day">19</div>
-                    <div class="calendar-day">20</div>
-                    <div class="calendar-day">21</div>
-                    <div class="calendar-day">22</div>
-                    <div class="calendar-day">23</div>
-                    <div class="calendar-day">24</div>
-                    <div class="calendar-day">25</div>
-                    <div class="calendar-day">26</div>
-                    <div class="calendar-day">27</div>
-                    <div class="calendar-day">28</div>
-                    <div class="calendar-day">29</div>
-                    <div class="calendar-day">30</div>
-                    <div class="calendar-day">31</div>
-                </div>
-            </div>
-            <p class="calendar-date">15 de Octubre de 2025</p>
-        </aside>
+        </div>
     </div>
 </main>
 
-<footer class="footer">
-    <div class="footer-content">
-        <div class="footer-brand">
-            <h2>Bitacora Pet</h2>
-            <h2>Martina Garcia</h2>
-        </div>
-        <div class="footer-info">
-            <h2>Curso Desarrollo Web</h2>
-            <h2>Coderhouse 2025</h2>
+<footer class="footer-custom mt-auto">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="h5 fw-bold">Bitacora Pet</h2>
+                <h2 class="h6">Martina Garcia</h2>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <h2 class="h5 fw-bold">Curso Desarrollo Web</h2>
+                <h2 class="h6">Coderhouse 2025</h2>
+            </div>
         </div>
     </div>
 </footer>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
 </html>

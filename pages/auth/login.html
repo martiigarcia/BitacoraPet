@@ -1,77 +1,67 @@
 <!--<!DOCTYPE html>-->
-<!--<html lang="en">-->
+<!--<html lang="es">-->
 <!--<head>-->
 <!--    <meta charset="UTF-8">-->
-<!--    <title>Login</title>-->
-<!--    <link rel="stylesheet" href="../../assets/css/styles-ORIGINAL.css">-->
-<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"-->
-<!--          rel="stylesheet"-->
-<!--          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"-->
-<!--          crossorigin="anonymous">-->
-<!--    &lt;!&ndash;    <link rel="stylesheet" href="../../assets/css/footer.css">&ndash;&gt;-->
-<!--    &lt;!&ndash;    <link rel="stylesheet" href="../../assets/css/login.css">&ndash;&gt;-->
-<!--    &lt;!&ndash;    <link rel="stylesheet" href="../../assets/css/navbar.css">&ndash;&gt;-->
-
-
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Login - Bitacora Pet</title>-->
+<!--    <link rel="stylesheet" href="../../assets/css/styles.css">-->
 <!--</head>-->
-<!--<body style=" margin: 0;padding: 0;">-->
-
-
+<!--<body>-->
 <!--<header>-->
-<!--    <nav>-->
+<!--    <nav class="navbar">-->
 <!--        <ul>-->
-<!--            <li>-->
-<!--                <a href="../../index.html">Bitacora Pet</a>-->
-<!--            </li>-->
+<!--            <li><a href="../../index.html">Bitacora Pet</a></li>-->
 <!--            <li><a href="../pets/my-pets-home.html">Mis mascotas</a></li>-->
 <!--            <li><a href="../vet/vets.html">Veterinarias</a></li>-->
 <!--            <li><a href="../vaccination/vaccination-calendar.html">Calendario de vacunaciones</a></li>-->
-<!--            <li style="float:right"><a href="login.html" class="active">Salir</a></li>-->
+<!--            <li class="navbar-right"><a href="login.html" class="active">Salir</a></li>-->
 <!--        </ul>-->
 <!--    </nav>-->
 <!--</header>-->
 
-
 <!--<main>-->
-<!--    <section>-->
-<!--        <h2>Ingreso al sistema</h2>-->
-<!--        <p>Contenido de la sección principal.</p>-->
-<!--    </section>-->
+<!--    <nav class="breadcrumb">-->
+<!--        <a href="../../index.html">Home</a>-->
+<!--        <span>/</span>-->
+<!--        <a class="active">Ingreso al sistema</a>-->
+<!--    </nav>-->
 
-<!--    <section>-->
-<!--        <form action="../pets/my-pets-home.html">-->
-<!--            <label for="username">Nombre de usuario:</label><br>-->
-<!--            <input type="text" id="username" name="username" value="user"><br>-->
+<!--    <div class="login-container">-->
+<!--        <section class="text-center mb-2">-->
+<!--            <h2>Ingreso al sistema</h2>-->
+<!--            <p>Ingresa tus credenciales para acceder a tu cuenta</p>-->
+<!--        </section>-->
 
-<!--            <label for="password">Contraseña:</label><br>-->
-<!--            <input type="password" id="password" name="password" value="***"><br><br>-->
+<!--        <form class="login-form" action="../pets/my-pets-home.html">-->
+<!--            <div class="form-group">-->
+<!--                <label for="username">Nombre de usuario:</label>-->
+<!--                <input type="text" id="username" name="username" class="form-input" value="user">-->
+<!--            </div>-->
 
-<!--            <input type="submit" value="Submit">-->
-<!--            <button class="btn btn-outline-success" type="submit">Ingresar</button>-->
+<!--            <div class="form-group">-->
+<!--                <label for="password">Contraseña:</label>-->
+<!--                <input type="password" id="password" name="password" class="form-input" value="***">-->
+<!--            </div>-->
+<!--            <div class="button-wrapper">-->
+<!--&lt;!&ndash;            <div class="form-group">&ndash;&gt;-->
+<!--                <button type="submit" class="btn btn-primary">Ingresar</button>-->
+<!--            </div>-->
 <!--        </form>-->
-
-<!--    </section>-->
+<!--    </div>-->
 <!--</main>-->
 
-<!--&lt;!&ndash; Footer &ndash;&gt;-->
 <!--<footer class="footer">-->
-<!--    <div class="footer-column">-->
+<!--    <div class="footer-content">-->
 <!--        <div class="footer-brand">-->
 <!--            <h2>Bitacora Pet</h2>-->
 <!--            <h2>Martina Garcia</h2>-->
 <!--        </div>-->
-<!--        <div class="footer-right">-->
-<!--            <div>-->
-<!--                <h2>Curso Desarrollo Web</h2>-->
-<!--                <h2>Coderhouse 2025</h2>-->
-<!--            </div>-->
+<!--        <div class="footer-info">-->
+<!--            <h2>Curso Desarrollo Web</h2>-->
+<!--            <h2>Coderhouse 2025</h2>-->
 <!--        </div>-->
 <!--    </div>-->
 <!--</footer>-->
-
-
-<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>-->
-
 <!--</body>-->
 <!--</html>-->
 
@@ -80,64 +70,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../assets/images/logo2.png">
     <title>Login - Bitacora Pet</title>
-    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="../../assets/css/styles-bootstrap.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
+
+
 <header>
-    <nav class="navbar">
-        <ul>
-            <li><a href="../../index.html">Bitacora Pet</a></li>
-            <li><a href="../pets/my-pets-home.html">Mis mascotas</a></li>
-            <li><a href="../vet/vets.html">Veterinarias</a></li>
-            <li><a href="../vaccination/vaccination-calendar.html">Calendario de vacunaciones</a></li>
-            <li class="navbar-right"><a href="login.html" class="active">Salir</a></li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white fw-bold" href="../../index.html">Bitacora Pet</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pets/my-pets-home.html">Mis mascotas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../vet/vets.html">Veterinarias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../vaccination/vaccination-calendar.html">Calendario de
+                            vacunaciones</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="login.html">Salir</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 </header>
 
-<main>
-    <nav class="breadcrumb">
-        <a href="../../index.html">Home</a>
-        <span>/</span>
-        <a class="active">Ingreso al sistema</a>
+<main class="flex-grow-1">
+    <nav class="breadcrumb-custom">
+        <div class="container">
+            <a href="../../index.html" class="text-decoration-none">Home</a>
+            <span class="mx-2">/</span>
+            <a class="active text-decoration-none">Ingreso al sistema</a>
+        </div>
     </nav>
 
-    <div class="login-container">
-        <section class="text-center mb-2">
-            <h2>Ingreso al sistema</h2>
-            <p>Ingresa tus credenciales para acceder a tu cuenta</p>
-        </section>
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <section class="text-center mb-4">
+                    <h2 class="h3 fw-bold">Ingreso al sistema</h2>
+                    <p class="text-muted">Ingresa tus credenciales para acceder a tu cuenta</p>
+                </section>
 
-        <form class="login-form" action="../pets/my-pets-home.html">
-            <div class="form-group">
-                <label for="username">Nombre de usuario:</label>
-                <input type="text" id="username" name="username" class="form-input" value="user">
-            </div>
+                <form class="border rounded p-4 bg-light" action="../pets/my-pets-home.html">
+                    <div class="mb-3">
+                        <label for="username" class="form-label fw-bold">Nombre de usuario:</label>
+                        <input type="text" id="username" name="username" class="form-control" value="user">
+                    </div>
 
-            <div class="form-group">
-                <label for="password">Contraseña:</label>
-                <input type="password" id="password" name="password" class="form-input" value="***">
+                    <div class="mb-3">
+                        <label for="password" class="form-label fw-bold">Contraseña:</label>
+                        <input type="password" id="password" name="password" class="form-control" value="***">
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary-custom btn-lg">Ingresar</button>
+                    </div>
+                </form>
             </div>
-            <div class="button-wrapper">
-<!--            <div class="form-group">-->
-                <button type="submit" class="btn btn-primary">Ingresar</button>
-            </div>
-        </form>
+        </div>
     </div>
 </main>
 
-<footer class="footer">
-    <div class="footer-content">
-        <div class="footer-brand">
-            <h2>Bitacora Pet</h2>
-            <h2>Martina Garcia</h2>
-        </div>
-        <div class="footer-info">
-            <h2>Curso Desarrollo Web</h2>
-            <h2>Coderhouse 2025</h2>
+<footer class="footer-custom mt-auto">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="h5 fw-bold">Bitacora Pet</h2>
+                <h2 class="h6">Martina Garcia</h2>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <h2 class="h5 fw-bold">Curso Desarrollo Web</h2>
+                <h2 class="h6">Coderhouse 2025</h2>
+            </div>
         </div>
     </div>
 </footer>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
 </html>

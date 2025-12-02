@@ -1,131 +1,96 @@
-<!--<!DOCTYPE html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-<!--    <meta charset="UTF-8">-->
-<!--    <title>Bitacora Pet</title>-->
-<!--    <link rel="stylesheet" href="assets/css/styles.css">-->
-<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"-->
-<!--          rel="stylesheet"-->
-<!--          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"-->
-<!--          crossorigin="anonymous">-->
-
-
-<!--</head>-->
-<!--<body>-->
-
-<!--<header>-->
-<!--    <nav>-->
-<!--        <ul>-->
-<!--            <li>-->
-<!--                <a href="index.html" class="active">Bitacora Pet</a>-->
-<!--            </li>-->
-<!--            <li><a href="./pages/pets/my-pets-home.html">Mis mascotas</a></li>-->
-<!--            <li><a href="pages/vet/vets.html">Veterinarias</a></li>-->
-<!--            <li><a href="pages/vaccination/vaccination-calendar.html">Calendario de vacunaciones</a></li>-->
-<!--            <li style="float:right"><a href="pages/auth/login.html">Ingresar</a></li>-->
-<!--        </ul>-->
-<!--    </nav>-->
-<!--</header>-->
-
-
-<!--<section class="hero">-->
-<!--    <h1>Bitacora Pet</h1>-->
-<!--    <p>Cuidado integral de mascotas</p>-->
-<!--</section>-->
-
-
-
-
-<!--<main class="main-cards">-->
-<!--    <a href="pages/vet/vets.html" class="card">-->
-<!--        <div class="card-image-vet"></div>-->
-<!--        <h2>Veterinarias</h2>-->
-<!--        <p>Listado de veterinarias de turno hoy</p>-->
-<!--    </a>-->
-
-<!--    <a href="pages/vaccination/vaccination-calendar.html" class="card">-->
-<!--        <div class="card-image-vac"></div>-->
-<!--        <h2>Vacunaciones</h2>-->
-<!--        <p>Calendario de vacunación de mascotas</p>-->
-<!--    </a>-->
-<!--</main>-->
-
-<!--&lt;!&ndash; Footer &ndash;&gt;-->
-<!--<footer class="footer">-->
-<!--    <div class="footer-column">-->
-<!--        <div class="footer-brand">-->
-<!--            <h2>Bitacora Pet</h2>-->
-<!--            <h2>Martina Garcia</h2>-->
-<!--        </div>-->
-<!--        <div class="footer-right">-->
-<!--            <div>-->
-<!--                <h2>Curso Desarrollo Web</h2>-->
-<!--                <h2>Coderhouse 2025</h2>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</footer>-->
-
-<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>-->
-
-<!--</body>-->
-<!--</html>-->
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/logo2.png">
     <title>Bitacora Pet</title>
-    <link rel="stylesheet" href="./assets/css/styles.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/styles-bootstrap.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 <header>
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html" class="active">Bitacora Pet</a></li>
-            <li><a href="./pages/pets/my-pets-home.html">Mis mascotas</a></li>
-            <li><a href="pages/vet/vets.html">Veterinarias</a></li>
-            <li><a href="pages/vaccination/vaccination-calendar.html">Calendario de vacunaciones</a></li>
-            <li class="navbar-right"><a href="pages/auth/login.html">Ingresar</a></li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white fw-bold" href="index.html">Bitacora Pet</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/pets/my-pets-home.html">Mis mascotas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/vet/vets.html">Veterinarias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/vaccination/vaccination-calendar.html">Calendario de
+                            vacunaciones</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link " href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/auth/login.html">Ingresar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 </header>
 
-<section class="hero" style="background-image: url('./assets/images/mascotas4.jpg')">
+<section class="front-page" style="background-image: url('./assets/images/home.jpg')">
     <div class="hero-content">
-        <h1>Bitacora Pet</h1>
-        <p>Cuidado integral de mascotas</p>
+        <h1 class="display-5 fw-bold">Bitacora Pet</h1>
+        <p class="lead">Cuidado integral de mascotas</p>
     </div>
 </section>
 
-<main>
-    <div class="cards-grid">
-        <a href="pages/vet/vets.html" class="card">
-            <div class="card-image card-image-vet"></div>
-            <h2>Veterinarias</h2>
-            <p>Listado de veterinarias de turno hoy</p>
-        </a>
-
-        <a href="pages/vaccination/vaccination-calendar.html" class="card">
-            <div class="card-image card-image-vac"></div>
-            <h2>Vacunaciones</h2>
-            <p>Calendario de vacunación de mascotas</p>
-        </a>
+<main class="container py-5 flex-grow-1">
+    <div class="row g-4">
+        <div class="col-md-6">
+            <a href="pages/vet/vets.html" class="card-custom d-block">
+                <div class="card-image card-image-vet"></div>
+                <h2>Veterinarias</h2>
+                <p class="mb-0">Listado de veterinarias de turno hoy</p>
+            </a>
+        </div>
+        <div class="col-md-6">
+            <a href="pages/vaccination/vaccination-calendar.html" class="card-custom d-block">
+                <div class="card-image card-image-vac"></div>
+                <h2>Vacunaciones</h2>
+                <p class="mb-0">Calendario de vacunación de mascotas</p>
+            </a>
+        </div>
     </div>
 </main>
 
-<footer class="footer">
-    <div class="footer-content">
-        <div class="footer-brand">
-            <h2>Bitacora Pet</h2>
-            <h2>Martina Garcia</h2>
-        </div>
-        <div class="footer-info">
-            <h2>Curso Desarrollo Web</h2>
-            <h2>Coderhouse 2025</h2>
+<footer class="footer-custom mt-auto">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="h5 fw-bold">Bitacora Pet</h2>
+                <h2 class="h6">Martina Garcia</h2>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <h2 class="h5 fw-bold">Curso Desarrollo Web</h2>
+                <h2 class="h6">Coderhouse 2025</h2>
+            </div>
         </div>
     </div>
 </footer>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
 </html>

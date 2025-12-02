@@ -1,221 +1,160 @@
-<!--<!DOCTYPE html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-<!--    <meta charset="UTF-8">-->
-<!--    <title>Pet Detail</title>-->
-<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"-->
-<!--          rel="stylesheet"-->
-<!--          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"-->
-<!--          crossorigin="anonymous">-->
-<!--    <link rel="stylesheet" href="../../assets/css/styles-ORIGINAL.css">-->
-<!--&lt;!&ndash;    <link rel="stylesheet" href="../../assets/css/footer.css">&ndash;&gt;-->
-<!--&lt;!&ndash;    <link rel="stylesheet" href="../../assets/css/navbar.css">&ndash;&gt;-->
-<!--&lt;!&ndash;    <link rel="stylesheet" href="../../assets/css/breadcrum-navegacion.css">&ndash;&gt;-->
-<!--&lt;!&ndash;    <link rel="stylesheet" href="../../assets/css/pet-form-detail.css">&ndash;&gt;-->
-
-<!--</head>-->
-<!--<body style=" margin: 0;padding: 0;">-->
-
-
-<!--<header>-->
-<!--    <nav>-->
-<!--        <ul>-->
-<!--            <li>-->
-<!--                <a href="../../index.html" class="active">Bitacora Pet</a>-->
-<!--            </li>-->
-<!--            <li><a href="../pets/my-pets-home.html">Mis mascotas</a></li>-->
-<!--            <li><a href="../vet/vets.html">Veterinarias</a></li>-->
-<!--            <li><a href="../vaccination/vaccination-calendar.html">Calendario de vacunaciones</a></li>-->
-<!--            <li style="float:right"><a href="../auth/login.html">Salir</a></li>-->
-<!--        </ul>-->
-<!--    </nav>-->
-<!--</header>-->
-
-<!--&lt;!&ndash; Breadcrumb &ndash;&gt;-->
-<!--<nav class="breadcrumb">-->
-<!--    <a href="../../index.html">Home</a>-->
-<!--    <span>/</span>-->
-<!--    <a href="../pets/my-pets-home.html">Mis mascotas</a>-->
-<!--    <span>/</span>-->
-<!--    <a class="active">Datos de mascota</a>-->
-<!--</nav>-->
-
-<!--<main class="main-container">-->
-<!--    <h2>Datos de mi mascota</h2>-->
-
-<!--    <div class="form-container">-->
-<!--        <form class="pet-form">-->
-
-<!--            <label for="pet-name">Nombre:</label>-->
-<!--            <input type="text" id="pet-name" name="pet-name" value="Mora">-->
-
-<!--            &lt;!&ndash;            Deberian ser dropdowns con los tipos de animales permitidos&ndash;&gt;-->
-<!--            <label for="pet-type">Tipo de animal:</label>-->
-<!--            <input type="text" id="pet-type" name="pet-type" value="Perro">-->
-
-<!--            &lt;!&ndash;            Deberian ser dropdowns dinamicos con las razas de animales permitidos segun el tipod e animal seleccionado previamente&ndash;&gt;-->
-<!--            <label for="pet-breed">Raza del animal:</label>-->
-<!--            <input type="text" id="pet-breed" name="pet-breed" value="Bulldog">-->
-
-<!--            &lt;!&ndash;            radiobutton en algun momento&ndash;&gt;-->
-<!--            <label for="pet-gender">Género:</label>-->
-<!--            <input type="text" id="pet-gender" name="pet-gender" value="Hembra">-->
-
-<!--            &lt;!&ndash;            formato dd/mm/aaaa tengo que armar selectores para esto tipo DatePicker&ndash;&gt;-->
-<!--            <label for="pet-birthdate">Fecha de nacimiento:</label>-->
-<!--            <input type="date" id="pet-birthdate" name="pet-birthdate" value="2023-12-23">-->
-
-<!--            <label for="pet-adoption">Fecha de adopción:</label>-->
-<!--            <input type="date" id="pet-adoption" name="pet-adoption" value="2024-02-02">-->
-
-<!--            &lt;!&ndash;            Esto en algun momento deberia ser dinamico y depende de que estado este mostrar una cosa u otra&ndash;&gt;-->
-<!--            <div class="toggle">-->
-<!--                <input type="checkbox" id="deactivate">-->
-<!--                <label for="deactivate">Desactivar</label>-->
-<!--                <span class="tooltip">La información de la mascota seguirá guardada pero no se verá su información en el menú principal ni opciones de selección.</span>-->
-<!--            </div>-->
-
-
-<!--            &lt;!&ndash;            En esta instancia solo va a rerigirir a Mis mascotas, en algun moemtno deberia mostrar una alerta o algo asi (y guardar datos)&ndash;&gt;-->
-<!--            <button type="submit" class="btn-primary" onclick="window.alert('Actualizando..')">Actualizar datos</button>-->
-<!--        </form>-->
-
-<!--        <div class="image-section">-->
-<!--            <div class="image-box"-->
-<!--                 style="background-image: url('https://cvlacolina.com/wp-content/uploads/2021/02/Blog_WeCanLa_Colina_Veterinarios_0040_F.jpg')"-->
-<!--            ></div>-->
-<!--            <button class="btn-secondary">Cambiar imagen</button>-->
-<!--            <p class="hint">Suba una nueva imagen desde la galería</p>-->
-<!--        </div>-->
-<!--    </div>-->
-
-<!--    <div class="delete-section">-->
-<!--        <button class="btn-delete">Eliminar mascota 🗑</button>-->
-<!--        <p class="delete-hint">Si se elimina no se podrá recuperar la mascota</p>-->
-<!--    </div>-->
-<!--</main>-->
-
-<!--&lt;!&ndash; Footer &ndash;&gt;-->
-<!--<footer class="footer">-->
-<!--    <div class="footer-column">-->
-<!--        <div class="footer-brand">-->
-<!--            <h2>Bitacora Pet</h2>-->
-<!--            <h2>Martina Garcia</h2>-->
-<!--        </div>-->
-<!--        <div class="footer-right">-->
-<!--            <div>-->
-<!--                <h2>Curso Desarrollo Web</h2>-->
-<!--                <h2>Coderhouse 2025</h2>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</footer>-->
-
-
-<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>-->
-
-<!--</body>-->
-<!--</html>-->
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../assets/images/logo2.png">
     <title>Datos de Mascota - Bitacora Pet</title>
-    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="../../assets/css/styles-bootstrap.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 <header>
-    <nav class="navbar">
-        <ul>
-            <li><a href="../../index.html">Bitacora Pet</a></li>
-            <li><a href="../pets/my-pets-home.html">Mis mascotas</a></li>
-            <li><a href="../vet/vets.html">Veterinarias</a></li>
-            <li><a href="../vaccination/vaccination-calendar.html">Calendario de vacunaciones</a></li>
-            <li class="navbar-right"><a href="../auth/login.html">Salir</a></li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white fw-bold" href="../../index.html">Bitacora Pet</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pets/my-pets-home.html">Mis mascotas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../vet/vets.html">Veterinarias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../vaccination/vaccination-calendar.html">Calendario de vacunaciones</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../auth/login.html">Salir</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 </header>
 
-<main>
-    <nav class="breadcrumb">
-        <a href="../../index.html">Home</a>
-        <span>/</span>
-        <a href="../pets/my-pets-home.html">Mis mascotas</a>
-        <span>/</span>
-        <a class="active">Datos de mascota</a>
+<main class="flex-grow-1">
+    <nav class="breadcrumb-custom">
+        <div class="container">
+            <a href="../../index.html" class="text-decoration-none">Home</a>
+            <span class="mx-2">/</span>
+            <a href="../pets/my-pets-home.html" class="text-decoration-none">Mis mascotas</a>
+            <span class="mx-2">/</span>
+            <a class="active text-decoration-none">Datos de mascota</a>
+        </div>
     </nav>
 
-    <div class="form-container">
-        <h2 class="section-title">Datos de mi mascota</h2>
-        <div class="image-section">
-            <div class="image-box" style="background-image: url('https://cvlacolina.com/wp-content/uploads/2021/02/Blog_WeCanLa_Colina_Veterinarios_0040_F.jpg')"></div>
-            <button class="btn btn-outline">Cambiar imagen</button>
-            <p class="hint">Suba una nueva imagen desde la galería</p>
+    <div class="container py-5">
+        <h2 class="h3 fw-bold mb-4">Datos de mi mascota</h2>
+
+        <div class="row g-5">
+            <div class="col-lg-5">
+                <div class="image-box mb-3" style="background-image: url('https://cvlacolina.com/wp-content/uploads/2021/02/Blog_WeCanLa_Colina_Veterinarios_0040_F.jpg')"></div>
+                <button class="btn btn-outline-custom w-100 mb-2">Cambiar imagen</button>
+                <p class="hint">Suba una nueva imagen desde la galería</p>
+            </div>
+
+            <div class="col-lg-7">
+                <form class="pet-form">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="form-group-custom">
+                                <label for="pet-name" class="form-label">Nombre:</label>
+                                <input type="text" id="pet-name" name="pet-name" class="form-control" value="Mora">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group-custom">
+                                <label for="pet-type" class="form-label">Tipo de animal:</label>
+                                <input type="text" id="pet-type" name="pet-type" class="form-control" value="Perro">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group-custom">
+                                <label for="pet-breed" class="form-label">Raza del animal:</label>
+                                <input type="text" id="pet-breed" name="pet-breed" class="form-control" value="Bulldog">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group-custom">
+                                <label for="pet-gender" class="form-label">Género:</label>
+                                <input type="text" id="pet-gender" name="pet-gender" class="form-control" value="Hembra">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group-custom">
+                                <label for="pet-birthdate" class="form-label">Fecha de nacimiento:</label>
+                                <input type="date" id="pet-birthdate" name="pet-birthdate" class="form-control" value="2023-12-23">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group-custom">
+                                <label for="pet-adoption" class="form-label">Fecha de adopción:</label>
+                                <input type="date" id="pet-adoption" name="pet-adoption" class="form-control" value="2024-02-02">
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="form-check toggle-group">
+                                <input class="form-check-input" type="checkbox" id="deactivate">
+                                <label class="form-check-label" for="deactivate">
+                                    Desactivar
+                                </label>
+                                <span class="tooltip">La información de la mascota seguirá guardada pero no se verá su información en el menú principal ni opciones de selección.</span>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary-custom" onclick="window.alert('Actualizando..')">Actualizar datos</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
 
-        <form class="pet-form">
-            <div class="form-group">
-                <label for="pet-name">Nombre:</label>
-                <input type="text" id="pet-name" name="pet-name" value="Mora">
-            </div>
-
-            <div class="form-group">
-                <label for="pet-type">Tipo de animal:</label>
-                <input type="text" id="pet-type" name="pet-type" value="Perro">
-            </div>
-
-            <div class="form-group">
-                <label for="pet-breed">Raza del animal:</label>
-                <input type="text" id="pet-breed" name="pet-breed" value="Bulldog">
-            </div>
-
-            <div class="form-group">
-                <label for="pet-gender">Género:</label>
-                <input type="text" id="pet-gender" name="pet-gender" value="Hembra">
-            </div>
-
-            <div class="form-group">
-                <label for="pet-birthdate">Fecha de nacimiento:</label>
-                <input type="date" id="pet-birthdate" name="pet-birthdate" value="2023-12-23">
-            </div>
-
-            <div class="form-group">
-                <label for="pet-adoption">Fecha de adopción:</label>
-                <input type="date" id="pet-adoption" name="pet-adoption" value="2024-02-02">
-            </div>
-
-            <div class="toggle-group">
-                <input type="checkbox" id="deactivate">
-                <label for="deactivate">Desactivar</label>
-                <span class="tooltip">La información de la mascota seguirá guardada pero no se verá su información en el menú principal ni opciones de selección.</span>
-            </div>
-
-            <button type="submit" class="btn btn-primary" onclick="window.alert('Actualizando..')">Actualizar datos</button>
-        </form>
-
-
-    </div>
-
-    <div class="delete-section">
-        <button class="btn-delete">Eliminar mascota 🗑</button>
-        <p class="delete-hint">Si se elimina no se podrá recuperar la mascota</p>
+        <div class="delete-section mt-5">
+            <button class="btn-delete-custom">Eliminar mascota 🗑</button>
+            <p class="text-muted mt-2">Si se elimina no se podrá recuperar la mascota</p>
+        </div>
     </div>
 </main>
 
-<footer class="footer">
-    <div class="footer-content">
-        <div class="footer-brand">
-            <h2>Bitacora Pet</h2>
-            <h2>Martina Garcia</h2>
-        </div>
-        <div class="footer-info">
-            <h2>Curso Desarrollo Web</h2>
-            <h2>Coderhouse 2025</h2>
+<footer class="footer-custom mt-auto">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="h5 fw-bold">Bitacora Pet</h2>
+                <h2 class="h6">Martina Garcia</h2>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <h2 class="h5 fw-bold">Curso Desarrollo Web</h2>
+                <h2 class="h6">Coderhouse 2025</h2>
+            </div>
         </div>
     </div>
 </footer>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
 </html>
