@@ -1,0 +1,2798 @@
+<!--&lt;!&ndash;&lt;!&ndash;<!DOCTYPE html>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;<html lang="es">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;<head>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;  <meta charset="UTF-8">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;  <meta name="viewport" content="width=device-width, initial-scale=1.0">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;  <title>Avatar Group con Botones de Texto</title>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;  <style>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    * {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      margin: 0;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      padding: 0;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      box-sizing: border-box;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      font-family: 'Segoe UI', system-ui, sans-serif;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    }&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;    body {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      display: flex;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      flex-direction: column;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      align-items: center;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      justify-content: center;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      min-height: 100vh;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      color: #f0f0f0;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      padding: 20px;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    }&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;    .container {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      max-width: 1000px;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      width: 100%;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      padding: 30px;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      background-color: rgba(255, 255, 255, 0.05);&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      backdrop-filter: blur(10px);&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      border-radius: 20px;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      border: 1px solid rgba(255, 255, 255, 0.1);&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    }&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;    header {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      text-align: center;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      margin-bottom: 40px;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    }&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;    h1 {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      font-size: 2.5rem;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      margin-bottom: 10px;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      background: linear-gradient(to right, #4cc9f0, #4361ee);&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      -webkit-background-clip: text;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      background-clip: text;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      color: transparent;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    }&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;    .subtitle {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      font-size: 1.1rem;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      color: #a0a0c0;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      max-width: 600px;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      margin: 0 auto;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      line-height: 1.6;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    }&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;    .avatar-group {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      display: flex;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      justify-content: center;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      flex-wrap: wrap;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      gap: 20px;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      margin-bottom: 50px;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      padding: 20px;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    }&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;    .avatar-btn {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      width: 80px;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      height: 80px;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      border-radius: 50%;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      border: none;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      background: linear-gradient(135deg, #4361ee, #3a0ca3);&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      color: white;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      font-size: 1.8rem;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      font-weight: bold;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      cursor: pointer;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      transition: all 0.3s ease;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      display: flex;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      align-items: center;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      justify-content: center;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      box-shadow: 0 8px 20px rgba(67, 97, 238, 0.3);&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      position: relative;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    }&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;    .avatar-btn:hover {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      transform: translateY(-5px);&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      box-shadow: 0 12px 25px rgba(67, 97, 238, 0.5);&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      background: linear-gradient(135deg, #4cc9f0, #4361ee);&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    }&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;    .avatar-btn.active {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      transform: scale(1.1);&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.8), 0 12px 25px rgba(67, 97, 238, 0.7);&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      background: linear-gradient(135deg, #f72585, #b5179e);&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    }&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;    .avatar-btn::after {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      content: attr(data-name);&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      position: absolute;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      bottom: -30px;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      left: 50%;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      transform: translateX(-50%);&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      white-space: nowrap;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      font-size: 0.9rem;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      font-weight: 600;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      color: #c5c5e3;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      opacity: 0;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      transition: opacity 0.3s ease;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    }&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;    .avatar-btn:hover::after,&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    .avatar-btn.active::after {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      opacity: 1;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    }&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;    .message-container {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      background: rgba(30, 30, 46, 0.8);&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      border-radius: 15px;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      padding: 30px;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      min-height: 250px;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      display: flex;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      flex-direction: column;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      justify-content: center;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      border: 1px solid rgba(255, 255, 255, 0.1);&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      transition: all 0.5s ease;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    }&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;    .message-header {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      display: flex;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      align-items: center;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      margin-bottom: 20px;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      padding-bottom: 15px;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      border-bottom: 1px solid rgba(255, 255, 255, 0.1);&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    }&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;    .message-icon {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      width: 50px;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      height: 50px;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      border-radius: 50%;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      background: linear-gradient(135deg, #f72585, #b5179e);&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      display: flex;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      align-items: center;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      justify-content: center;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      margin-right: 15px;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      font-size: 1.5rem;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    }&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;    .message-title {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      font-size: 1.5rem;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      font-weight: 600;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      color: #f0f0f0;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    }&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;    .message-content {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      font-size: 1.2rem;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      line-height: 1.6;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      color: #c5c5e3;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    }&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;    .message-content strong {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      color: #4cc9f0;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    }&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;    .instructions {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      text-align: center;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      margin-top: 30px;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      padding: 15px;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      background: rgba(0, 0, 0, 0.2);&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      border-radius: 10px;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      font-size: 0.95rem;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      color: #a0a0c0;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    }&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;    .instructions i {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      color: #4cc9f0;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      margin: 0 5px;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    }&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;    footer {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      margin-top: 40px;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      text-align: center;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      color: #8888aa;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      font-size: 0.9rem;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    }&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;    @media (max-width: 768px) {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      .avatar-group {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        gap: 15px;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      }&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;      .avatar-btn {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        width: 70px;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        height: 70px;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        font-size: 1.5rem;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      }&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;      h1 {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        font-size: 2rem;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      }&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;      .message-container {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        padding: 20px;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      }&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    }&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;    @media (max-width: 480px) {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      .avatar-group {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        gap: 10px;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      }&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;      .avatar-btn {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        width: 60px;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        height: 60px;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        font-size: 1.3rem;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      }&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;      .message-title {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        font-size: 1.3rem;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      }&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;      .message-content {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        font-size: 1rem;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      }&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    }&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;  </style>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;</head>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;<body>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;<div class="container">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;  <header>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    <h1>Avatar Group Interactivo</h1>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    <p class="subtitle">Selecciona un avatar para ver un mensaje personalizado. Cada avatar es un círculo con texto y representa una categoría diferente.</p>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;  </header>&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;  <div class="avatar-group">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    &lt;!&ndash; Botones avatar con texto en lugar de imágenes &ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    <button class="avatar-btn active" data-name="Tecnología" data-message-id="tech">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      <span>T</span>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    </button>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    <button class="avatar-btn" data-name="Diseño" data-message-id="design">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      <span>D</span>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    </button>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    <button class="avatar-btn" data-name="Negocios" data-message-id="business">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      <span>N</span>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    </button>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    <button class="avatar-btn" data-name="Educación" data-message-id="education">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      <span>E</span>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    </button>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    <button class="avatar-btn" data-name="Salud" data-message-id="health">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      <span>S</span>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    </button>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    <button class="avatar-btn" data-name="Arte" data-message-id="art">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      <span>A</span>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    </button>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;  </div>&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;  <div class="message-container">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    <div class="message-header">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      <div class="message-icon">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        <i class="fas fa-laptop-code"></i>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      </div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      <div class="message-title">Mensaje de Tecnología</div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    </div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    <div class="message-content" id="message-display">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      <strong>La innovación tecnológica</strong> está transformando rápidamente nuestro mundo. Desde inteligencia artificial hasta computación cuántica, las tecnologías emergentes están redefiniendo lo posible. Mantenerse actualizado en este campo es crucial para el futuro.&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    </div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;  </div>&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;  <div class="instructions">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    <p><i class="fas fa-mouse-pointer"></i> Haz clic en cualquier avatar para ver su mensaje correspondiente. El avatar activo se resaltará en color rosa.</p>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;  </div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;</div>&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;<footer>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;  <p>Avatar Group con CSS puro - Interactividad con JavaScript</p>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;</footer>&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;<script>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;  // Datos de los mensajes para cada avatar&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;  const messages = {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    tech: {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      title: "Mensaje de Tecnología",&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      icon: "fas fa-laptop-code",&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      content: "<strong>La innovación tecnológica</strong> está transformando rápidamente nuestro mundo. Desde inteligencia artificial hasta computación cuántica, las tecnologías emergentes están redefiniendo lo posible. Mantenerse actualizado en este campo es crucial para el futuro."&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    },&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    design: {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      title: "Mensaje de Diseño",&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      icon: "fas fa-palette",&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      content: "<strong>El diseño creativo</strong> va más allá de la estética; es la comunicación visual de ideas. Un buen diseño no solo es atractivo, sino también funcional y centrado en el usuario, creando experiencias memorables que resuelven problemas reales."&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    },&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    business: {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      title: "Mensaje de Negocios",&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      icon: "fas fa-chart-line",&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      content: "<strong>El mundo de los negocios</strong> evoluciona constantemente. La adaptabilidad y la innovación son clave para el éxito en el mercado actual. Las estrategias ágiles y el pensamiento disruptivo marcan la diferencia entre las empresas que crecen y las que se estancan."&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    },&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    education: {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      title: "Mensaje de Educación",&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      icon: "fas fa-graduation-cap",&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      content: "<strong>La educación transformadora</strong> es el cimiento del progreso social. En un mundo cambiante, el aprendizaje continuo y el desarrollo de habilidades críticas son esenciales para preparar a las personas para los desafíos del mañana."&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    },&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    health: {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      title: "Mensaje de Salud",&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      icon: "fas fa-heartbeat",&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      content: "<strong>El bienestar integral</strong> abarca no solo la salud física, sino también mental y emocional. Adoptar hábitos saludables, gestionar el estrés y mantener conexiones sociales significativas son componentes esenciales para una vida plena y equilibrada."&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    },&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    art: {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      title: "Mensaje de Arte",&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      icon: "fas fa-theater-masks",&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      content: "<strong>La expresión artística</strong> es un lenguaje universal que trasciende fronteras culturales. A través del arte, exploramos la condición humana, cuestionamos la realidad y encontramos belleza en formas que desafían la lógica convencional."&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    }&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;  };&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;  // Seleccionar todos los botones avatar&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;  const avatarButtons = document.querySelectorAll('.avatar-btn');&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;  const messageDisplay = document.getElementById('message-display');&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;  const messageTitle = document.querySelector('.message-title');&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;  const messageIcon = document.querySelector('.message-icon');&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;  // Función para cambiar el mensaje mostrado&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;  function changeMessage(messageId) {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    // Obtener el mensaje correspondiente&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    const message = messages[messageId];&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;    // Actualizar el contenido del mensaje&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    messageTitle.textContent = message.title;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    messageIcon.innerHTML = `<i class="${message.icon}"></i>`;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    messageDisplay.innerHTML = message.content;&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;    // Actualizar el estado activo de los botones&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    avatarButtons.forEach(btn => {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      btn.classList.remove('active');&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      if (btn.getAttribute('data-message-id') === messageId) {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        btn.classList.add('active');&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      }&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    });&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;  }&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;  // Agregar event listeners a cada botón avatar&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;  avatarButtons.forEach(button => {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    button.addEventListener('click', () => {&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      const messageId = button.getAttribute('data-message-id');&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      changeMessage(messageId);&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    });&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;  });&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;  // Inicializar con el primer mensaje (tecnología)&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;  changeMessage('tech');&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;</script>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;</body>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;</html>&ndash;&gt;&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;<!DOCTYPE html>&ndash;&gt;-->
+<!--&lt;!&ndash;<html lang="es">&ndash;&gt;-->
+<!--&lt;!&ndash;<head>&ndash;&gt;-->
+<!--&lt;!&ndash;  <meta charset="UTF-8">&ndash;&gt;-->
+<!--&lt;!&ndash;  <meta name="viewport" content="width=device-width, initial-scale=1.0">&ndash;&gt;-->
+<!--&lt;!&ndash;  <title>Avatar Group con Imágenes Aleatorias</title>&ndash;&gt;-->
+<!--&lt;!&ndash;  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">&ndash;&gt;-->
+<!--&lt;!&ndash;  <style>&ndash;&gt;-->
+<!--&lt;!&ndash;    * {&ndash;&gt;-->
+<!--&lt;!&ndash;      margin: 0;&ndash;&gt;-->
+<!--&lt;!&ndash;      padding: 0;&ndash;&gt;-->
+<!--&lt;!&ndash;      box-sizing: border-box;&ndash;&gt;-->
+<!--&lt;!&ndash;      font-family: 'Segoe UI', system-ui, sans-serif;&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+
+<!--&lt;!&ndash;    body {&ndash;&gt;-->
+<!--&lt;!&ndash;      display: flex;&ndash;&gt;-->
+<!--&lt;!&ndash;      flex-direction: column;&ndash;&gt;-->
+<!--&lt;!&ndash;      align-items: center;&ndash;&gt;-->
+<!--&lt;!&ndash;      justify-content: center;&ndash;&gt;-->
+<!--&lt;!&ndash;      min-height: 100vh;&ndash;&gt;-->
+<!--&lt;!&ndash;      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);&ndash;&gt;-->
+<!--&lt;!&ndash;      color: #f0f0f0;&ndash;&gt;-->
+<!--&lt;!&ndash;      padding: 20px;&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+
+<!--&lt;!&ndash;    .container {&ndash;&gt;-->
+<!--&lt;!&ndash;      max-width: 1100px;&ndash;&gt;-->
+<!--&lt;!&ndash;      width: 100%;&ndash;&gt;-->
+<!--&lt;!&ndash;      padding: 30px;&ndash;&gt;-->
+<!--&lt;!&ndash;      background-color: rgba(255, 255, 255, 0.05);&ndash;&gt;-->
+<!--&lt;!&ndash;      backdrop-filter: blur(10px);&ndash;&gt;-->
+<!--&lt;!&ndash;      border-radius: 20px;&ndash;&gt;-->
+<!--&lt;!&ndash;      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);&ndash;&gt;-->
+<!--&lt;!&ndash;      border: 1px solid rgba(255, 255, 255, 0.1);&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+
+<!--&lt;!&ndash;    header {&ndash;&gt;-->
+<!--&lt;!&ndash;      text-align: center;&ndash;&gt;-->
+<!--&lt;!&ndash;      margin-bottom: 40px;&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+
+<!--&lt;!&ndash;    h1 {&ndash;&gt;-->
+<!--&lt;!&ndash;      font-size: 2.5rem;&ndash;&gt;-->
+<!--&lt;!&ndash;      margin-bottom: 10px;&ndash;&gt;-->
+<!--&lt;!&ndash;      background: linear-gradient(to right, #4cc9f0, #4361ee);&ndash;&gt;-->
+<!--&lt;!&ndash;      -webkit-background-clip: text;&ndash;&gt;-->
+<!--&lt;!&ndash;      background-clip: text;&ndash;&gt;-->
+<!--&lt;!&ndash;      color: transparent;&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+
+<!--&lt;!&ndash;    .subtitle {&ndash;&gt;-->
+<!--&lt;!&ndash;      font-size: 1.1rem;&ndash;&gt;-->
+<!--&lt;!&ndash;      color: #a0a0c0;&ndash;&gt;-->
+<!--&lt;!&ndash;      max-width: 600px;&ndash;&gt;-->
+<!--&lt;!&ndash;      margin: 0 auto;&ndash;&gt;-->
+<!--&lt;!&ndash;      line-height: 1.6;&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+
+<!--&lt;!&ndash;    .avatar-group {&ndash;&gt;-->
+<!--&lt;!&ndash;      display: flex;&ndash;&gt;-->
+<!--&lt;!&ndash;      justify-content: center;&ndash;&gt;-->
+<!--&lt;!&ndash;      flex-wrap: wrap;&ndash;&gt;-->
+<!--&lt;!&ndash;      gap: 20px;&ndash;&gt;-->
+<!--&lt;!&ndash;      margin-bottom: 50px;&ndash;&gt;-->
+<!--&lt;!&ndash;      padding: 20px;&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+
+<!--&lt;!&ndash;    .avatar-btn {&ndash;&gt;-->
+<!--&lt;!&ndash;      width: 80px;&ndash;&gt;-->
+<!--&lt;!&ndash;      height: 80px;&ndash;&gt;-->
+<!--&lt;!&ndash;      border-radius: 50%;&ndash;&gt;-->
+<!--&lt;!&ndash;      border: none;&ndash;&gt;-->
+<!--&lt;!&ndash;      background: linear-gradient(135deg, #4361ee, #3a0ca3);&ndash;&gt;-->
+<!--&lt;!&ndash;      color: white;&ndash;&gt;-->
+<!--&lt;!&ndash;      font-size: 1.8rem;&ndash;&gt;-->
+<!--&lt;!&ndash;      font-weight: bold;&ndash;&gt;-->
+<!--&lt;!&ndash;      cursor: pointer;&ndash;&gt;-->
+<!--&lt;!&ndash;      transition: all 0.3s ease;&ndash;&gt;-->
+<!--&lt;!&ndash;      display: flex;&ndash;&gt;-->
+<!--&lt;!&ndash;      align-items: center;&ndash;&gt;-->
+<!--&lt;!&ndash;      justify-content: center;&ndash;&gt;-->
+<!--&lt;!&ndash;      box-shadow: 0 8px 20px rgba(67, 97, 238, 0.3);&ndash;&gt;-->
+<!--&lt;!&ndash;      position: relative;&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+
+<!--&lt;!&ndash;    .avatar-btn:hover {&ndash;&gt;-->
+<!--&lt;!&ndash;      transform: translateY(-5px);&ndash;&gt;-->
+<!--&lt;!&ndash;      box-shadow: 0 12px 25px rgba(67, 97, 238, 0.5);&ndash;&gt;-->
+<!--&lt;!&ndash;      background: linear-gradient(135deg, #4cc9f0, #4361ee);&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+
+<!--&lt;!&ndash;    .avatar-btn.active {&ndash;&gt;-->
+<!--&lt;!&ndash;      transform: scale(1.1);&ndash;&gt;-->
+<!--&lt;!&ndash;      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.8), 0 12px 25px rgba(67, 97, 238, 0.7);&ndash;&gt;-->
+<!--&lt;!&ndash;      background: linear-gradient(135deg, #f72585, #b5179e);&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+
+<!--&lt;!&ndash;    .avatar-btn::after {&ndash;&gt;-->
+<!--&lt;!&ndash;      content: attr(data-name);&ndash;&gt;-->
+<!--&lt;!&ndash;      position: absolute;&ndash;&gt;-->
+<!--&lt;!&ndash;      bottom: -30px;&ndash;&gt;-->
+<!--&lt;!&ndash;      left: 50%;&ndash;&gt;-->
+<!--&lt;!&ndash;      transform: translateX(-50%);&ndash;&gt;-->
+<!--&lt;!&ndash;      white-space: nowrap;&ndash;&gt;-->
+<!--&lt;!&ndash;      font-size: 0.9rem;&ndash;&gt;-->
+<!--&lt;!&ndash;      font-weight: 600;&ndash;&gt;-->
+<!--&lt;!&ndash;      color: #c5c5e3;&ndash;&gt;-->
+<!--&lt;!&ndash;      opacity: 0;&ndash;&gt;-->
+<!--&lt;!&ndash;      transition: opacity 0.3s ease;&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+
+<!--&lt;!&ndash;    .avatar-btn:hover::after,&ndash;&gt;-->
+<!--&lt;!&ndash;    .avatar-btn.active::after {&ndash;&gt;-->
+<!--&lt;!&ndash;      opacity: 1;&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+
+<!--&lt;!&ndash;    .content-wrapper {&ndash;&gt;-->
+<!--&lt;!&ndash;      display: flex;&ndash;&gt;-->
+<!--&lt;!&ndash;      flex-wrap: wrap;&ndash;&gt;-->
+<!--&lt;!&ndash;      gap: 30px;&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+
+<!--&lt;!&ndash;    .message-container {&ndash;&gt;-->
+<!--&lt;!&ndash;      flex: 1;&ndash;&gt;-->
+<!--&lt;!&ndash;      min-width: 300px;&ndash;&gt;-->
+<!--&lt;!&ndash;      background: rgba(30, 30, 46, 0.8);&ndash;&gt;-->
+<!--&lt;!&ndash;      border-radius: 15px;&ndash;&gt;-->
+<!--&lt;!&ndash;      padding: 30px;&ndash;&gt;-->
+<!--&lt;!&ndash;      display: flex;&ndash;&gt;-->
+<!--&lt;!&ndash;      flex-direction: column;&ndash;&gt;-->
+<!--&lt;!&ndash;      justify-content: center;&ndash;&gt;-->
+<!--&lt;!&ndash;      border: 1px solid rgba(255, 255, 255, 0.1);&ndash;&gt;-->
+<!--&lt;!&ndash;      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);&ndash;&gt;-->
+<!--&lt;!&ndash;      transition: all 0.5s ease;&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+
+<!--&lt;!&ndash;    .image-container {&ndash;&gt;-->
+<!--&lt;!&ndash;      flex: 1;&ndash;&gt;-->
+<!--&lt;!&ndash;      min-width: 300px;&ndash;&gt;-->
+<!--&lt;!&ndash;      background: rgba(30, 30, 46, 0.8);&ndash;&gt;-->
+<!--&lt;!&ndash;      border-radius: 15px;&ndash;&gt;-->
+<!--&lt;!&ndash;      padding: 20px;&ndash;&gt;-->
+<!--&lt;!&ndash;      display: flex;&ndash;&gt;-->
+<!--&lt;!&ndash;      flex-direction: column;&ndash;&gt;-->
+<!--&lt;!&ndash;      align-items: center;&ndash;&gt;-->
+<!--&lt;!&ndash;      justify-content: center;&ndash;&gt;-->
+<!--&lt;!&ndash;      border: 1px solid rgba(255, 255, 255, 0.1);&ndash;&gt;-->
+<!--&lt;!&ndash;      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);&ndash;&gt;-->
+<!--&lt;!&ndash;      overflow: hidden;&ndash;&gt;-->
+<!--&lt;!&ndash;      min-height: 350px;&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+
+<!--&lt;!&ndash;    .image-placeholder {&ndash;&gt;-->
+<!--&lt;!&ndash;      width: 100%;&ndash;&gt;-->
+<!--&lt;!&ndash;      height: 100%;&ndash;&gt;-->
+<!--&lt;!&ndash;      display: flex;&ndash;&gt;-->
+<!--&lt;!&ndash;      flex-direction: column;&ndash;&gt;-->
+<!--&lt;!&ndash;      align-items: center;&ndash;&gt;-->
+<!--&lt;!&ndash;      justify-content: center;&ndash;&gt;-->
+<!--&lt;!&ndash;      color: #a0a0c0;&ndash;&gt;-->
+<!--&lt;!&ndash;      font-size: 1.1rem;&ndash;&gt;-->
+<!--&lt;!&ndash;      text-align: center;&ndash;&gt;-->
+<!--&lt;!&ndash;      padding: 20px;&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+
+<!--&lt;!&ndash;    .image-placeholder i {&ndash;&gt;-->
+<!--&lt;!&ndash;      font-size: 3rem;&ndash;&gt;-->
+<!--&lt;!&ndash;      margin-bottom: 15px;&ndash;&gt;-->
+<!--&lt;!&ndash;      color: #4361ee;&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+
+<!--&lt;!&ndash;    #random-image {&ndash;&gt;-->
+<!--&lt;!&ndash;      width: 100%;&ndash;&gt;-->
+<!--&lt;!&ndash;      height: 100%;&ndash;&gt;-->
+<!--&lt;!&ndash;      object-fit: cover;&ndash;&gt;-->
+<!--&lt;!&ndash;      border-radius: 10px;&ndash;&gt;-->
+<!--&lt;!&ndash;      display: none;&ndash;&gt;-->
+<!--&lt;!&ndash;      transition: opacity 0.5s ease;&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+
+<!--&lt;!&ndash;    .image-loading {&ndash;&gt;-->
+<!--&lt;!&ndash;      display: none;&ndash;&gt;-->
+<!--&lt;!&ndash;      flex-direction: column;&ndash;&gt;-->
+<!--&lt;!&ndash;      align-items: center;&ndash;&gt;-->
+<!--&lt;!&ndash;      justify-content: center;&ndash;&gt;-->
+<!--&lt;!&ndash;      width: 100%;&ndash;&gt;-->
+<!--&lt;!&ndash;      height: 100%;&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+
+<!--&lt;!&ndash;    .image-loading .spinner {&ndash;&gt;-->
+<!--&lt;!&ndash;      width: 40px;&ndash;&gt;-->
+<!--&lt;!&ndash;      height: 40px;&ndash;&gt;-->
+<!--&lt;!&ndash;      border: 4px solid rgba(255, 255, 255, 0.1);&ndash;&gt;-->
+<!--&lt;!&ndash;      border-top: 4px solid #4cc9f0;&ndash;&gt;-->
+<!--&lt;!&ndash;      border-radius: 50%;&ndash;&gt;-->
+<!--&lt;!&ndash;      animation: spin 1s linear infinite;&ndash;&gt;-->
+<!--&lt;!&ndash;      margin-bottom: 15px;&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+
+<!--&lt;!&ndash;    @keyframes spin {&ndash;&gt;-->
+<!--&lt;!&ndash;      0% { transform: rotate(0deg); }&ndash;&gt;-->
+<!--&lt;!&ndash;      100% { transform: rotate(360deg); }&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+
+<!--&lt;!&ndash;    .message-header {&ndash;&gt;-->
+<!--&lt;!&ndash;      display: flex;&ndash;&gt;-->
+<!--&lt;!&ndash;      align-items: center;&ndash;&gt;-->
+<!--&lt;!&ndash;      margin-bottom: 20px;&ndash;&gt;-->
+<!--&lt;!&ndash;      padding-bottom: 15px;&ndash;&gt;-->
+<!--&lt;!&ndash;      border-bottom: 1px solid rgba(255, 255, 255, 0.1);&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+
+<!--&lt;!&ndash;    .message-icon {&ndash;&gt;-->
+<!--&lt;!&ndash;      width: 50px;&ndash;&gt;-->
+<!--&lt;!&ndash;      height: 50px;&ndash;&gt;-->
+<!--&lt;!&ndash;      border-radius: 50%;&ndash;&gt;-->
+<!--&lt;!&ndash;      background: linear-gradient(135deg, #f72585, #b5179e);&ndash;&gt;-->
+<!--&lt;!&ndash;      display: flex;&ndash;&gt;-->
+<!--&lt;!&ndash;      align-items: center;&ndash;&gt;-->
+<!--&lt;!&ndash;      justify-content: center;&ndash;&gt;-->
+<!--&lt;!&ndash;      margin-right: 15px;&ndash;&gt;-->
+<!--&lt;!&ndash;      font-size: 1.5rem;&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+
+<!--&lt;!&ndash;    .message-title {&ndash;&gt;-->
+<!--&lt;!&ndash;      font-size: 1.5rem;&ndash;&gt;-->
+<!--&lt;!&ndash;      font-weight: 600;&ndash;&gt;-->
+<!--&lt;!&ndash;      color: #f0f0f0;&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+
+<!--&lt;!&ndash;    .message-content {&ndash;&gt;-->
+<!--&lt;!&ndash;      font-size: 1.2rem;&ndash;&gt;-->
+<!--&lt;!&ndash;      line-height: 1.6;&ndash;&gt;-->
+<!--&lt;!&ndash;      color: #c5c5e3;&ndash;&gt;-->
+<!--&lt;!&ndash;      margin-bottom: 20px;&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+
+<!--&lt;!&ndash;    .message-content strong {&ndash;&gt;-->
+<!--&lt;!&ndash;      color: #4cc9f0;&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+
+<!--&lt;!&ndash;    .image-caption {&ndash;&gt;-->
+<!--&lt;!&ndash;      margin-top: 15px;&ndash;&gt;-->
+<!--&lt;!&ndash;      text-align: center;&ndash;&gt;-->
+<!--&lt;!&ndash;      font-size: 0.9rem;&ndash;&gt;-->
+<!--&lt;!&ndash;      color: #a0a0c0;&ndash;&gt;-->
+<!--&lt;!&ndash;      font-style: italic;&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+
+<!--&lt;!&ndash;    .instructions {&ndash;&gt;-->
+<!--&lt;!&ndash;      text-align: center;&ndash;&gt;-->
+<!--&lt;!&ndash;      margin-top: 30px;&ndash;&gt;-->
+<!--&lt;!&ndash;      padding: 15px;&ndash;&gt;-->
+<!--&lt;!&ndash;      background: rgba(0, 0, 0, 0.2);&ndash;&gt;-->
+<!--&lt;!&ndash;      border-radius: 10px;&ndash;&gt;-->
+<!--&lt;!&ndash;      font-size: 0.95rem;&ndash;&gt;-->
+<!--&lt;!&ndash;      color: #a0a0c0;&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+
+<!--&lt;!&ndash;    .instructions i {&ndash;&gt;-->
+<!--&lt;!&ndash;      color: #4cc9f0;&ndash;&gt;-->
+<!--&lt;!&ndash;      margin: 0 5px;&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+
+<!--&lt;!&ndash;    .footer {&ndash;&gt;-->
+<!--&lt;!&ndash;      margin-top: 40px;&ndash;&gt;-->
+<!--&lt;!&ndash;      text-align: center;&ndash;&gt;-->
+<!--&lt;!&ndash;      color: #8888aa;&ndash;&gt;-->
+<!--&lt;!&ndash;      font-size: 0.9rem;&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+
+<!--&lt;!&ndash;    .image-credit {&ndash;&gt;-->
+<!--&lt;!&ndash;      font-size: 0.8rem;&ndash;&gt;-->
+<!--&lt;!&ndash;      color: #666699;&ndash;&gt;-->
+<!--&lt;!&ndash;      margin-top: 10px;&ndash;&gt;-->
+<!--&lt;!&ndash;      text-align: center;&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+
+<!--&lt;!&ndash;    @media (max-width: 768px) {&ndash;&gt;-->
+<!--&lt;!&ndash;      .avatar-group {&ndash;&gt;-->
+<!--&lt;!&ndash;        gap: 15px;&ndash;&gt;-->
+<!--&lt;!&ndash;      }&ndash;&gt;-->
+
+<!--&lt;!&ndash;      .avatar-btn {&ndash;&gt;-->
+<!--&lt;!&ndash;        width: 70px;&ndash;&gt;-->
+<!--&lt;!&ndash;        height: 70px;&ndash;&gt;-->
+<!--&lt;!&ndash;        font-size: 1.5rem;&ndash;&gt;-->
+<!--&lt;!&ndash;      }&ndash;&gt;-->
+
+<!--&lt;!&ndash;      h1 {&ndash;&gt;-->
+<!--&lt;!&ndash;        font-size: 2rem;&ndash;&gt;-->
+<!--&lt;!&ndash;      }&ndash;&gt;-->
+
+<!--&lt;!&ndash;      .content-wrapper {&ndash;&gt;-->
+<!--&lt;!&ndash;        flex-direction: column;&ndash;&gt;-->
+<!--&lt;!&ndash;      }&ndash;&gt;-->
+
+<!--&lt;!&ndash;      .message-container,&ndash;&gt;-->
+<!--&lt;!&ndash;      .image-container {&ndash;&gt;-->
+<!--&lt;!&ndash;        min-width: 100%;&ndash;&gt;-->
+<!--&lt;!&ndash;      }&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+
+<!--&lt;!&ndash;    @media (max-width: 480px) {&ndash;&gt;-->
+<!--&lt;!&ndash;      .avatar-group {&ndash;&gt;-->
+<!--&lt;!&ndash;        gap: 10px;&ndash;&gt;-->
+<!--&lt;!&ndash;      }&ndash;&gt;-->
+
+<!--&lt;!&ndash;      .avatar-btn {&ndash;&gt;-->
+<!--&lt;!&ndash;        width: 60px;&ndash;&gt;-->
+<!--&lt;!&ndash;        height: 60px;&ndash;&gt;-->
+<!--&lt;!&ndash;        font-size: 1.3rem;&ndash;&gt;-->
+<!--&lt;!&ndash;      }&ndash;&gt;-->
+
+<!--&lt;!&ndash;      .message-title {&ndash;&gt;-->
+<!--&lt;!&ndash;        font-size: 1.3rem;&ndash;&gt;-->
+<!--&lt;!&ndash;      }&ndash;&gt;-->
+
+<!--&lt;!&ndash;      .message-content {&ndash;&gt;-->
+<!--&lt;!&ndash;        font-size: 1rem;&ndash;&gt;-->
+<!--&lt;!&ndash;      }&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+<!--&lt;!&ndash;  </style>&ndash;&gt;-->
+<!--&lt;!&ndash;</head>&ndash;&gt;-->
+<!--&lt;!&ndash;<body>&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="container">&ndash;&gt;-->
+<!--&lt;!&ndash;  <header>&ndash;&gt;-->
+<!--&lt;!&ndash;    <h1>Avatar Group con Imágenes Aleatorias</h1>&ndash;&gt;-->
+<!--&lt;!&ndash;    <p class="subtitle">Selecciona un avatar para ver un mensaje personalizado y una imagen temática relacionada. Cada categoría muestra contenido diferente.</p>&ndash;&gt;-->
+<!--&lt;!&ndash;  </header>&ndash;&gt;-->
+
+<!--&lt;!&ndash;  <div class="avatar-group">&ndash;&gt;-->
+<!--&lt;!&ndash;    <button class="avatar-btn active" data-name="Tecnología" data-message-id="tech" data-image-query="technology future">&ndash;&gt;-->
+<!--&lt;!&ndash;      <span>T</span>&ndash;&gt;-->
+<!--&lt;!&ndash;    </button>&ndash;&gt;-->
+<!--&lt;!&ndash;    <button class="avatar-btn" data-name="Naturaleza" data-message-id="nature" data-image-query="nature landscape">&ndash;&gt;-->
+<!--&lt;!&ndash;      <span>N</span>&ndash;&gt;-->
+<!--&lt;!&ndash;    </button>&ndash;&gt;-->
+<!--&lt;!&ndash;    <button class="avatar-btn" data-name="Arquitectura" data-message-id="architecture" data-image-query="modern architecture">&ndash;&gt;-->
+<!--&lt;!&ndash;      <span>A</span>&ndash;&gt;-->
+<!--&lt;!&ndash;    </button>&ndash;&gt;-->
+<!--&lt;!&ndash;    <button class="avatar-btn" data-name="Arte" data-message-id="art" data-image-query="abstract art">&ndash;&gt;-->
+<!--&lt;!&ndash;      <span>Ar</span>&ndash;&gt;-->
+<!--&lt;!&ndash;    </button>&ndash;&gt;-->
+<!--&lt;!&ndash;    <button class="avatar-btn" data-name="Ciencia" data-message-id="science" data-image-query="science laboratory">&ndash;&gt;-->
+<!--&lt;!&ndash;      <span>C</span>&ndash;&gt;-->
+<!--&lt;!&ndash;    </button>&ndash;&gt;-->
+<!--&lt;!&ndash;    <button class="avatar-btn" data-name="Deportes" data-message-id="sports" data-image-query="sports action">&ndash;&gt;-->
+<!--&lt;!&ndash;      <span>D</span>&ndash;&gt;-->
+<!--&lt;!&ndash;    </button>&ndash;&gt;-->
+<!--&lt;!&ndash;  </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;  <div class="content-wrapper">&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="message-container">&ndash;&gt;-->
+<!--&lt;!&ndash;      <div class="message-header">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="message-icon">&ndash;&gt;-->
+<!--&lt;!&ndash;          <i class="fas fa-laptop-code"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="message-title">Tecnología del Futuro</div>&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--&lt;!&ndash;      <div class="message-content" id="message-display">&ndash;&gt;-->
+<!--&lt;!&ndash;        <strong>La innovación tecnológica</strong> está transformando rápidamente nuestro mundo. Desde inteligencia artificial hasta computación cuántica, las tecnologías emergentes están redefiniendo lo posible. Mantenerse actualizado en este campo es crucial para el futuro del trabajo y la sociedad.&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--&lt;!&ndash;      <div class="image-caption" id="image-caption">&ndash;&gt;-->
+<!--&lt;!&ndash;        Imagen relacionada con tecnología futurista&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <div class="image-container">&ndash;&gt;-->
+<!--&lt;!&ndash;      <div class="image-placeholder" id="image-placeholder">&ndash;&gt;-->
+<!--&lt;!&ndash;        <i class="fas fa-image"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;        <p>Selecciona una categoría para cargar una imagen temática</p>&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;      <div class="image-loading" id="image-loading">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="spinner"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;        <p>Cargando imagen...</p>&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;      <img id="random-image" alt="Imagen temática aleatoria">&ndash;&gt;-->
+
+<!--&lt;!&ndash;      <div class="image-credit" id="image-credit">&ndash;&gt;-->
+<!--&lt;!&ndash;        Imágenes cortesía de Unsplash&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;  </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;  <div class="instructions">&ndash;&gt;-->
+<!--&lt;!&ndash;    <p><i class="fas fa-mouse-pointer"></i> Haz clic en cualquier avatar para ver su mensaje y una imagen aleatoria relacionada con el tema.</p>&ndash;&gt;-->
+<!--&lt;!&ndash;  </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;  <div class="footer">&ndash;&gt;-->
+<!--&lt;!&ndash;    <p>Avatar Group con Imágenes Aleatorias - Usando API de Unsplash</p>&ndash;&gt;-->
+<!--&lt;!&ndash;  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<script>&ndash;&gt;-->
+<!--&lt;!&ndash;  // Datos de los mensajes para cada avatar&ndash;&gt;-->
+<!--&lt;!&ndash;  const messages = {&ndash;&gt;-->
+<!--&lt;!&ndash;    tech: {&ndash;&gt;-->
+<!--&lt;!&ndash;      title: "Tecnología del Futuro",&ndash;&gt;-->
+<!--&lt;!&ndash;      icon: "fas fa-laptop-code",&ndash;&gt;-->
+<!--&lt;!&ndash;      content: "<strong>La innovación tecnológica</strong> está transformando rápidamente nuestro mundo. Desde inteligencia artificial hasta computación cuántica, las tecnologías emergentes están redefiniendo lo posible. Mantenerse actualizado en este campo es crucial para el futuro del trabajo y la sociedad.",&ndash;&gt;-->
+<!--&lt;!&ndash;      caption: "Imagen relacionada con tecnología futurista"&ndash;&gt;-->
+<!--&lt;!&ndash;    },&ndash;&gt;-->
+<!--&lt;!&ndash;    nature: {&ndash;&gt;-->
+<!--&lt;!&ndash;      title: "Belleza Natural",&ndash;&gt;-->
+<!--&lt;!&ndash;      icon: "fas fa-tree",&ndash;&gt;-->
+<!--&lt;!&ndash;      content: "<strong>La naturaleza</strong> nos recuerda la importancia de preservar nuestro planeta. Los ecosistemas diversos y los paisajes impresionantes son tesoros que debemos proteger para las generaciones futuras. Reconectar con la naturaleza es esencial para nuestro bienestar.",&ndash;&gt;-->
+<!--&lt;!&ndash;      caption: "Imagen de paisajes naturales y vida silvestre"&ndash;&gt;-->
+<!--&lt;!&ndash;    },&ndash;&gt;-->
+<!--&lt;!&ndash;    architecture: {&ndash;&gt;-->
+<!--&lt;!&ndash;      title: "Arquitectura Moderna",&ndash;&gt;-->
+<!--&lt;!&ndash;      icon: "fas fa-building",&ndash;&gt;-->
+<!--&lt;!&ndash;      content: "<strong>La arquitectura contemporánea</strong> combina funcionalidad, estética y sostenibilidad. Los diseños innovadores no solo crean espacios habitables, sino que también reflejan la cultura y aspiraciones de una sociedad en constante evolución.",&ndash;&gt;-->
+<!--&lt;!&ndash;      caption: "Imagen de arquitectura moderna y diseños innovadores"&ndash;&gt;-->
+<!--&lt;!&ndash;    },&ndash;&gt;-->
+<!--&lt;!&ndash;    art: {&ndash;&gt;-->
+<!--&lt;!&ndash;      title: "Expresión Artística",&ndash;&gt;-->
+<!--&lt;!&ndash;      icon: "fas fa-palette",&ndash;&gt;-->
+<!--&lt;!&ndash;      content: "<strong>El arte abstracto</strong> desafía nuestras percepciones y nos invita a interpretar la realidad de maneras novedosas. A través del color, la forma y la textura, los artistas comunican emociones y conceptos que trascienden el lenguaje verbal.",&ndash;&gt;-->
+<!--&lt;!&ndash;      caption: "Imagen de arte abstracto y expresiones creativas"&ndash;&gt;-->
+<!--&lt;!&ndash;    },&ndash;&gt;-->
+<!--&lt;!&ndash;    science: {&ndash;&gt;-->
+<!--&lt;!&ndash;      title: "Descubrimiento Científico",&ndash;&gt;-->
+<!--&lt;!&ndash;      icon: "fas fa-flask",&ndash;&gt;-->
+<!--&lt;!&ndash;      content: "<strong>La investigación científica</strong> es la base del progreso humano. Cada experimento, cada hipótesis probada, nos acerca a comprender mejor el universo y a resolver los desafíos más urgentes que enfrentamos como civilización.",&ndash;&gt;-->
+<!--&lt;!&ndash;      caption: "Imagen relacionada con investigación científica y laboratorios"&ndash;&gt;-->
+<!--&lt;!&ndash;    },&ndash;&gt;-->
+<!--&lt;!&ndash;    sports: {&ndash;&gt;-->
+<!--&lt;!&ndash;      title: "Deporte y Superación",&ndash;&gt;-->
+<!--&lt;!&ndash;      icon: "fas fa-running",&ndash;&gt;-->
+<!--&lt;!&ndash;      content: "<strong>El deporte</strong> representa la excelencia humana, la disciplina y el trabajo en equipo. Más allá de la competencia, enseña valores como la perseverancia, el respeto y la superación personal que aplicamos en todos los aspectos de la vida.",&ndash;&gt;-->
+<!--&lt;!&ndash;      caption: "Imagen de acción deportiva y atletismo"&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+<!--&lt;!&ndash;  };&ndash;&gt;-->
+
+<!--&lt;!&ndash;  // API de Unsplash para imágenes aleatorias&ndash;&gt;-->
+<!--&lt;!&ndash;  const UNSPLASH_ACCESS_KEY = 'z_BfDdby5QWlbFujowZ4pTGQb6pEfRxqwMtv2pEWXno'; // Clave pública de demo (puedes cambiarla)&ndash;&gt;-->
+<!--&lt;!&ndash;  const UNSPLASH_API_URL = 'https://api.unsplash.com/photos/random';&ndash;&gt;-->
+
+<!--&lt;!&ndash;  // Elementos del DOM&ndash;&gt;-->
+<!--&lt;!&ndash;  const avatarButtons = document.querySelectorAll('.avatar-btn');&ndash;&gt;-->
+<!--&lt;!&ndash;  const messageDisplay = document.getElementById('message-display');&ndash;&gt;-->
+<!--&lt;!&ndash;  const messageTitle = document.querySelector('.message-title');&ndash;&gt;-->
+<!--&lt;!&ndash;  const messageIcon = document.querySelector('.message-icon');&ndash;&gt;-->
+<!--&lt;!&ndash;  const imageCaption = document.getElementById('image-caption');&ndash;&gt;-->
+<!--&lt;!&ndash;  const randomImage = document.getElementById('random-image');&ndash;&gt;-->
+<!--&lt;!&ndash;  const imagePlaceholder = document.getElementById('image-placeholder');&ndash;&gt;-->
+<!--&lt;!&ndash;  const imageLoading = document.getElementById('image-loading');&ndash;&gt;-->
+<!--&lt;!&ndash;  const imageCredit = document.getElementById('image-credit');&ndash;&gt;-->
+
+<!--&lt;!&ndash;  // Función para cargar una imagen aleatoria de Unsplash&ndash;&gt;-->
+<!--&lt;!&ndash;  async function loadRandomImage(query) {&ndash;&gt;-->
+<!--&lt;!&ndash;    try {&ndash;&gt;-->
+<!--&lt;!&ndash;      // Mostrar estado de carga&ndash;&gt;-->
+<!--&lt;!&ndash;      imagePlaceholder.style.display = 'none';&ndash;&gt;-->
+<!--&lt;!&ndash;      randomImage.style.display = 'none';&ndash;&gt;-->
+<!--&lt;!&ndash;      imageLoading.style.display = 'flex';&ndash;&gt;-->
+
+<!--&lt;!&ndash;      // Construir URL de la API con parámetros&ndash;&gt;-->
+<!--&lt;!&ndash;      const url = new URL(UNSPLASH_API_URL);&ndash;&gt;-->
+<!--&lt;!&ndash;      url.searchParams.append('query', query);&ndash;&gt;-->
+<!--&lt;!&ndash;      url.searchParams.append('orientation', 'landscape');&ndash;&gt;-->
+<!--&lt;!&ndash;      url.searchParams.append('client_id', UNSPLASH_ACCESS_KEY);&ndash;&gt;-->
+
+<!--&lt;!&ndash;      // Hacer la solicitud a la API&ndash;&gt;-->
+<!--&lt;!&ndash;      const response = await fetch(url);&ndash;&gt;-->
+
+<!--&lt;!&ndash;      if (!response.ok) {&ndash;&gt;-->
+<!--&lt;!&ndash;        throw new Error('Error al cargar la imagen');&ndash;&gt;-->
+<!--&lt;!&ndash;      }&ndash;&gt;-->
+
+<!--&lt;!&ndash;      const data = await response.json();&ndash;&gt;-->
+
+<!--&lt;!&ndash;      // Actualizar la imagen&ndash;&gt;-->
+<!--&lt;!&ndash;      randomImage.src = data.urls.regular;&ndash;&gt;-->
+<!--&lt;!&ndash;      randomImage.alt = data.alt_description || query;&ndash;&gt;-->
+
+<!--&lt;!&ndash;      // Actualizar el crédito de la imagen&ndash;&gt;-->
+<!--&lt;!&ndash;      imageCredit.innerHTML = `Foto por <a href="${data.user.links.html}?utm_source=avatar_group&utm_medium=referral" target="_blank" style="color:#8888aa;">${data.user.name}</a> en <a href="https://unsplash.com/?utm_source=avatar_group&utm_medium=referral" target="_blank" style="color:#8888aa;">Unsplash</a>`;&ndash;&gt;-->
+
+<!--&lt;!&ndash;      // Ocultar carga y mostrar imagen&ndash;&gt;-->
+<!--&lt;!&ndash;      setTimeout(() => {&ndash;&gt;-->
+<!--&lt;!&ndash;        imageLoading.style.display = 'none';&ndash;&gt;-->
+<!--&lt;!&ndash;        randomImage.style.display = 'block';&ndash;&gt;-->
+<!--&lt;!&ndash;        randomImage.style.opacity = '0';&ndash;&gt;-->
+
+<!--&lt;!&ndash;        // Animación de fade in&ndash;&gt;-->
+<!--&lt;!&ndash;        setTimeout(() => {&ndash;&gt;-->
+<!--&lt;!&ndash;          randomImage.style.transition = 'opacity 0.5s ease';&ndash;&gt;-->
+<!--&lt;!&ndash;          randomImage.style.opacity = '1';&ndash;&gt;-->
+<!--&lt;!&ndash;        }, 50);&ndash;&gt;-->
+<!--&lt;!&ndash;      }, 500);&ndash;&gt;-->
+
+<!--&lt;!&ndash;    } catch (error) {&ndash;&gt;-->
+<!--&lt;!&ndash;      console.error('Error al cargar imagen:', error);&ndash;&gt;-->
+
+<!--&lt;!&ndash;      // En caso de error, usar imagen de respaldo local&ndash;&gt;-->
+<!--&lt;!&ndash;      const fallbackImages = {&ndash;&gt;-->
+<!--&lt;!&ndash;        'technology future': 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',&ndash;&gt;-->
+<!--&lt;!&ndash;        'nature landscape': 'https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',&ndash;&gt;-->
+<!--&lt;!&ndash;        'modern architecture': 'https://images.unsplash.com/photo-1487956382158-bb926046304a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',&ndash;&gt;-->
+<!--&lt;!&ndash;        'abstract art': 'https://images.unsplash.com/photo-1543857778-c4a1a569e388?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',&ndash;&gt;-->
+<!--&lt;!&ndash;        'science laboratory': 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',&ndash;&gt;-->
+<!--&lt;!&ndash;        'sports action': 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'&ndash;&gt;-->
+<!--&lt;!&ndash;      };&ndash;&gt;-->
+
+<!--&lt;!&ndash;      const fallbackQuery = query.split(' ')[0];&ndash;&gt;-->
+<!--&lt;!&ndash;      const fallbackUrl = fallbackImages[query] || fallbackImages['technology future'];&ndash;&gt;-->
+
+<!--&lt;!&ndash;      randomImage.src = fallbackUrl;&ndash;&gt;-->
+<!--&lt;!&ndash;      randomImage.alt = `Imagen de ${query}`;&ndash;&gt;-->
+<!--&lt;!&ndash;      imageCredit.innerHTML = "Imagen de respaldo (Unsplash)";&ndash;&gt;-->
+
+<!--&lt;!&ndash;      imageLoading.style.display = 'none';&ndash;&gt;-->
+<!--&lt;!&ndash;      randomImage.style.display = 'block';&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+<!--&lt;!&ndash;  }&ndash;&gt;-->
+
+<!--&lt;!&ndash;  // Función para cambiar el mensaje mostrado&ndash;&gt;-->
+<!--&lt;!&ndash;  async function changeMessage(messageId, imageQuery) {&ndash;&gt;-->
+<!--&lt;!&ndash;    // Obtener el mensaje correspondiente&ndash;&gt;-->
+<!--&lt;!&ndash;    const message = messages[messageId];&ndash;&gt;-->
+
+<!--&lt;!&ndash;    // Actualizar el contenido del mensaje&ndash;&gt;-->
+<!--&lt;!&ndash;    messageTitle.textContent = message.title;&ndash;&gt;-->
+<!--&lt;!&ndash;    messageIcon.innerHTML = `<i class="${message.icon}"></i>`;&ndash;&gt;-->
+<!--&lt;!&ndash;    messageDisplay.innerHTML = message.content;&ndash;&gt;-->
+<!--&lt;!&ndash;    imageCaption.textContent = message.caption;&ndash;&gt;-->
+
+<!--&lt;!&ndash;    // Actualizar el estado activo de los botones&ndash;&gt;-->
+<!--&lt;!&ndash;    avatarButtons.forEach(btn => {&ndash;&gt;-->
+<!--&lt;!&ndash;      btn.classList.remove('active');&ndash;&gt;-->
+<!--&lt;!&ndash;      if (btn.getAttribute('data-message-id') === messageId) {&ndash;&gt;-->
+<!--&lt;!&ndash;        btn.classList.add('active');&ndash;&gt;-->
+<!--&lt;!&ndash;      }&ndash;&gt;-->
+<!--&lt;!&ndash;    });&ndash;&gt;-->
+
+<!--&lt;!&ndash;    // Cargar una imagen aleatoria relacionada&ndash;&gt;-->
+<!--&lt;!&ndash;    await loadRandomImage(imageQuery);&ndash;&gt;-->
+<!--&lt;!&ndash;  }&ndash;&gt;-->
+
+<!--&lt;!&ndash;  // Agregar event listeners a cada botón avatar&ndash;&gt;-->
+<!--&lt;!&ndash;  avatarButtons.forEach(button => {&ndash;&gt;-->
+<!--&lt;!&ndash;    button.addEventListener('click', () => {&ndash;&gt;-->
+<!--&lt;!&ndash;      const messageId = button.getAttribute('data-message-id');&ndash;&gt;-->
+<!--&lt;!&ndash;      const imageQuery = button.getAttribute('data-image-query');&ndash;&gt;-->
+<!--&lt;!&ndash;      changeMessage(messageId, imageQuery);&ndash;&gt;-->
+<!--&lt;!&ndash;    });&ndash;&gt;-->
+<!--&lt;!&ndash;  });&ndash;&gt;-->
+
+<!--&lt;!&ndash;  // Inicializar con el primer mensaje (tecnología)&ndash;&gt;-->
+<!--&lt;!&ndash;  window.addEventListener('DOMContentLoaded', () => {&ndash;&gt;-->
+<!--&lt;!&ndash;    const initialButton = document.querySelector('.avatar-btn.active');&ndash;&gt;-->
+<!--&lt;!&ndash;    const messageId = initialButton.getAttribute('data-message-id');&ndash;&gt;-->
+<!--&lt;!&ndash;    const imageQuery = initialButton.getAttribute('data-image-query');&ndash;&gt;-->
+<!--&lt;!&ndash;    changeMessage(messageId, imageQuery);&ndash;&gt;-->
+<!--&lt;!&ndash;  });&ndash;&gt;-->
+
+<!--&lt;!&ndash;  // Función para recargar una nueva imagen (por si el usuario quiere otra)&ndash;&gt;-->
+<!--&lt;!&ndash;  function refreshImage() {&ndash;&gt;-->
+<!--&lt;!&ndash;    const activeButton = document.querySelector('.avatar-btn.active');&ndash;&gt;-->
+<!--&lt;!&ndash;    const imageQuery = activeButton.getAttribute('data-image-query');&ndash;&gt;-->
+<!--&lt;!&ndash;    loadRandomImage(imageQuery);&ndash;&gt;-->
+<!--&lt;!&ndash;  }&ndash;&gt;-->
+
+<!--&lt;!&ndash;  // Agregar evento de clic a la imagen para recargar&ndash;&gt;-->
+<!--&lt;!&ndash;  randomImage.addEventListener('click', refreshImage);&ndash;&gt;-->
+<!--&lt;!&ndash;</script>&ndash;&gt;-->
+<!--&lt;!&ndash;</body>&ndash;&gt;-->
+<!--&lt;!&ndash;</html>&ndash;&gt;-->
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="es">-->
+<!--<head>-->
+<!--  <meta charset="UTF-8">-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--  <title>Club de Razas de Perros</title>-->
+<!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">-->
+<!--  <style>-->
+<!--    * {-->
+<!--      margin: 0;-->
+<!--      padding: 0;-->
+<!--      box-sizing: border-box;-->
+<!--      font-family: 'Segoe UI', system-ui, sans-serif;-->
+<!--    }-->
+
+<!--    body {-->
+<!--      display: flex;-->
+<!--      flex-direction: column;-->
+<!--      align-items: center;-->
+<!--      justify-content: center;-->
+<!--      min-height: 100vh;-->
+<!--      background: linear-gradient(135deg, #2c5530 0%, #3a7c5c 100%);-->
+<!--      color: #f0f0f0;-->
+<!--      padding: 20px;-->
+<!--    }-->
+
+<!--    .container {-->
+<!--      max-width: 1100px;-->
+<!--      width: 100%;-->
+<!--      padding: 30px;-->
+<!--      background-color: rgba(255, 255, 255, 0.08);-->
+<!--      backdrop-filter: blur(10px);-->
+<!--      border-radius: 20px;-->
+<!--      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);-->
+<!--      border: 1px solid rgba(255, 255, 255, 0.15);-->
+<!--    }-->
+
+<!--    header {-->
+<!--      text-align: center;-->
+<!--      margin-bottom: 40px;-->
+<!--    }-->
+
+<!--    h1 {-->
+<!--      font-size: 2.8rem;-->
+<!--      margin-bottom: 10px;-->
+<!--      background: linear-gradient(to right, #ffd166, #ef8a17);-->
+<!--      -webkit-background-clip: text;-->
+<!--      background-clip: text;-->
+<!--      color: transparent;-->
+<!--      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);-->
+<!--    }-->
+
+<!--    .subtitle {-->
+<!--      font-size: 1.2rem;-->
+<!--      color: #e0e0e0;-->
+<!--      max-width: 700px;-->
+<!--      margin: 0 auto;-->
+<!--      line-height: 1.6;-->
+<!--      background: rgba(0, 0, 0, 0.2);-->
+<!--      padding: 15px;-->
+<!--      border-radius: 10px;-->
+<!--      border-left: 4px solid #ffd166;-->
+<!--    }-->
+
+<!--    .dog-paw {-->
+<!--      color: #ffd166;-->
+<!--      font-size: 1.4rem;-->
+<!--      margin: 0 5px;-->
+<!--    }-->
+
+<!--    .avatar-group {-->
+<!--      display: flex;-->
+<!--      justify-content: center;-->
+<!--      flex-wrap: wrap;-->
+<!--      gap: 25px;-->
+<!--      margin-bottom: 50px;-->
+<!--      padding: 25px;-->
+<!--      background: rgba(0, 0, 0, 0.15);-->
+<!--      border-radius: 15px;-->
+<!--      border: 1px solid rgba(255, 255, 255, 0.1);-->
+<!--    }-->
+
+<!--    .avatar-btn {-->
+<!--      width: 85px;-->
+<!--      height: 85px;-->
+<!--      border-radius: 50%;-->
+<!--      border: none;-->
+<!--      background: linear-gradient(135deg, #8b4513, #d2691e);-->
+<!--      color: white;-->
+<!--      font-size: 1.8rem;-->
+<!--      font-weight: bold;-->
+<!--      cursor: pointer;-->
+<!--      transition: all 0.3s ease;-->
+<!--      display: flex;-->
+<!--      align-items: center;-->
+<!--      justify-content: center;-->
+<!--      box-shadow: 0 8px 20px rgba(139, 69, 19, 0.4);-->
+<!--      position: relative;-->
+<!--      overflow: hidden;-->
+<!--    }-->
+
+<!--    .avatar-btn:hover {-->
+<!--      transform: translateY(-8px) scale(1.05);-->
+<!--      box-shadow: 0 15px 25px rgba(139, 69, 19, 0.6);-->
+<!--      background: linear-gradient(135deg, #d2691e, #ff8c00);-->
+<!--    }-->
+
+<!--    .avatar-btn.active {-->
+<!--      transform: scale(1.15);-->
+<!--      box-shadow: 0 0 0 4px rgba(255, 209, 102, 0.9), 0 15px 30px rgba(139, 69, 19, 0.8);-->
+<!--      background: linear-gradient(135deg, #ff8c00, #ff4500);-->
+<!--      animation: pulse 2s infinite;-->
+<!--    }-->
+
+<!--    @keyframes pulse {-->
+<!--      0% { box-shadow: 0 0 0 4px rgba(255, 209, 102, 0.9); }-->
+<!--      50% { box-shadow: 0 0 0 8px rgba(255, 209, 102, 0.5); }-->
+<!--      100% { box-shadow: 0 0 0 4px rgba(255, 209, 102, 0.9); }-->
+<!--    }-->
+
+<!--    .avatar-btn::before {-->
+<!--      content: '';-->
+<!--      position: absolute;-->
+<!--      top: 2px;-->
+<!--      left: 2px;-->
+<!--      right: 2px;-->
+<!--      bottom: 2px;-->
+<!--      border-radius: 50%;-->
+<!--      background: rgba(255, 255, 255, 0.1);-->
+<!--      z-index: 1;-->
+<!--    }-->
+
+<!--    .avatar-btn span {-->
+<!--      position: relative;-->
+<!--      z-index: 2;-->
+<!--    }-->
+
+<!--    .avatar-btn::after {-->
+<!--      content: attr(data-name);-->
+<!--      position: absolute;-->
+<!--      bottom: -35px;-->
+<!--      left: 50%;-->
+<!--      transform: translateX(-50%);-->
+<!--      white-space: nowrap;-->
+<!--      font-size: 0.95rem;-->
+<!--      font-weight: 700;-->
+<!--      color: #ffd166;-->
+<!--      opacity: 0;-->
+<!--      transition: opacity 0.3s ease;-->
+<!--      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);-->
+<!--      background: rgba(0, 0, 0, 0.7);-->
+<!--      padding: 4px 10px;-->
+<!--      border-radius: 5px;-->
+<!--    }-->
+
+<!--    .avatar-btn:hover::after,-->
+<!--    .avatar-btn.active::after {-->
+<!--      opacity: 1;-->
+<!--    }-->
+
+<!--    .content-wrapper {-->
+<!--      display: flex;-->
+<!--      flex-wrap: wrap;-->
+<!--      gap: 30px;-->
+<!--      margin-bottom: 20px;-->
+<!--    }-->
+
+<!--    .message-container {-->
+<!--      flex: 1;-->
+<!--      min-width: 300px;-->
+<!--      background: rgba(40, 60, 50, 0.9);-->
+<!--      border-radius: 15px;-->
+<!--      padding: 30px;-->
+<!--      display: flex;-->
+<!--      flex-direction: column;-->
+<!--      justify-content: center;-->
+<!--      border: 1px solid rgba(255, 255, 255, 0.15);-->
+<!--      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);-->
+<!--      transition: all 0.5s ease;-->
+<!--      position: relative;-->
+<!--      overflow: hidden;-->
+<!--    }-->
+
+<!--    .message-container::before {-->
+<!--      content: '';-->
+<!--      position: absolute;-->
+<!--      top: 0;-->
+<!--      left: 0;-->
+<!--      right: 0;-->
+<!--      height: 5px;-->
+<!--      background: linear-gradient(to right, #8b4513, #ffd166, #8b4513);-->
+<!--    }-->
+
+<!--    .image-container {-->
+<!--      flex: 1;-->
+<!--      min-width: 300px;-->
+<!--      background: rgba(40, 60, 50, 0.9);-->
+<!--      border-radius: 15px;-->
+<!--      padding: 20px;-->
+<!--      display: flex;-->
+<!--      flex-direction: column;-->
+<!--      align-items: center;-->
+<!--      justify-content: center;-->
+<!--      border: 1px solid rgba(255, 255, 255, 0.15);-->
+<!--      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);-->
+<!--      overflow: hidden;-->
+<!--      min-height: 380px;-->
+<!--      position: relative;-->
+<!--    }-->
+
+<!--    .image-container::before {-->
+<!--      content: '';-->
+<!--      position: absolute;-->
+<!--      top: 0;-->
+<!--      left: 0;-->
+<!--      right: 0;-->
+<!--      height: 5px;-->
+<!--      background: linear-gradient(to right, #8b4513, #ffd166, #8b4513);-->
+<!--    }-->
+
+<!--    .image-placeholder {-->
+<!--      width: 100%;-->
+<!--      height: 100%;-->
+<!--      display: flex;-->
+<!--      flex-direction: column;-->
+<!--      align-items: center;-->
+<!--      justify-content: center;-->
+<!--      color: #e0e0e0;-->
+<!--      font-size: 1.2rem;-->
+<!--      text-align: center;-->
+<!--      padding: 30px;-->
+<!--      background: rgba(0, 0, 0, 0.2);-->
+<!--      border-radius: 10px;-->
+<!--      border: 2px dashed rgba(255, 209, 102, 0.3);-->
+<!--    }-->
+
+<!--    .image-placeholder i {-->
+<!--      font-size: 3.5rem;-->
+<!--      margin-bottom: 20px;-->
+<!--      color: #ffd166;-->
+<!--    }-->
+
+<!--    #random-image {-->
+<!--      width: 100%;-->
+<!--      height: 100%;-->
+<!--      object-fit: cover;-->
+<!--      border-radius: 10px;-->
+<!--      display: none;-->
+<!--      transition: opacity 0.5s ease;-->
+<!--      border: 3px solid rgba(255, 209, 102, 0.3);-->
+<!--      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);-->
+<!--    }-->
+
+<!--    .image-loading {-->
+<!--      display: none;-->
+<!--      flex-direction: column;-->
+<!--      align-items: center;-->
+<!--      justify-content: center;-->
+<!--      width: 100%;-->
+<!--      height: 100%;-->
+<!--      background: rgba(0, 0, 0, 0.3);-->
+<!--      border-radius: 10px;-->
+<!--    }-->
+
+<!--    .image-loading .spinner {-->
+<!--      width: 50px;-->
+<!--      height: 50px;-->
+<!--      border: 5px solid rgba(255, 255, 255, 0.1);-->
+<!--      border-top: 5px solid #ffd166;-->
+<!--      border-radius: 50%;-->
+<!--      animation: spin 1s linear infinite;-->
+<!--      margin-bottom: 20px;-->
+<!--    }-->
+
+<!--    .dog-bone {-->
+<!--      position: absolute;-->
+<!--      font-size: 1.2rem;-->
+<!--      color: rgba(255, 209, 102, 0.3);-->
+<!--      animation: float 3s infinite ease-in-out;-->
+<!--    }-->
+
+<!--    @keyframes spin {-->
+<!--      0% { transform: rotate(0deg); }-->
+<!--      100% { transform: rotate(360deg); }-->
+<!--    }-->
+
+<!--    @keyframes float {-->
+<!--      0%, 100% { transform: translateY(0) rotate(0deg); }-->
+<!--      50% { transform: translateY(-10px) rotate(10deg); }-->
+<!--    }-->
+
+<!--    .message-header {-->
+<!--      display: flex;-->
+<!--      align-items: center;-->
+<!--      margin-bottom: 25px;-->
+<!--      padding-bottom: 20px;-->
+<!--      border-bottom: 2px solid rgba(255, 209, 102, 0.3);-->
+<!--      position: relative;-->
+<!--      z-index: 2;-->
+<!--    }-->
+
+<!--    .message-icon {-->
+<!--      width: 60px;-->
+<!--      height: 60px;-->
+<!--      border-radius: 50%;-->
+<!--      background: linear-gradient(135deg, #8b4513, #ff8c00);-->
+<!--      display: flex;-->
+<!--      align-items: center;-->
+<!--      justify-content: center;-->
+<!--      margin-right: 20px;-->
+<!--      font-size: 1.8rem;-->
+<!--      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);-->
+<!--      border: 2px solid #ffd166;-->
+<!--    }-->
+
+<!--    .message-title {-->
+<!--      font-size: 1.8rem;-->
+<!--      font-weight: 700;-->
+<!--      color: #ffd166;-->
+<!--      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);-->
+<!--    }-->
+
+<!--    .message-content {-->
+<!--      font-size: 1.3rem;-->
+<!--      line-height: 1.7;-->
+<!--      color: #f0f0f0;-->
+<!--      margin-bottom: 25px;-->
+<!--      position: relative;-->
+<!--      z-index: 2;-->
+<!--    }-->
+
+<!--    .message-content strong {-->
+<!--      color: #ffd166;-->
+<!--      font-weight: 700;-->
+<!--    }-->
+
+<!--    .dog-stats {-->
+<!--      display: flex;-->
+<!--      flex-wrap: wrap;-->
+<!--      gap: 15px;-->
+<!--      margin-top: 20px;-->
+<!--      background: rgba(0, 0, 0, 0.2);-->
+<!--      padding: 15px;-->
+<!--      border-radius: 10px;-->
+<!--      border-left: 4px solid #8b4513;-->
+<!--    }-->
+
+<!--    .stat {-->
+<!--      flex: 1;-->
+<!--      min-width: 120px;-->
+<!--      text-align: center;-->
+<!--      padding: 10px;-->
+<!--      background: rgba(255, 255, 255, 0.1);-->
+<!--      border-radius: 8px;-->
+<!--    }-->
+
+<!--    .stat-value {-->
+<!--      font-size: 1.5rem;-->
+<!--      font-weight: 700;-->
+<!--      color: #ffd166;-->
+<!--      display: block;-->
+<!--    }-->
+
+<!--    .stat-label {-->
+<!--      font-size: 0.9rem;-->
+<!--      color: #d0d0d0;-->
+<!--    }-->
+
+<!--    .image-caption {-->
+<!--      margin-top: 20px;-->
+<!--      text-align: center;-->
+<!--      font-size: 1rem;-->
+<!--      color: #ffd166;-->
+<!--      font-style: italic;-->
+<!--      padding: 10px;-->
+<!--      background: rgba(0, 0, 0, 0.2);-->
+<!--      border-radius: 8px;-->
+<!--      position: relative;-->
+<!--      z-index: 2;-->
+<!--    }-->
+
+<!--    .instructions {-->
+<!--      text-align: center;-->
+<!--      margin-top: 30px;-->
+<!--      padding: 20px;-->
+<!--      background: rgba(0, 0, 0, 0.25);-->
+<!--      border-radius: 12px;-->
+<!--      font-size: 1rem;-->
+<!--      color: #e0e0e0;-->
+<!--      border: 1px solid rgba(255, 209, 102, 0.2);-->
+<!--    }-->
+
+<!--    .instructions i {-->
+<!--      color: #ffd166;-->
+<!--      margin: 0 8px;-->
+<!--    }-->
+
+<!--    .footer {-->
+<!--      margin-top: 40px;-->
+<!--      text-align: center;-->
+<!--      color: #c0c0c0;-->
+<!--      font-size: 0.95rem;-->
+<!--      padding-top: 20px;-->
+<!--      border-top: 1px solid rgba(255, 255, 255, 0.1);-->
+<!--    }-->
+
+<!--    .image-credit {-->
+<!--      font-size: 0.85rem;-->
+<!--      color: #aaa;-->
+<!--      margin-top: 15px;-->
+<!--      text-align: center;-->
+<!--      position: relative;-->
+<!--      z-index: 2;-->
+<!--    }-->
+
+<!--    .image-credit a {-->
+<!--      color: #ffd166;-->
+<!--      text-decoration: none;-->
+<!--      transition: color 0.3s;-->
+<!--    }-->
+
+<!--    .image-credit a:hover {-->
+<!--      color: #ff8c00;-->
+<!--      text-decoration: underline;-->
+<!--    }-->
+
+<!--    .refresh-btn {-->
+<!--      margin-top: 15px;-->
+<!--      padding: 10px 20px;-->
+<!--      background: linear-gradient(to right, #8b4513, #d2691e);-->
+<!--      color: white;-->
+<!--      border: none;-->
+<!--      border-radius: 8px;-->
+<!--      cursor: pointer;-->
+<!--      font-weight: 600;-->
+<!--      transition: all 0.3s;-->
+<!--      display: flex;-->
+<!--      align-items: center;-->
+<!--      gap: 8px;-->
+<!--      position: relative;-->
+<!--      z-index: 2;-->
+<!--    }-->
+
+<!--    .refresh-btn:hover {-->
+<!--      background: linear-gradient(to right, #d2691e, #ff8c00);-->
+<!--      transform: translateY(-2px);-->
+<!--      box-shadow: 0 5px 15px rgba(139, 69, 19, 0.4);-->
+<!--    }-->
+
+<!--    @media (max-width: 768px) {-->
+<!--      .avatar-group {-->
+<!--        gap: 20px;-->
+<!--      }-->
+
+<!--      .avatar-btn {-->
+<!--        width: 75px;-->
+<!--        height: 75px;-->
+<!--        font-size: 1.6rem;-->
+<!--      }-->
+
+<!--      h1 {-->
+<!--        font-size: 2.2rem;-->
+<!--      }-->
+
+<!--      .content-wrapper {-->
+<!--        flex-direction: column;-->
+<!--      }-->
+
+<!--      .message-container,-->
+<!--      .image-container {-->
+<!--        min-width: 100%;-->
+<!--      }-->
+
+<!--      .message-title {-->
+<!--        font-size: 1.5rem;-->
+<!--      }-->
+
+<!--      .message-content {-->
+<!--        font-size: 1.1rem;-->
+<!--      }-->
+<!--    }-->
+
+<!--    @media (max-width: 480px) {-->
+<!--      .avatar-group {-->
+<!--        gap: 15px;-->
+<!--        padding: 15px;-->
+<!--      }-->
+
+<!--      .avatar-btn {-->
+<!--        width: 65px;-->
+<!--        height: 65px;-->
+<!--        font-size: 1.4rem;-->
+<!--      }-->
+
+<!--      h1 {-->
+<!--        font-size: 1.8rem;-->
+<!--      }-->
+
+<!--      .message-title {-->
+<!--        font-size: 1.3rem;-->
+<!--      }-->
+
+<!--      .message-content {-->
+<!--        font-size: 1rem;-->
+<!--      }-->
+<!--    }-->
+<!--  </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="container">-->
+<!--  <header>-->
+<!--    <h1><i class="fas fa-paw"></i> Club de Razas de Perros <i class="fas fa-paw"></i></h1>-->
+<!--    <p class="subtitle">-->
+<!--      Descubre las características únicas de cada raza canina.-->
+<!--      <span class="dog-paw"><i class="fas fa-paw"></i></span>-->
+<!--      Selecciona una raza para conocerla mejor y ver fotos adorables.-->
+<!--      <span class="dog-paw"><i class="fas fa-paw"></i></span>-->
+<!--    </p>-->
+<!--  </header>-->
+
+<!--  <div class="avatar-group">-->
+<!--    <button class="avatar-btn active" data-name="Golden Retriever" data-message-id="golden" data-image-query="golden retriever dog">-->
+<!--      <span>GR</span>-->
+<!--    </button>-->
+<!--    <button class="avatar-btn" data-name="Bulldog Francés" data-message-id="bulldog" data-image-query="french bulldog dog">-->
+<!--      <span>BF</span>-->
+<!--    </button>-->
+<!--    <button class="avatar-btn" data-name="Pastor Alemán" data-message-id="german" data-image-query="german shepherd dog">-->
+<!--      <span>PA</span>-->
+<!--    </button>-->
+<!--    <button class="avatar-btn" data-name="Chihuahua" data-message-id="chihuahua" data-image-query="chihuahua dog">-->
+<!--      <span>CH</span>-->
+<!--    </button>-->
+<!--    <button class="avatar-btn" data-name="Husky Siberiano" data-message-id="husky" data-image-query="siberian husky dog">-->
+<!--      <span>HS</span>-->
+<!--    </button>-->
+<!--    <button class="avatar-btn" data-name="Labrador" data-message-id="labrador" data-image-query="labrador retriever dog">-->
+<!--      <span>LB</span>-->
+<!--    </button>-->
+<!--  </div>-->
+
+<!--  <div class="content-wrapper">-->
+<!--    <div class="message-container">-->
+<!--      <div class="dog-bone" style="top: 10px; left: 10px;"><i class="fas fa-bone"></i></div>-->
+<!--      <div class="dog-bone" style="bottom: 20px; right: 15px;"><i class="fas fa-bone"></i></div>-->
+
+<!--      <div class="message-header">-->
+<!--        <div class="message-icon">-->
+<!--          <i class="fas fa-dog"></i>-->
+<!--        </div>-->
+<!--        <div class="message-title">Golden Retriever</div>-->
+<!--      </div>-->
+
+<!--      <div class="message-content" id="message-display">-->
+<!--        <strong>El Golden Retriever</strong> es una de las razas más populares y amigables del mundo. Conocidos por su temperamento dócil, inteligencia y pelaje dorado, son excelentes perros de familia y de trabajo. Su naturaleza paciente los hace ideales para convivir con niños.-->
+<!--      </div>-->
+
+<!--      <div class="dog-stats">-->
+<!--        <div class="stat">-->
+<!--          <span class="stat-value">10-12</span>-->
+<!--          <span class="stat-label">Años de vida</span>-->
+<!--        </div>-->
+<!--        <div class="stat">-->
+<!--          <span class="stat-value">Amigable</span>-->
+<!--          <span class="stat-label">Temperamento</span>-->
+<!--        </div>-->
+<!--        <div class="stat">-->
+<!--          <span class="stat-value">Mediano</span>-->
+<!--          <span class="stat-label">Tamaño</span>-->
+<!--        </div>-->
+<!--        <div class="stat">-->
+<!--          <span class="stat-value">Alta</span>-->
+<!--          <span class="stat-label">Energía</span>-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      <div class="image-caption" id="image-caption">-->
+<!--        El compañero familiar perfecto - Alegre y leal-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    <div class="image-container">-->
+<!--      <div class="dog-bone" style="top: 15px; right: 20px;"><i class="fas fa-bone"></i></div>-->
+<!--      <div class="dog-bone" style="bottom: 30px; left: 10px;"><i class="fas fa-bone"></i></div>-->
+
+<!--      <div class="image-placeholder" id="image-placeholder">-->
+<!--        <i class="fas fa-dog"></i>-->
+<!--        <p>¡Selecciona una raza para ver fotos adorables!</p>-->
+<!--        <p><small>Cada raza tiene su propia galería de imágenes</small></p>-->
+<!--      </div>-->
+
+<!--      <div class="image-loading" id="image-loading">-->
+<!--        <div class="spinner"></div>-->
+<!--        <p>Buscando perritos adorables...</p>-->
+<!--      </div>-->
+
+<!--      <img id="random-image" alt="Foto de perro por raza">-->
+
+<!--      <button class="refresh-btn" id="refresh-btn">-->
+<!--        <i class="fas fa-redo-alt"></i> Ver otro perrito-->
+<!--      </button>-->
+
+<!--      <div class="image-credit" id="image-credit">-->
+<!--        Imágenes de perros cortesía de Unsplash-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--  <div class="instructions">-->
+<!--    <p>-->
+<!--      <i class="fas fa-paw"></i> Haz clic en cualquier raza para conocer sus características y ver fotos adorables.-->
+<!--      <i class="fas fa-paw"></i> El botón "Ver otro perrito" te permite ver más imágenes de la misma raza.-->
+<!--      <i class="fas fa-paw"></i>-->
+<!--    </p>-->
+<!--  </div>-->
+
+<!--  <div class="footer">-->
+<!--    <p><i class="fas fa-heart" style="color:#ff6b6b;"></i> Club de Razas de Perros - Todas las razas merecen amor y un hogar <i class="fas fa-heart" style="color:#ff6b6b;"></i></p>-->
+<!--    <p style="margin-top: 10px; font-size: 0.85rem;">Cada perro es único - Adopta, no compres</p>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!--<script>-->
+<!--  // Datos de las razas de perros-->
+<!--  const dogBreeds = {-->
+<!--    golden: {-->
+<!--      title: "Golden Retriever",-->
+<!--      icon: "fas fa-dog",-->
+<!--      content: "<strong>El Golden Retriever</strong> es una de las razas más populares y amigables del mundo. Conocidos por su temperamento dócil, inteligencia y pelaje dorado, son excelentes perros de familia y de trabajo. Su naturaleza paciente los hace ideales para convivir con niños.",-->
+<!--      caption: "El compañero familiar perfecto - Alegre y leal",-->
+<!--      stats: {-->
+<!--        lifespan: "10-12",-->
+<!--        temperament: "Amigable",-->
+<!--        size: "Mediano",-->
+<!--        energy: "Alta"-->
+<!--      }-->
+<!--    },-->
+<!--    bulldog: {-->
+<!--      title: "Bulldog Francés",-->
+<!--      icon: "fas fa-dog",-->
+<!--      content: "<strong>El Bulldog Francés</strong> es pequeño pero lleno de personalidad. Con sus orejas de murciélago y expresión curiosamente seria, son perros cariñosos, juguetones y excelentes para apartamentos. Aunque pueden ser tercos, su lealtad es incomparable.",-->
+<!--      caption: "Pequeño gran compañero - Personalidad única",-->
+<!--      stats: {-->
+<!--        lifespan: "10-12",-->
+<!--        temperament: "Tranquilo",-->
+<!--        size: "Pequeño",-->
+<!--        energy: "Moderada"-->
+<!--      }-->
+<!--    },-->
+<!--    german: {-->
+<!--      title: "Pastor Alemán",-->
+<!--      icon: "fas fa-dog",-->
+<!--      content: "<strong>El Pastor Alemán</strong> es conocido por su inteligencia, lealtad y versatilidad. Excelentes perros de trabajo en policía, rescate y como perros guía. Son protectores por naturaleza y forman lazos muy fuertes con sus familias.",-->
+<!--      caption: "El protector leal - Inteligente y valiente",-->
+<!--      stats: {-->
+<!--        lifespan: "9-13",-->
+<!--        temperament: "Protector",-->
+<!--        size: "Grande",-->
+<!--        energy: "Muy Alta"-->
+<!--      }-->
+<!--    },-->
+<!--    chihuahua: {-->
+<!--      title: "Chihuahua",-->
+<!--      icon: "fas fa-dog",-->
+<!--      content: "<strong>El Chihuahua</strong> es la raza más pequeña del mundo pero con una gran personalidad. Valientes, alertas y llenos de energía, son perros leales que forman fuertes vínculos con sus dueños. Perfectos para la vida en ciudad y espacios pequeños.",-->
+<!--      caption: "Pequeño pero valiente - Gran personalidad",-->
+<!--      stats: {-->
+<!--        lifespan: "12-20",-->
+<!--        temperament: "Audaz",-->
+<!--        size: "Muy Pequeño",-->
+<!--        energy: "Moderada"-->
+<!--      }-->
+<!--    },-->
+<!--    husky: {-->
+<!--      title: "Husky Siberiano",-->
+<!--      icon: "fas fa-dog",-->
+<!--      content: "<strong>El Husky Siberiano</strong> es conocido por su impresionante apariencia de lobo y ojos azules penetrantes. Son perros enérgicos, independientes y amigables. Necesitan mucho ejercicio y son famosos por su aullido característico en lugar de ladrar.",-->
+<!--      caption: "Belleza salvaje - Energético y vocal",-->
+<!--      stats: {-->
+<!--        lifespan: "12-14",-->
+<!--        temperament: "Independiente",-->
+<!--        size: "Mediano-Grande",-->
+<!--        energy: "Extremadamente Alta"-->
+<!--      }-->
+<!--    },-->
+<!--    labrador: {-->
+<!--      title: "Labrador Retriever",-->
+<!--      icon: "fas fa-dog",-->
+<!--      content: "<strong>El Labrador</strong> es la raza más popular en muchos países gracias a su naturaleza amigable, inteligente y juguetona. Excelentes con niños, otros perros y perfectos como perros de terapia o asistencia. Les encanta el agua y recuperar objetos.",-->
+<!--      caption: "El mejor amigo - Juguetón y confiable",-->
+<!--      stats: {-->
+<!--        lifespan: "10-12",-->
+<!--        temperament: "Juguetón",-->
+<!--        size: "Mediano-Grande",-->
+<!--        energy: "Alta"-->
+<!--      }-->
+<!--    }-->
+<!--  };-->
+
+<!--  // API de Unsplash para imágenes de perros-->
+<!--  const UNSPLASH_ACCESS_KEY = 'z_BfDdby5QWlbFujowZ4pTGQb6pEfRxqwMtv2pEWXno';-->
+<!--  const UNSPLASH_API_URL = 'https://api.unsplash.com/photos/random';-->
+
+<!--  // Elementos del DOM-->
+<!--  const avatarButtons = document.querySelectorAll('.avatar-btn');-->
+<!--  const messageDisplay = document.getElementById('message-display');-->
+<!--  const messageTitle = document.querySelector('.message-title');-->
+<!--  const messageIcon = document.querySelector('.message-icon');-->
+<!--  const imageCaption = document.getElementById('image-caption');-->
+<!--  const randomImage = document.getElementById('random-image');-->
+<!--  const imagePlaceholder = document.getElementById('image-placeholder');-->
+<!--  const imageLoading = document.getElementById('image-loading');-->
+<!--  const imageCredit = document.getElementById('image-credit');-->
+<!--  const refreshBtn = document.getElementById('refresh-btn');-->
+<!--  const statsContainer = document.querySelector('.dog-stats');-->
+
+<!--  // Variables para rastrear la raza actual-->
+<!--  let currentBreed = 'golden';-->
+<!--  let currentQuery = 'golden retriever dog';-->
+
+<!--  // Función para actualizar las estadísticas-->
+<!--  function updateStats(stats) {-->
+<!--    const statElements = statsContainer.querySelectorAll('.stat');-->
+
+<!--    statElements[0].querySelector('.stat-value').textContent = stats.lifespan;-->
+<!--    statElements[1].querySelector('.stat-value').textContent = stats.temperament;-->
+<!--    statElements[2].querySelector('.stat-value').textContent = stats.size;-->
+<!--    statElements[3].querySelector('.stat-value').textContent = stats.energy;-->
+<!--  }-->
+
+<!--  // Función para cargar una imagen aleatoria de perros de Unsplash-->
+<!--  async function loadRandomDogImage(query) {-->
+<!--    try {-->
+<!--      // Mostrar estado de carga-->
+<!--      imagePlaceholder.style.display = 'none';-->
+<!--      randomImage.style.display = 'none';-->
+<!--      imageLoading.style.display = 'flex';-->
+
+<!--      // Construir URL de la API con parámetros-->
+<!--      const url = new URL(UNSPLASH_API_URL);-->
+<!--      url.searchParams.append('query', query);-->
+<!--      url.searchParams.append('orientation', 'squarish');-->
+<!--      url.searchParams.append('client_id', UNSPLASH_ACCESS_KEY);-->
+
+<!--      // Hacer la solicitud a la API-->
+<!--      const response = await fetch(url);-->
+
+<!--      if (!response.ok) {-->
+<!--        throw new Error('Error al cargar la imagen');-->
+<!--      }-->
+
+<!--      const data = await response.json();-->
+
+<!--      // Actualizar la imagen-->
+<!--      randomImage.src = data.urls.regular;-->
+<!--      randomImage.alt = data.alt_description || `Foto de ${query}`;-->
+
+<!--      // Actualizar el crédito de la imagen-->
+<!--      imageCredit.innerHTML = `Foto por <a href="${data.user.links.html}?utm_source=dog_breeds&utm_medium=referral" target="_blank">${data.user.name}</a> en <a href="https://unsplash.com/?utm_source=dog_breeds&utm_medium=referral" target="_blank">Unsplash</a>`;-->
+
+<!--      // Ocultar carga y mostrar imagen-->
+<!--      setTimeout(() => {-->
+<!--        imageLoading.style.display = 'none';-->
+<!--        randomImage.style.display = 'block';-->
+<!--        randomImage.style.opacity = '0';-->
+
+<!--        // Animación de fade in-->
+<!--        setTimeout(() => {-->
+<!--          randomImage.style.transition = 'opacity 0.5s ease';-->
+<!--          randomImage.style.opacity = '1';-->
+<!--        }, 50);-->
+<!--      }, 500);-->
+
+<!--    } catch (error) {-->
+<!--      console.error('Error al cargar imagen:', error);-->
+
+<!--      // Imágenes de respaldo específicas para cada raza-->
+<!--      const fallbackImages = {-->
+<!--        'golden retriever dog': 'https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',-->
+<!--        'french bulldog dog': 'https://images.unsplash.com/photo-1519011985187-444d62641929?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',-->
+<!--        'german shepherd dog': 'https://images.unsplash.com/photo-1567752881298-894bb81f9379?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',-->
+<!--        'chihuahua dog': 'https://images.unsplash.com/photo-1596492784531-6e6eb5ea9993?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',-->
+<!--        'siberian husky dog': 'https://images.unsplash.com/photo-1568572933382-74d440642117?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',-->
+<!--        'labrador retriever dog': 'https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'-->
+<!--      };-->
+
+<!--      const fallbackUrl = fallbackImages[query] || fallbackImages['golden retriever dog'];-->
+
+<!--      randomImage.src = fallbackUrl;-->
+<!--      randomImage.alt = `Foto de ${query}`;-->
+<!--      imageCredit.innerHTML = "Imagen de respaldo (Unsplash)";-->
+
+<!--      imageLoading.style.display = 'none';-->
+<!--      randomImage.style.display = 'block';-->
+<!--    }-->
+<!--  }-->
+
+<!--  // Función para cambiar la raza mostrada-->
+<!--  async function changeBreed(breedId, imageQuery) {-->
+<!--    // Guardar la raza actual-->
+<!--    currentBreed = breedId;-->
+<!--    currentQuery = imageQuery;-->
+
+<!--    // Obtener los datos de la raza-->
+<!--    const breed = dogBreeds[breedId];-->
+
+<!--    // Actualizar el contenido-->
+<!--    messageTitle.textContent = breed.title;-->
+<!--    messageIcon.innerHTML = `<i class="${breed.icon}"></i>`;-->
+<!--    messageDisplay.innerHTML = breed.content;-->
+<!--    imageCaption.textContent = breed.caption;-->
+
+<!--    // Actualizar las estadísticas-->
+<!--    updateStats(breed.stats);-->
+
+<!--    // Actualizar el estado activo de los botones-->
+<!--    avatarButtons.forEach(btn => {-->
+<!--      btn.classList.remove('active');-->
+<!--      if (btn.getAttribute('data-message-id') === breedId) {-->
+<!--        btn.classList.add('active');-->
+<!--      }-->
+<!--    });-->
+
+<!--    // Cargar una imagen aleatoria de la raza-->
+<!--    await loadRandomDogImage(imageQuery);-->
+<!--  }-->
+
+<!--  // Agregar event listeners a cada botón avatar-->
+<!--  avatarButtons.forEach(button => {-->
+<!--    button.addEventListener('click', () => {-->
+<!--      const breedId = button.getAttribute('data-message-id');-->
+<!--      const imageQuery = button.getAttribute('data-image-query');-->
+<!--      changeBreed(breedId, imageQuery);-->
+<!--    });-->
+<!--  });-->
+
+<!--  // Botón para recargar imagen-->
+<!--  refreshBtn.addEventListener('click', () => {-->
+<!--    loadRandomDogImage(currentQuery);-->
+<!--  });-->
+
+<!--  // Inicializar con la primera raza (Golden Retriever)-->
+<!--  window.addEventListener('DOMContentLoaded', () => {-->
+<!--    const initialButton = document.querySelector('.avatar-btn.active');-->
+<!--    const breedId = initialButton.getAttribute('data-message-id');-->
+<!--    const imageQuery = initialButton.getAttribute('data-image-query');-->
+<!--    changeBreed(breedId, imageQuery);-->
+
+<!--    // Agregar huesos decorativos animados-->
+<!--    addDecorativeBones();-->
+<!--  });-->
+
+<!--  // Función para agregar huesos decorativos-->
+<!--  function addDecorativeBones() {-->
+<!--    const messageContainer = document.querySelector('.message-container');-->
+<!--    const imageContainer = document.querySelector('.image-container');-->
+
+<!--    // Crear más huesos decorativos-->
+<!--    for (let i = 0; i < 3; i++) {-->
+<!--      const bone1 = document.createElement('div');-->
+<!--      bone1.className = 'dog-bone';-->
+<!--      bone1.innerHTML = '<i class="fas fa-bone"></i>';-->
+<!--      bone1.style.left = `${10 + i * 30}px`;-->
+<!--      bone1.style.top = `${60 + i * 40}px`;-->
+<!--      bone1.style.animationDelay = `${i * 0.5}s`;-->
+<!--      messageContainer.appendChild(bone1);-->
+
+<!--      const bone2 = document.createElement('div');-->
+<!--      bone2.className = 'dog-bone';-->
+<!--      bone2.innerHTML = '<i class="fas fa-bone"></i>';-->
+<!--      bone2.style.right = `${15 + i * 25}px`;-->
+<!--      bone2.style.bottom = `${40 + i * 35}px`;-->
+<!--      bone2.style.animationDelay = `${i * 0.7}s`;-->
+<!--      imageContainer.appendChild(bone2);-->
+<!--    }-->
+<!--  }-->
+
+<!--  // Agregar evento de clic a la imagen para recargar-->
+<!--  randomImage.addEventListener('click', () => {-->
+<!--    loadRandomDogImage(currentQuery);-->
+<!--  });-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Club de Razas de Perros - Edición Violeta</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: #ffffff;
+      color: #333333;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      width: 100%;
+      padding: 30px;
+      background: linear-gradient(145deg, #f8f4ff 0%, #ffffff 100%);
+      border-radius: 24px;
+      box-shadow:
+              0 20px 40px rgba(108, 35, 197, 0.1),
+              0 5px 15px rgba(108, 35, 197, 0.05),
+              inset 0 1px 0 rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(181, 137, 239, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: linear-gradient(to right, #6c23c5, #b589ef, #6c23c5);
+      z-index: 1;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+      background: linear-gradient(to right, #6c23c5, #b589ef);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 2px 4px rgba(108, 35, 197, 0.1);
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: #666;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+      background: rgba(181, 137, 239, 0.08);
+      padding: 20px;
+      border-radius: 16px;
+      border: 1px solid rgba(181, 137, 239, 0.2);
+      box-shadow: 0 4px 12px rgba(108, 35, 197, 0.05);
+    }
+
+    .dog-paw {
+      color: #6c23c5;
+      font-size: 1.4rem;
+      margin: 0 8px;
+      text-shadow: 0 2px 4px rgba(108, 35, 197, 0.2);
+    }
+
+    .avatar-group {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      margin-bottom: 50px;
+      padding: 25px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 20px;
+      border: 2px solid rgba(181, 137, 239, 0.3);
+      box-shadow:
+              0 10px 25px rgba(108, 35, 197, 0.08),
+              inset 0 1px 0 rgba(255, 255, 255, 0.8);
+      position: relative;
+      z-index: 2;
+    }
+
+    .avatar-btn {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: none;
+      background: linear-gradient(145deg, #6c23c5, #8a4cd3);
+      color: white;
+      font-size: 1.9rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow:
+              0 10px 20px rgba(108, 35, 197, 0.25),
+              0 5px 10px rgba(108, 35, 197, 0.15),
+              inset 0 -2px 0 rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
+      z-index: 2;
+    }
+
+    .avatar-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(145deg, rgba(255,255,255,0.2), rgba(255,255,255,0.05));
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .avatar-btn span {
+      position: relative;
+      z-index: 2;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .avatar-btn:hover {
+      transform: translateY(-10px) scale(1.08);
+      box-shadow:
+              0 20px 35px rgba(108, 35, 197, 0.4),
+              0 10px 15px rgba(108, 35, 197, 0.2),
+              inset 0 -2px 0 rgba(0, 0, 0, 0.1);
+      background: linear-gradient(145deg, #8a4cd3, #a368e8);
+    }
+
+    .avatar-btn.active {
+      transform: scale(1.15);
+      box-shadow:
+              0 0 0 5px rgba(255, 255, 255, 0.95),
+              0 0 0 10px rgba(181, 137, 239, 0.4),
+              0 25px 40px rgba(108, 35, 197, 0.35);
+      background: linear-gradient(145deg, #b589ef, #9b6de3);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) scale(1.15); }
+      50% { transform: translateY(-8px) scale(1.18); }
+    }
+
+    .avatar-btn::after {
+      content: attr(data-name);
+      position: absolute;
+      bottom: -42px;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #6c23c5;
+      opacity: 0;
+      transition: all 0.4s ease;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 8px 16px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(108, 35, 197, 0.15);
+      border: 1px solid rgba(181, 137, 239, 0.3);
+      z-index: 10;
+    }
+
+    .avatar-btn:hover::after,
+    .avatar-btn.active::after {
+      opacity: 1;
+      bottom: -48px;
+    }
+
+    .content-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-bottom: 20px;
+    }
+
+    .message-container {
+      flex: 1;
+      min-width: 300px;
+      background: white;
+      border-radius: 20px;
+      padding: 35px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border: 2px solid rgba(181, 137, 239, 0.3);
+      box-shadow:
+              0 15px 35px rgba(108, 35, 197, 0.1),
+              inset 0 1px 0 rgba(255, 255, 255, 0.9);
+      transition: all 0.5s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .message-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(to right, #6c23c5, #b589ef);
+    }
+
+    .image-container {
+      flex: 1;
+      min-width: 300px;
+      background: white;
+      border-radius: 20px;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid rgba(181, 137, 239, 0.3);
+      box-shadow:
+              0 15px 35px rgba(108, 35, 197, 0.1),
+              inset 0 1px 0 rgba(255, 255, 255, 0.9);
+      overflow: hidden;
+      min-height: 400px;
+      position: relative;
+    }
+
+    .image-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(to right, #6c23c5, #b589ef);
+    }
+
+    .image-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-size: 1.2rem;
+      text-align: center;
+      padding: 40px;
+      background: rgba(181, 137, 239, 0.05);
+      border-radius: 16px;
+      border: 2px dashed rgba(108, 35, 197, 0.2);
+    }
+
+    .image-placeholder i {
+      font-size: 4rem;
+      margin-bottom: 25px;
+      color: #b589ef;
+      opacity: 0.7;
+    }
+
+    #random-image {
+      width: 100%;
+      height: 100%;
+      /*max-height: 500px;*/
+      object-fit: cover;
+      border-radius: 16px;
+      display: none;
+      /*transition: all 0.5s ease;*/
+      transition: opacity 0.5s ease;
+      /*border: 2px solid rgba(181, 137, 239, 0.4);*/
+      border: 3px solid rgba(181, 137, 239, 0.3);
+      box-shadow: 0 8px 25px rgba(108, 35, 197, 0.3);
+      /*box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);*/
+    }
+
+    .image-loading {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 16px;
+    }
+
+    .image-loading .spinner {
+      width: 60px;
+      height: 60px;
+      border: 4px solid rgba(181, 137, 239, 0.2);
+      border-top: 4px solid #6c23c5;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-bottom: 25px;
+    }
+
+    .dog-bone {
+      position: absolute;
+      font-size: 1.4rem;
+      color: rgba(181, 137, 239, 0.5);
+      animation: float-bone 4s infinite ease-in-out;
+      z-index: 1;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes float-bone {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-15px) rotate(15deg); }
+    }
+
+    .message-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      padding-bottom: 25px;
+      border-bottom: 2px solid rgba(181, 137, 239, 0.2);
+      position: relative;
+      z-index: 2;
+    }
+
+    .message-icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #6c23c5, #8a4cd3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 25px;
+      font-size: 2rem;
+      box-shadow:
+              0 8px 20px rgba(108, 35, 197, 0.25),
+              inset 0 1px 0 rgba(255, 255, 255, 0.3);
+      border: 2px solid rgba(255, 255, 255, 0.8);
+    }
+
+    .message-title {
+      font-size: 1.9rem;
+      font-weight: 800;
+      color: #6c23c5;
+      text-shadow: 0 2px 4px rgba(108, 35, 197, 0.1);
+    }
+
+    .message-content {
+      font-size: 1.3rem;
+      line-height: 1.7;
+      color: #555;
+      margin-bottom: 30px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .message-content strong {
+      color: #6c23c5;
+      font-weight: 700;
+    }
+
+    .dog-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 25px;
+      background: linear-gradient(145deg, rgba(181, 137, 239, 0.08), rgba(108, 35, 197, 0.05));
+      padding: 25px;
+      border-radius: 16px;
+      border: 1px solid rgba(181, 137, 239, 0.2);
+      box-shadow: 0 4px 12px rgba(108, 35, 197, 0.05);
+    }
+
+    .stat {
+      flex: 1;
+      min-width: 120px;
+      text-align: center;
+      padding: 15px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 12px;
+      border: 1px solid rgba(181, 137, 239, 0.3);
+      box-shadow: 0 4px 8px rgba(108, 35, 197, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .stat:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(108, 35, 197, 0.1);
+    }
+
+    .stat-value {
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: #6c23c5;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .stat-label {
+      font-size: 0.95rem;
+      color: #777;
+      font-weight: 600;
+    }
+
+    .image-caption {
+      margin-top: 25px;
+      text-align: center;
+      font-size: 1.1rem;
+      color: #6c23c5;
+      font-weight: 600;
+      padding: 15px;
+      background: rgba(181, 137, 239, 0.1);
+      border-radius: 12px;
+      border: 1px solid rgba(181, 137, 239, 0.3);
+      position: relative;
+      z-index: 2;
+    }
+
+    .instructions {
+      text-align: center;
+      margin-top: 35px;
+      padding: 25px;
+      background: linear-gradient(145deg, rgba(108, 35, 197, 0.05), rgba(181, 137, 239, 0.08));
+      border-radius: 18px;
+      font-size: 1.05rem;
+      color: #666;
+      border: 1px solid rgba(181, 137, 239, 0.3);
+      box-shadow: 0 8px 20px rgba(108, 35, 197, 0.05);
+    }
+
+    .instructions i {
+      color: #6c23c5;
+      margin: 0 10px;
+    }
+
+    .footer {
+      margin-top: 40px;
+      text-align: center;
+      color: #888;
+      font-size: 1rem;
+      padding-top: 25px;
+      border-top: 1px solid rgba(181, 137, 239, 0.3);
+    }
+
+    .footer strong {
+      color: #6c23c5;
+    }
+
+    .image-credit {
+      font-size: 0.9rem;
+      color: #888;
+      margin-top: 20px;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .image-credit a {
+      color: #6c23c5;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .image-credit a:hover {
+      color: #b589ef;
+      text-decoration: underline;
+    }
+
+    .refresh-btn {
+      margin-top: 20px;
+      padding: 14px 28px;
+      background: linear-gradient(to right, #6c23c5, #8a4cd3);
+      color: white;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      position: relative;
+      z-index: 2;
+      box-shadow:
+              0 6px 15px rgba(108, 35, 197, 0.3),
+              inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    }
+
+    .refresh-btn:hover {
+      background: linear-gradient(to right, #8a4cd3, #b589ef);
+      transform: translateY(-3px);
+      box-shadow:
+              0 10px 25px rgba(108, 35, 197, 0.4),
+              inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    }
+
+    .refresh-btn:active {
+      transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+      .avatar-group {
+        gap: 20px;
+      }
+
+      .avatar-btn {
+        width: 80px;
+        height: 80px;
+        font-size: 1.7rem;
+      }
+
+      h1 {
+        font-size: 2.3rem;
+      }
+
+      .content-wrapper {
+        flex-direction: column;
+      }
+
+      .message-container,
+      .image-container {
+        min-width: 100%;
+      }
+
+      .message-title {
+        font-size: 1.6rem;
+      }
+
+      .message-content {
+        font-size: 1.1rem;
+      }
+
+      .message-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.7rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .avatar-group {
+        gap: 15px;
+        padding: 20px;
+      }
+
+      .avatar-btn {
+        width: 70px;
+        height: 70px;
+        font-size: 1.5rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .subtitle {
+        font-size: 1rem;
+        padding: 15px;
+      }
+
+      .message-title {
+        font-size: 1.4rem;
+      }
+
+      .message-content {
+        font-size: 1rem;
+      }
+
+      .stat {
+        min-width: 100px;
+        padding: 12px;
+      }
+
+      .stat-value {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1><i class="fas fa-paw"></i> Club de Razas Caninas <i class="fas fa-paw"></i></h1>
+    <p class="subtitle">
+      Explora el maravilloso mundo de las razas de perros.
+      <span class="dog-paw"><i class="fas fa-paw"></i></span>
+      Selecciona una raza para descubrir sus características únicas y ver fotos adorables.
+      <span class="dog-paw"><i class="fas fa-paw"></i></span>
+    </p>
+  </header>
+
+  <div class="avatar-group">
+    <button class="avatar-btn active" data-name="Golden Retriever" data-message-id="golden" data-image-query="golden retriever dog">
+      <span>GR</span>
+    </button>
+    <button class="avatar-btn" data-name="Bulldog Francés" data-message-id="bulldog" data-image-query="french bulldog dog">
+      <span>BF</span>
+    </button>
+    <button class="avatar-btn" data-name="Pastor Alemán" data-message-id="german" data-image-query="german shepherd dog">
+      <span>PA</span>
+    </button>
+    <button class="avatar-btn" data-name="Chihuahua" data-message-id="chihuahua" data-image-query="chihuahua dog">
+      <span>CH</span>
+    </button>
+    <button class="avatar-btn" data-name="Husky Siberiano" data-message-id="husky" data-image-query="siberian husky dog">
+      <span>HS</span>
+    </button>
+    <button class="avatar-btn" data-name="Labrador" data-message-id="labrador" data-image-query="labrador retriever dog">
+      <span>LB</span>
+    </button>
+  </div>
+
+  <div class="content-wrapper">
+    <div class="message-container">
+      <div class="dog-bone" style="top: 20px; left: 20px;"><i class="fas fa-bone"></i></div>
+      <div class="dog-bone" style="bottom: 30px; right: 25px;"><i class="fas fa-bone"></i></div>
+      <div class="dog-bone" style="top: 50%; left: 10px;"><i class="fas fa-bone"></i></div>
+
+      <div class="message-header">
+        <div class="message-icon">
+          <i class="fas fa-dog"></i>
+        </div>
+        <div class="message-title">Golden Retriever</div>
+      </div>
+
+      <div class="message-content" id="message-display">
+        <strong>El Golden Retriever</strong> es una de las razas más populares y amigables del mundo. Conocidos por su temperamento dócil, inteligencia y pelaje dorado, son excelentes perros de familia y de trabajo. Su naturaleza paciente los hace ideales para convivir con niños.
+      </div>
+
+      <div class="dog-stats">
+        <div class="stat">
+          <span class="stat-value">10-12</span>
+          <span class="stat-label">Años de vida</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">Amigable</span>
+          <span class="stat-label">Temperamento</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">Mediano</span>
+          <span class="stat-label">Tamaño</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">Alta</span>
+          <span class="stat-label">Energía</span>
+        </div>
+      </div>
+
+      <div class="image-caption" id="image-caption">
+        El compañero familiar perfecto - Alegre y leal
+      </div>
+    </div>
+
+    <div class="image-container">
+      <div class="dog-bone" style="top: 25px; right: 30px;"><i class="fas fa-bone"></i></div>
+      <div class="dog-bone" style="bottom: 40px; left: 15px;"><i class="fas fa-bone"></i></div>
+      <div class="dog-bone" style="top: 30%; right: 15px;"><i class="fas fa-bone"></i></div>
+
+      <div class="image-placeholder" id="image-placeholder">
+        <i class="fas fa-dog"></i>
+        <p>¡Selecciona una raza para ver fotos adorables!</p>
+        <p><small>Cada raza tiene su propia galería de imágenes</small></p>
+      </div>
+
+      <div class="image-loading" id="image-loading">
+        <div class="spinner"></div>
+        <p>Buscando perritos adorables...</p>
+      </div>
+
+      <img id="random-image" alt="Foto de perro por raza">
+
+      <button class="refresh-btn" id="refresh-btn">
+        <i class="fas fa-redo-alt"></i> Ver otro perrito
+      </button>
+
+      <div class="image-credit" id="image-credit">
+        Imágenes cortesía de <a href="https://unsplash.com" target="_blank">Unsplash</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="instructions">
+    <p>
+      <i class="fas fa-paw"></i> Haz clic en cualquier raza para conocer sus características y ver fotos adorables.
+      <i class="fas fa-paw"></i> El botón "Ver otro perrito" te permite ver más imágenes de la misma raza.
+      <i class="fas fa-paw"></i>
+    </p>
+  </div>
+
+  <div class="footer">
+    <p><i class="fas fa-heart" style="color:#b589ef;"></i> <strong>Club de Razas Caninas</strong> - Todas las razas merecen amor y un hogar <i class="fas fa-heart" style="color:#b589ef;"></i></p>
+    <p style="margin-top: 10px; font-size: 0.9rem;">Cada perro es único - Adopta, no compres</p>
+  </div>
+</div>
+
+<script>
+  // Datos de las razas de perros
+  const dogBreeds = {
+    golden: {
+      title: "Golden Retriever",
+      icon: "fas fa-dog",
+      content: "<strong>El Golden Retriever</strong> es una de las razas más populares y amigables del mundo. Conocidos por su temperamento dócil, inteligencia y pelaje dorado, son excelentes perros de familia y de trabajo. Su naturaleza paciente los hace ideales para convivir con niños.",
+      caption: "El compañero familiar perfecto - Alegre y leal",
+      stats: {
+        lifespan: "10-12",
+        temperament: "Amigable",
+        size: "Mediano",
+        energy: "Alta"
+      }
+    },
+    bulldog: {
+      title: "Bulldog Francés",
+      icon: "fas fa-dog",
+      content: "<strong>El Bulldog Francés</strong> es pequeño pero lleno de personalidad. Con sus orejas de murciélago y expresión curiosamente seria, son perros cariñosos, juguetones y excelentes para apartamentos. Aunque pueden ser tercos, su lealtad es incomparable.",
+      caption: "Pequeño gran compañero - Personalidad única",
+      stats: {
+        lifespan: "10-12",
+        temperament: "Tranquilo",
+        size: "Pequeño",
+        energy: "Moderada"
+      }
+    },
+    german: {
+      title: "Pastor Alemán",
+      icon: "fas fa-dog",
+      content: "<strong>El Pastor Alemán</strong> es conocido por su inteligencia, lealtad y versatilidad. Excelentes perros de trabajo en policía, rescate y como perros guía. Son protectores por naturaleza y forman lazos muy fuertes con sus familias.",
+      caption: "El protector leal - Inteligente y valiente",
+      stats: {
+        lifespan: "9-13",
+        temperament: "Protector",
+        size: "Grande",
+        energy: "Muy Alta"
+      }
+    },
+    chihuahua: {
+      title: "Chihuahua",
+      icon: "fas fa-dog",
+      content: "<strong>El Chihuahua</strong> es la raza más pequeña del mundo pero con una gran personalidad. Valientes, alertas y llenos de energía, son perros leales que forman fuertes vínculos con sus dueños. Perfectos para la vida en ciudad y espacios pequeños.",
+      caption: "Pequeño pero valiente - Gran personalidad",
+      stats: {
+        lifespan: "12-20",
+        temperament: "Audaz",
+        size: "Muy Pequeño",
+        energy: "Moderada"
+      }
+    },
+    husky: {
+      title: "Husky Siberiano",
+      icon: "fas fa-dog",
+      content: "<strong>El Husky Siberiano</strong> es conocido por su impresionante apariencia de lobo y ojos azules penetrantes. Son perros enérgicos, independientes y amigables. Necesitan mucho ejercicio y son famosos por su aullido característico en lugar de ladrar.",
+      caption: "Belleza salvaje - Energético y vocal",
+      stats: {
+        lifespan: "12-14",
+        temperament: "Independiente",
+        size: "Mediano-Grande",
+        energy: "Extremadamente Alta"
+      }
+    },
+    labrador: {
+      title: "Labrador Retriever",
+      icon: "fas fa-dog",
+      content: "<strong>El Labrador</strong> es la raza más popular en muchos países gracias a su naturaleza amigable, inteligente y juguetona. Excelentes con niños, otros perros y perfectos como perros de terapia o asistencia. Les encanta el agua y recuperar objetos.",
+      caption: "El mejor amigo - Juguetón y confiable",
+      stats: {
+        lifespan: "10-12",
+        temperament: "Juguetón",
+        size: "Mediano-Grande",
+        energy: "Alta"
+      }
+    }
+  };
+
+  // API de Unsplash para imágenes de perros
+  const UNSPLASH_ACCESS_KEY = 'z_BfDdby5QWlbFujowZ4pTGQb6pEfRxqwMtv2pEWXno';
+  const UNSPLASH_API_URL = 'https://api.unsplash.com/photos/random';
+
+  // Elementos del DOM
+  const avatarButtons = document.querySelectorAll('.avatar-btn');
+  const messageDisplay = document.getElementById('message-display');
+  const messageTitle = document.querySelector('.message-title');
+  const messageIcon = document.querySelector('.message-icon');
+  const imageCaption = document.getElementById('image-caption');
+  const randomImage = document.getElementById('random-image');
+  const imagePlaceholder = document.getElementById('image-placeholder');
+  const imageLoading = document.getElementById('image-loading');
+  const imageCredit = document.getElementById('image-credit');
+  const refreshBtn = document.getElementById('refresh-btn');
+  const statsContainer = document.querySelector('.dog-stats');
+
+  // Variables para rastrear la raza actual
+  let currentBreed = 'golden';
+  let currentQuery = 'golden retriever dog';
+
+  // Función para actualizar las estadísticas
+  function updateStats(stats) {
+    const statElements = statsContainer.querySelectorAll('.stat');
+
+    statElements[0].querySelector('.stat-value').textContent = stats.lifespan;
+    statElements[1].querySelector('.stat-value').textContent = stats.temperament;
+    statElements[2].querySelector('.stat-value').textContent = stats.size;
+    statElements[3].querySelector('.stat-value').textContent = stats.energy;
+  }
+
+  // Función para cargar una imagen aleatoria de perros de Unsplash
+  async function loadRandomDogImage(query) {
+    try {
+      // Mostrar estado de carga
+      imagePlaceholder.style.display = 'none';
+      randomImage.style.display = 'none';
+      imageLoading.style.display = 'flex';
+
+      // Construir URL de la API con parámetros
+      const url = new URL(UNSPLASH_API_URL);
+      url.searchParams.append('query', query);
+      url.searchParams.append('orientation', 'squarish');
+      url.searchParams.append('client_id', UNSPLASH_ACCESS_KEY);
+
+      // Hacer la solicitud a la API
+      const response = await fetch(url);
+
+      if (!response.ok) {
+        throw new Error('Error al cargar la imagen');
+      }
+
+      const data = await response.json();
+
+      // Actualizar la imagen
+      randomImage.src = data.urls.regular;
+      randomImage.alt = data.alt_description || `Foto de ${query}`;
+
+      // Actualizar el crédito de la imagen
+      imageCredit.innerHTML = `Foto por <a href="${data.user.links.html}?utm_source=dog_breeds&utm_medium=referral" target="_blank">${data.user.name}</a> en <a href="https://unsplash.com/?utm_source=dog_breeds&utm_medium=referral" target="_blank">Unsplash</a>`;
+
+      // Ocultar carga y mostrar imagen
+      setTimeout(() => {
+        imageLoading.style.display = 'none';
+        randomImage.style.display = 'block';
+        randomImage.style.opacity = '0';
+
+        // Animación de fade in
+        setTimeout(() => {
+          randomImage.style.transition = 'opacity 0.5s ease';
+          randomImage.style.opacity = '1';
+        }, 50);
+      }, 500);
+
+    } catch (error) {
+      console.error('Error al cargar imagen:', error);
+
+      // Imágenes de respaldo específicas para cada raza
+      const fallbackImages = {
+        'golden retriever dog': 'https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        'french bulldog dog': 'https://images.unsplash.com/photo-1519011985187-444d62641929?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        'german shepherd dog': 'https://images.unsplash.com/photo-1567752881298-894bb81f9379?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        'chihuahua dog': 'https://images.unsplash.com/photo-1596492784531-6e6eb5ea9993?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        'siberian husky dog': 'https://images.unsplash.com/photo-1568572933382-74d440642117?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        'labrador retriever dog': 'https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      };
+
+      const fallbackUrl = fallbackImages[query] || fallbackImages['golden retriever dog'];
+
+      randomImage.src = fallbackUrl;
+      randomImage.alt = `Foto de ${query}`;
+      imageCredit.innerHTML = "Imagen de respaldo (Unsplash)";
+
+      imageLoading.style.display = 'none';
+      randomImage.style.display = 'block';
+    }
+  }
+
+  // Función para cambiar la raza mostrada
+  async function changeBreed(breedId, imageQuery) {
+    // Guardar la raza actual
+    currentBreed = breedId;
+    currentQuery = imageQuery;
+
+    // Obtener los datos de la raza
+    const breed = dogBreeds[breedId];
+
+    // Actualizar el contenido
+    messageTitle.textContent = breed.title;
+    messageIcon.innerHTML = `<i class="${breed.icon}"></i>`;
+    messageDisplay.innerHTML = breed.content;
+    imageCaption.textContent = breed.caption;
+
+    // Actualizar las estadísticas
+    updateStats(breed.stats);
+
+    // Actualizar el estado activo de los botones
+    avatarButtons.forEach(btn => {
+      btn.classList.remove('active');
+      if (btn.getAttribute('data-message-id') === breedId) {
+        btn.classList.add('active');
+      }
+    });
+
+    // Cargar una imagen aleatoria de la raza
+    await loadRandomDogImage(imageQuery);
+  }
+
+  // Agregar event listeners a cada botón avatar
+  avatarButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const breedId = button.getAttribute('data-message-id');
+      const imageQuery = button.getAttribute('data-image-query');
+      changeBreed(breedId, imageQuery);
+    });
+  });
+
+  // Botón para recargar imagen
+  refreshBtn.addEventListener('click', () => {
+    loadRandomDogImage(currentQuery);
+  });
+
+  // Inicializar con la primera raza (Golden Retriever)
+  window.addEventListener('DOMContentLoaded', () => {
+    const initialButton = document.querySelector('.avatar-btn.active');
+    const breedId = initialButton.getAttribute('data-message-id');
+    const imageQuery = initialButton.getAttribute('data-image-query');
+    changeBreed(breedId, imageQuery);
+
+    // Agregar más huesos decorativos
+    addDecorativeBones();
+  });
+
+  // Función para agregar huesos decorativos
+  function addDecorativeBones() {
+    const containers = ['.message-container', '.image-container'];
+
+    containers.forEach(selector => {
+      const container = document.querySelector(selector);
+      for (let i = 0; i < 4; i++) {
+        const bone = document.createElement('div');
+        bone.className = 'dog-bone';
+        bone.innerHTML = '<i class="fas fa-bone"></i>';
+
+        // Posiciones aleatorias
+        const randomTop = Math.random() * 80 + 10;
+        const randomLeft = Math.random() * 80 + 10;
+        const randomDelay = Math.random() * 2;
+
+        bone.style.top = `${randomTop}%`;
+        bone.style.left = `${randomLeft}%`;
+        bone.style.animationDelay = `${randomDelay}s`;
+        bone.style.opacity = '0.4';
+
+        container.appendChild(bone);
+      }
+    });
+  }
+
+  // Agregar evento de clic a la imagen para recargar
+  randomImage.addEventListener('click', () => {
+    loadRandomDogImage(currentQuery);
+  });
+</script>
+</body>
+</html>

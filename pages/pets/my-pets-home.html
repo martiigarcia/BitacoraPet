@@ -5,13 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../../assets/images/logo2.png">
     <title>Mis Mascotas - Bitacora Pet</title>
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS (solo para navbar, el resto conj html y css porque me gusta mas como quedan los componentes asi) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
           rel="stylesheet"
           integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
           crossorigin="anonymous">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../../assets/css/styles-bootstrap.css">
+
 </head>
+
 <body class="d-flex flex-column min-vh-100">
 <header>
     <nav class="navbar navbar-expand-lg navbar-custom">
@@ -22,7 +26,6 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
-
                     <li class="nav-item">
                         <a class="nav-link active" href="../pets/my-pets-home.html">Mis mascotas</a>
                     </li>
@@ -30,8 +33,7 @@
                         <a class="nav-link" href="../vet/vets.html">Veterinarias</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../vaccination/vaccination-calendar.html">Calendario de
-                            vacunaciones</a>
+                        <a class="nav-link" href="../vaccination/vaccination-calendar.html">Calendario de vacunaciones</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav">
@@ -56,36 +58,135 @@
         </div>
     </nav>
 
-    <section class="pets-nav container py-4">
-        <button class="pet-btn active">Mora</button>
-        <button class="pet-btn">Negra</button>
-        <button class="pet-btn">Thor</button>
-        <button class="pet-btn">Rocko</button>
-    </section>
-    <!--https://cvlacolina.com/wp-content/uploads/2021/02/Blog_WeCanLa_Colina_Veterinarios_0040_F.jpg-->
-    <section class="front-page-pets"
-             style="background-image: url('../../assets/images/pet1.jpg')">
-        <div class="hero-content">
-            <h1 class="display-5 fw-bold">Mora</h1>
-        </div>
-    </section>
+    <!-- Contenedor principal de la página de mascotas -->
+    <div class="main-container-custom">
+        <header class="page-header">
+            <h1> Mis Mascotas </h1>
 
-    <div class="container py-5">
-        <div class="row g-4">
-            <div class="col-md-6">
-                <a href="../pets/pet-detail.html" class="card-custom d-block">
-                    <div class="card-image card-image-vet"></div>
-                    <h2>Detalle</h2>
-                    <p class="mb-0">Datos de la mascota</p>
+        </header>
+
+        <!-- CARRUSEL DE MASCOTAS : con JS mas abajo-->
+        <div class="pets-carousel-container">
+            <div class="pets-carousel" id="petsCarousel">
+            </div>
+
+            <!-- Flechas de navegación -->
+            <button class="carousel-arrow prev" id="prevBtn">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-arrow next" id="nextBtn">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+
+            <div class="carousel-indicators" id="carouselIndicators"></div>
+        </div>
+
+
+        <header class="page-header">
+            <p class="page-subtitle">
+                Explora tus mascotas
+                <br>
+                <span class="dog-paw"><i class="fas fa-paw"></i></span>
+                Selecciona una mascota para ver sus datos y fotos adorables
+                <span class="dog-paw"><i class="fas fa-paw"></i></span>
+            </p>
+        </header>
+
+        <!-- Grupo de avatares de mascotas -->
+        <div class="pets-avatar-group">
+            <button class="pet-avatar-btn active" data-pet-id="mora" data-name="Mora">
+                <span>MORA</span>
+            </button>
+            <button class="pet-avatar-btn" data-pet-id="negra" data-name="Negra">
+                <span>NEGRA</span>
+            </button>
+            <button class="pet-avatar-btn" data-pet-id="thor" data-name="Thor">
+                <span>THOR</span>
+            </button>
+            <button class="pet-avatar-btn" data-pet-id="rocko" data-name="Rocko">
+                <span>ROCKO</span>
+            </button>
+        </div>
+
+        <!-- Contenido principal -->
+        <div class="pets-content-wrapper">
+            <!-- Panel de información de la mascota -->
+            <div class="pet-info-container">
+                <div class="pet-bone" style="top: 20px; left: 20px;"><i class="fas fa-bone"></i></div>
+                <div class="pet-bone" style="bottom: 30px; right: 25px;"><i class="fas fa-bone"></i></div>
+                <div class="pet-bone" style="top: 50%; left: 10px;"><i class="fas fa-bone"></i></div>
+
+                <div class="pet-info-header">
+                    <div class="pet-info-icon">
+                        <i class="fas fa-paw"></i>
+                    </div>
+                    <div class="pet-info-title" id="pet-name">Mora</div>
+                </div>
+
+                <div class="pet-info-content" id="pet-description">
+                    <strong>Mora</strong> es una Bulldog hembra, adoptada el 2 de febrero de 2024. Nació el 23 de diciembre de 2023.
+                </div>
+
+                <div class="pet-stats">
+                    <div class="pet-stat">
+                        <span class="pet-stat-value" id="pet-type">Perro</span>
+                        <span class="pet-stat-label">Tipo</span>
+                    </div>
+                    <div class="pet-stat">
+                        <span class="pet-stat-value" id="pet-breed">Bulldog</span>
+                        <span class="pet-stat-label">Raza</span>
+                    </div>
+                    <div class="pet-stat">
+                        <span class="pet-stat-value" id="pet-gender">Hembra</span>
+                        <span class="pet-stat-label">Género</span>
+                    </div>
+                    <div class="pet-stat">
+                        <span class="pet-stat-value" id="pet-age">1 año</span>
+                        <span class="pet-stat-label">Edad</span>
+                    </div>
+                </div>
+
+                <div class="pet-action-buttons">
+                    <a href="../pets/pet-detail.html" class="pet-action-btn btn-edit-pet">
+                        <i class="fas fa-edit"></i> Editar datos de mascota
+                    </a>
+                </div>
+            </div>
+
+            <!-- Panel de imagen de la mascota -->
+            <div class="pet-image-container">
+                <div class="pet-bone" style="top: 25px; right: 30px;"><i class="fas fa-bone"></i></div>
+                <div class="pet-bone" style="bottom: 40px; left: 15px;"><i class="fas fa-bone"></i></div>
+                <div class="pet-bone" style="top: 30%; right: 15px;"><i class="fas fa-bone"></i></div>
+
+                <div class="pet-image-placeholder" id="pet-image-placeholder">
+                    <i class="fas fa-dog"></i>
+                    <p>¡Selecciona una mascota para ver su información!</p>
+                </div>
+
+                <div class="pet-image-loading" id="pet-image-loading">
+                    <div class="spinner"></div>
+                    <p>Cargando información...</p>
+                </div>
+
+                <img id="pet-image" alt="Foto de la mascota">
+
+                <div class="pet-image-credit">
+                    Bitácora Pet - Tu compañero de confianza
+                </div>
+            </div>
+        </div>
+
+        <div class="pet-instructions">
+            <p>
+                <i class="fas fa-paw"></i> Puedes editar los datos de la mascota o registrar una nueva.
+                <i class="fas fa-paw"></i>
+            <div class="pet-action-buttons">
+                <a href="../pets/pet-form.html" class="pet-action-btn btn-new-pet">
+                    <i class="fas fa-plus-circle"></i> Registrar nueva mascota
                 </a>
             </div>
-            <div class="col-md-6">
-                <a href="../pets/pet-form.html" class="card-custom d-block">
-                    <div class="card-image card-image-vet"></div>
-                    <h2>Registrar mascota</h2>
-                    <p class="mb-0">Registrar nueva mascota</p>
-                </a>
-            </div>
+            </p>
         </div>
     </div>
 </main>
@@ -109,5 +210,291 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+
+<script>
+    // JSON con Datos de las mascotas
+    const petsData = {
+        mora: {
+            name: "Mora",
+            type: "Perro",
+            breed: "Bulldog",
+            gender: "Hembra",
+            birthdate: "2023-12-23",
+            adoptionDate: "2024-02-02",
+            age: "1 año",
+            image: "../../assets/images/pet1.jpg",
+            description: "<strong>Mora</strong> es una Bulldog hembra, adoptada el 2 de febrero de 2024. Nació el 23 de diciembre de 2023.",
+        },
+        negra: {
+            name: "Negra",
+            type: "Perro",
+            breed: "Labrador Retriever",
+            gender: "Hembra",
+            birthdate: "2022-05-15",
+            adoptionDate: "2022-08-10",
+            age: "3 años",
+            image: "../../assets/images/pet2.jpg",
+            description: "<strong>Negra</strong> es una Labrador Retriever hembra, adoptada el 10 de agosto de 2022. Nació el 15 de mayo de 2022.",
+        },
+        thor: {
+            name: "Thor",
+            type: "Perro",
+            breed: "Pastor Alemán",
+            gender: "Macho",
+            birthdate: "2021-03-20",
+            adoptionDate: "2021-06-25",
+            age: "4 años",
+            image: "../../assets/images/pet3.jpg",
+            description: "<strong>Thor</strong> es un Pastor Alemán macho, adoptado el 25 de junio de 2021. Nació el 20 de marzo de 2021.",
+        },
+        rocko: {
+            name: "Rocko",
+            type: "Perro",
+            breed: "Beagle",
+            gender: "Macho",
+            birthdate: "2020-11-10",
+            adoptionDate: "2021-01-15",
+            age: "5 años",
+            image: "../../assets/images/pet4.jpg",
+            description: "<strong>Rocko</strong> es un Beagle macho, adoptado el 15 de enero de 2021. Nació el 10 de noviembre de 2020.",
+        }
+    };
+
+    // Elementos del DOM
+    const petAvatarButtons = document.querySelectorAll('.pet-avatar-btn');
+    const petNameElement = document.getElementById('pet-name');
+    const petDescription = document.getElementById('pet-description');
+    const petType = document.getElementById('pet-type');
+    const petBreed = document.getElementById('pet-breed');
+    const petGender = document.getElementById('pet-gender');
+    const petAge = document.getElementById('pet-age');
+    const petImage = document.getElementById('pet-image');
+    const petImagePlaceholder = document.getElementById('pet-image-placeholder');
+    const petImageLoading = document.getElementById('pet-image-loading');
+    const petsCarousel = document.getElementById('petsCarousel');
+    const carouselIndicators = document.getElementById('carouselIndicators');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    // Variables para el carrusel
+    let currentCarouselIndex = 0;
+    let carouselInterval;
+    const carouselPetIds = ['mora', 'negra', 'thor', 'rocko'];
+    const AUTO_SLIDE_INTERVAL = 5000; // 5 segundos
+
+    // Variable para rastrear la mascota actualmente seleccionada en los datos
+    let currentSelectedPetId = 'mora';
+
+    // Función para crear el carrusel
+    function createCarousel() {
+        // Limpiar carrusel existente
+        petsCarousel.innerHTML = '';
+        carouselIndicators.innerHTML = '';
+
+        // Crear slides para cada mascota
+        carouselPetIds.forEach((petId, index) => {
+            const pet = petsData[petId];
+
+            // Crear slide
+            const slide = document.createElement('div');
+            slide.className = `carousel-slide ${index === 0 ? 'active' : ''}`;
+            slide.style.backgroundImage = `url('${pet.image}')`;
+            slide.dataset.petId = petId;
+
+            const content = document.createElement('div');
+            content.className = 'carousel-content';
+            content.innerHTML = `
+                <h2>${pet.name}</h2>
+            `;
+
+            slide.appendChild(content);
+            petsCarousel.appendChild(slide);
+
+            // Crear indicador
+            const indicator = document.createElement('button');
+            indicator.className = `carousel-indicator ${index === 0 ? 'active' : ''}`;
+            indicator.dataset.index = index;
+            indicator.addEventListener('click', () => goToSlide(index));
+            carouselIndicators.appendChild(indicator);
+        });
+
+        // Iniciar autoplay
+        startAutoSlide();
+    }
+
+    // Función para ir a un slide específico (SOLO cambia el carrusel, no los datos)
+    function goToSlide(index) {
+        const slides = document.querySelectorAll('.carousel-slide');
+        const indicators = document.querySelectorAll('.carousel-indicator');
+
+        // Remover clase active de todos
+        slides.forEach(slide => slide.classList.remove('active'));
+        indicators.forEach(indicator => indicator.classList.remove('active'));
+
+        // Agregar clase active al slide e indicador seleccionado
+        slides[index].classList.add('active');
+        indicators[index].classList.add('active');
+
+        currentCarouselIndex = index;
+
+        // NO actualizar los datos de la mascota aquí
+        // Solo el carrusel cambia, los datos permanecen con la última mascota seleccionada en los avatares
+
+        // Reiniciar autoplay
+        resetAutoSlide();
+    }
+
+    // Función para siguiente slide
+    function nextSlide() {
+        const nextIndex = (currentCarouselIndex + 1) % carouselPetIds.length;
+        goToSlide(nextIndex);
+    }
+
+    // Función para slide anterior
+    function prevSlide() {
+        const prevIndex = (currentCarouselIndex - 1 + carouselPetIds.length) % carouselPetIds.length;
+        goToSlide(prevIndex);
+    }
+
+    // Función para iniciar autoplay
+    function startAutoSlide() {
+        carouselInterval = setInterval(nextSlide, AUTO_SLIDE_INTERVAL);
+    }
+
+    // Función para resetear autoplay
+    function resetAutoSlide() {
+        clearInterval(carouselInterval);
+        startAutoSlide();
+    }
+
+    // Función para cargar y mostrar la imagen
+    function loadAndShowImage(imageUrl, imageElement) {
+        return new Promise((resolve) => {
+            const img = new Image();
+            img.onload = () => {
+                imageElement.src = imageUrl;
+                resolve();
+            };
+            img.onerror = () => {
+                // Si falla la carga, usar imagen por defecto
+                imageElement.src = '../../assets/images/logo2.png';
+                resolve();
+            };
+            img.src = imageUrl;
+        });
+    }
+
+    // Función para cambiar la mascota mostrada (solo se llama desde los botones de avatar)
+    async function changePet(petId) {
+        // Guardar la mascota actualmente seleccionada
+        currentSelectedPetId = petId;
+
+        // Obtener los datos de la mascota
+        const pet = petsData[petId];
+
+        // Mostrar estado de carga
+        petImagePlaceholder.style.display = 'none';
+        petImage.style.display = 'none';
+        petImage.classList.remove('loaded');
+        petImageLoading.style.display = 'flex';
+
+        // Actualizar el contenido
+        petNameElement.textContent = pet.name;
+        petDescription.innerHTML = pet.description;
+        petType.textContent = pet.type;
+        petBreed.textContent = pet.breed;
+        petGender.textContent = pet.gender;
+        petAge.textContent = pet.age;
+
+        // Cargar y mostrar la imagen en el panel derecho
+        await loadAndShowImage(pet.image, petImage);
+
+        // Ocultar carga y mostrar imagen
+        petImageLoading.style.display = 'none';
+        petImage.style.display = 'block';
+
+        // Animación de fade in
+        setTimeout(() => {
+            petImage.classList.add('loaded');
+        }, 50);
+
+        // Actualizar el estado activo de los botones de avatar
+        petAvatarButtons.forEach(btn => {
+            btn.classList.remove('active');
+            if (btn.getAttribute('data-pet-id') === petId) {
+                btn.classList.add('active');
+            }
+        });
+
+        // Opcional: También mover el carrusel a la mascota seleccionada
+        // const carouselIndex = carouselPetIds.indexOf(petId);
+        // if (carouselIndex !== -1 && carouselIndex !== currentCarouselIndex) {
+        //     goToSlide(carouselIndex);
+        // }
+    }
+
+    // Agregar event listeners a cada botón avatar
+    petAvatarButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const petId = button.getAttribute('data-pet-id');
+            changePet(petId);
+        });
+    });
+
+    // Event listeners para las flechas del carrusel
+    prevBtn.addEventListener('click', prevSlide);
+    nextBtn.addEventListener('click', nextSlide);
+
+    // Pausar autoplay al hacer hover en el carrusel
+    petsCarousel.addEventListener('mouseenter', () => {
+        clearInterval(carouselInterval);
+    });
+
+    // Reanudar autoplay al salir del carrusel
+    petsCarousel.addEventListener('mouseleave', () => {
+        startAutoSlide();
+    });
+
+    // Inicializar con la primera mascota (Mora)
+    window.addEventListener('DOMContentLoaded', async () => {
+        // Crear el carrusel
+        createCarousel();
+
+        // Cargar la primera mascota en los datos
+        await changePet('mora');
+
+        // Agregar huesos decorativos adicionales
+        addDecorativeBones();
+    });
+
+    // Función para agregar huesos decorativos
+    function addDecorativeBones() {
+        const containers = ['.pet-info-container', '.pet-image-container'];
+
+        containers.forEach(selector => {
+            const container = document.querySelector(selector);
+            if (container) {
+                for (let i = 0; i < 3; i++) {
+                    const bone = document.createElement('div');
+                    bone.className = 'pet-bone';
+                    bone.innerHTML = '<i class="fas fa-bone"></i>';
+
+                    // Posiciones aleatorias
+                    const randomTop = Math.random() * 80 + 10;
+                    const randomLeft = Math.random() * 80 + 10;
+                    const randomDelay = Math.random() * 2;
+
+                    bone.style.top = `${randomTop}%`;
+                    bone.style.left = `${randomLeft}%`;
+                    bone.style.animationDelay = `${randomDelay}s`;
+                    bone.style.opacity = '0.4';
+
+                    container.appendChild(bone);
+                }
+            }
+        });
+    }
+</script>
+
 </body>
 </html>
