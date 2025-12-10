@@ -39,6 +39,319 @@ main {
 }
 
 /***********************************************************************/
+/**************************    HOME PAGE UPDATE   **********************/
+/***********************************************************************/
+
+/* Hero section mejorada para index.html */
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #6c23c5, #b589ef);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 4px 8px rgba(108, 35, 197, 0.15);
+    letter-spacing: -1px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    color: #555;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.8);
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(181, 137, 239, 0.3);
+    box-shadow: 0 4px 15px rgba(108, 35, 197, 0.1);
+}
+
+/* Contenedor principal de index */
+.home-main-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 40px auto;
+    padding: 40px 20px;
+    background: linear-gradient(145deg, #f8f4ff 0%, #ffffff 100%);
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(108, 35, 197, 0.1),
+    0 5px 15px rgba(108, 35, 197, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(181, 137, 239, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.home-main-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(to right, #6c23c5, #b589ef, #6c23c5);
+    z-index: 1;
+}
+
+/* Header de la home */
+.home-header {
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 2;
+}
+
+.home-header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #6c23c5, #b589ef);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 4px 8px rgba(108, 35, 197, 0.1);
+}
+
+.home-subtitle {
+    font-size: 1.3rem;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+    background: rgba(181, 137, 239, 0.08);
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid rgba(181, 137, 239, 0.2);
+    box-shadow: 0 8px 25px rgba(108, 35, 197, 0.05);
+}
+
+/* Cards grid mejorada */
+.home-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+/* Cards estilo mejorado */
+.home-card-custom {
+    border: 2px solid rgba(181, 137, 239, 0.3);
+    border-radius: 20px;
+    text-align: center;
+    padding: 2rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    background: white;
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(108, 35, 197, 0.1);
+}
+
+.home-card-custom::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(to right, #6c23c5, #b589ef);
+    transition: height 0.3s ease;
+}
+
+.home-card-custom:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(108, 35, 197, 0.2);
+    text-decoration: none;
+    color: inherit;
+    border-color: rgba(108, 35, 197, 0.5);
+}
+
+.home-card-custom:hover::before {
+    height: 8px;
+}
+
+/* Imagen de card mejorada */
+.home-card-image {
+    width: 100%;
+    height: 250px;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 3px solid rgba(181, 137, 239, 0.2);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.home-card-custom:hover .home-card-image {
+    transform: scale(1.05);
+    border-color: rgba(108, 35, 197, 0.4);
+}
+
+.home-card-image-vet {
+    background-image: url("../images/vet.jpg");
+}
+
+.home-card-image-vac {
+    background-image: url("https://i0.wp.com/puppis.blog/wp-content/uploads/2022/04/%C2%BFPor-que-es-importante-que-vacunemos-a-los-cachorros_-min.jpg?resize=900%2C600&ssl=1");
+}
+
+/* Títulos de cards */
+.home-card-custom h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.home-card-custom h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+    border-radius: 2px;
+}
+
+.home-card-custom p {
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Icono decorativo en cards */
+.card-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+/* Sección de características */
+.features-section {
+    background: linear-gradient(145deg, rgba(108, 35, 197, 0.05), rgba(181, 137, 239, 0.08));
+    border-radius: 20px;
+    padding: 40px;
+    margin: 40px 0;
+    border: 1px solid rgba(181, 137, 239, 0.3);
+    text-align: center;
+}
+
+.features-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.feature-item {
+    padding: 25px;
+    background: white;
+    border-radius: 16px;
+    border: 1px solid rgba(181, 137, 239, 0.3);
+    box-shadow: 0 8px 20px rgba(108, 35, 197, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(108, 35, 197, 0.1);
+}
+
+.feature-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.feature-item h3 {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Responsive para home */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .home-main-container {
+        margin: 20px auto;
+        padding: 25px 15px;
+    }
+
+    .home-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .home-subtitle {
+        font-size: 1.1rem;
+        padding: 20px;
+    }
+
+    .home-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features-section {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .home-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .home-card-custom {
+        padding: 1.5rem;
+    }
+
+    .home-card-image {
+        height: 200px;
+    }
+}
+
+/***********************************************************************/
 /**************************    CUSTOM BOOTSTRAP OVERRIDES   ************/
 /***********************************************************************/
 
@@ -127,6 +440,7 @@ main {
     left: 0;
     right: 0;
     bottom: 0;
+    /*background: rgba(0, 0, 0, 0.4);*/
     background: rgba(255, 255, 255, 0.6);
 }
 
@@ -136,8 +450,9 @@ main {
 }
 
 .front-page h1 {
-    font-size: 2rem;
+    /*font-size: 2rem;*/
     margin-bottom: 0.5rem;
+    /*color: #ffffff;*/
     color: var(--text-color);
 }
 
@@ -187,7 +502,6 @@ main {
     bottom: 0;
     background: rgba(255, 255, 255, 0.6);
 }
-
 
 
 /***********************************************************************/
@@ -1231,5 +1545,395 @@ main {
     .pet-action-btn {
         padding: 12px 20px;
         font-size: 0.9rem;
+    }
+}
+/***********************************************************************/
+/**************************    VETS PAGE FIXED  ************************/
+/***********************************************************************/
+
+/* Contenedor principal para veterinarias - FIXED */
+.vets-main-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 30px auto;
+    padding: 40px 20px;
+    background: linear-gradient(145deg, #f8f4ff 0%, #ffffff 100%);
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(108, 35, 197, 0.1),
+    0 5px 15px rgba(108, 35, 197, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(181, 137, 239, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.vets-main-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(to right, #6c23c5, #b589ef, #6c23c5);
+    z-index: 1;
+}
+
+/* Header de veterinarias - FIXED */
+.vets-header {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.vets-header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    background: linear-gradient(to right, #6c23c5, #b589ef);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 4px 8px rgba(108, 35, 197, 0.1);
+    letter-spacing: -0.5px;
+}
+
+.vets-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    background: rgba(181, 137, 239, 0.08);
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid rgba(181, 137, 239, 0.2);
+    box-shadow: 0 4px 12px rgba(108, 35, 197, 0.05);
+}
+
+/* Grid layout - FIXED para vet 1 | vet 2 | calendario | vet 3 */
+.vets-grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+/* Columna izquierda (veterinarias) */
+.vets-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Columna derecha (calendario) */
+.calendar-column {
+    position: relative;
+}
+
+/* Tarjetas de veterinarias - FIXED */
+.vet-card-custom {
+    display: flex;
+    align-items: flex-start;
+    border: 2px solid rgba(181, 137, 239, 0.3);
+    border-radius: 16px;
+    padding: 1.5rem;
+    background: white;
+    transition: all 0.3s ease;
+    position: relative;
+    box-shadow: 0 8px 20px rgba(108, 35, 197, 0.1);
+    min-height: 180px;
+}
+
+.vet-card-custom:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(108, 35, 197, 0.2);
+    border-color: rgba(108, 35, 197, 0.4);
+}
+
+/* Imagen de veterinaria - FIXED */
+.vet-card-custom .card-image-small {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    margin-right: 1.5rem;
+    flex-shrink: 0;
+    background: linear-gradient(145deg, #6c23c5, #8a4cd3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 20px rgba(108, 35, 197, 0.25);
+    overflow: hidden;
+}
+
+.vet-card-custom .card-image-small img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+/* Contenido de la tarjeta - FIXED */
+.vet-card-content {
+    flex: 1;
+    position: relative;
+    padding-right: 100px; /* Espacio para el botón DE TURNO */
+}
+
+.vet-card-content h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.vet-specialty {
+    display: inline-block;
+    background: linear-gradient(to right, rgba(108, 35, 197, 0.1), rgba(181, 137, 239, 0.1));
+    color: #6c23c5;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    border: 1px solid rgba(108, 35, 197, 0.2);
+}
+
+.vet-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+/* Info de contacto - FIXED */
+.vet-contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.contact-item i {
+    color: #6c23c5;
+    font-size: 0.9rem;
+}
+
+/* Badge DE TURNO - FIXED (solo en la primera card) */
+.vet-on-duty {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: linear-gradient(to right, #ba0069, #d63384);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    box-shadow: 0 4px 8px rgba(186, 0, 105, 0.3);
+    z-index: 2;
+    white-space: nowrap;
+}
+
+/* Calendario - FIXED (manteniendo estilo original pero mejorado) */
+.calendar-section-custom {
+    background: linear-gradient(145deg, #f8f4ff, #ffffff);
+    padding: 1.5rem;
+    border-radius: 16px;
+    height: 100%;
+    border: 2px solid rgba(181, 137, 239, 0.3);
+    box-shadow: 0 10px 25px rgba(108, 35, 197, 0.1);
+    position: sticky;
+    top: 20px;
+}
+
+.calendar-section-custom::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(to right, #6c23c5, #b589ef);
+    border-radius: 16px 16px 0 0;
+}
+
+.calendar-section-custom h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Controles del calendario - FIXED */
+.calendar .d-flex {
+    margin-bottom: 1.5rem;
+}
+
+.calendar .btn-outline-custom {
+    background: linear-gradient(to right, #6c23c5, #8a4cd3);
+    color: white;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(108, 35, 197, 0.25);
+    font-size: 0.9rem;
+}
+
+.calendar .btn-outline-custom:hover {
+    background: linear-gradient(to right, #8a4cd3, #b589ef);
+    transform: scale(1.05);
+}
+
+.calendar h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+/* Grid del calendario - FIXED */
+.calendar-grid-custom {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+}
+
+.calendar-grid-custom div {
+    padding: 8px;
+    font-size: 0.85rem;
+    text-align: center;
+    border-radius: 6px;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendar-day {
+    color: #333;
+    background: white;
+    border: 1px solid rgba(181, 137, 239, 0.1);
+}
+
+.calendar-day.today {
+    background: linear-gradient(to right, #6c23c5, #8a4cd3);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 8px rgba(108, 35, 197, 0.3);
+    font-weight: 700;
+}
+
+.calendar-date {
+    margin-top: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: var(--primary-color);
+    padding: 10px;
+    background: rgba(181, 137, 239, 0.1);
+    border-radius: 10px;
+    border: 1px solid rgba(181, 137, 239, 0.2);
+    font-size: 0.9rem;
+}
+
+/* Responsive - FIXED */
+@media (max-width: 992px) {
+    .vets-grid-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .calendar-section-custom {
+        position: relative;
+        top: 0;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .vets-main-container {
+        padding: 25px 15px;
+        margin: 20px auto;
+    }
+
+    .vets-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .vets-subtitle {
+        font-size: 1.1rem;
+        padding: 15px;
+    }
+
+    .vet-card-custom {
+        padding: 1.2rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .vet-card-custom .card-image-small {
+        width: 70px;
+        height: 70px;
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .vet-card-content {
+        padding-right: 0;
+        width: 100%;
+    }
+
+    .vet-on-duty {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-bottom: 10px;
+        align-self: flex-start;
+    }
+
+    .vet-contact-info {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .vets-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .vet-card-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .vet-description {
+        font-size: 0.85rem;
+    }
+
+    .calendar-section-custom {
+        padding: 1.2rem;
+    }
+
+    .calendar-grid-custom div {
+        padding: 6px;
+        font-size: 0.8rem;
+        min-height: 32px;
     }
 }

@@ -1,3 +1,440 @@
+<!--&lt;!&ndash;<!DOCTYPE html>&ndash;&gt;-->
+<!--&lt;!&ndash;<html lang="es">&ndash;&gt;-->
+<!--&lt;!&ndash;<head>&ndash;&gt;-->
+<!--&lt;!&ndash;    <meta charset="UTF-8">&ndash;&gt;-->
+<!--&lt;!&ndash;    <meta name="viewport" content="width=device-width, initial-scale=1.0">&ndash;&gt;-->
+<!--&lt;!&ndash;    <link rel="shortcut icon" href="../../assets/images/logo2.png">&ndash;&gt;-->
+<!--&lt;!&ndash;    <title>Veterinarias - Bitacora Pet</title>&ndash;&gt;-->
+<!--&lt;!&ndash;    &lt;!&ndash; Bootstrap CSS &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"&ndash;&gt;-->
+<!--&lt;!&ndash;          rel="stylesheet"&ndash;&gt;-->
+<!--&lt;!&ndash;          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"&ndash;&gt;-->
+<!--&lt;!&ndash;          crossorigin="anonymous">&ndash;&gt;-->
+<!--&lt;!&ndash;    <link rel="stylesheet" href="../../assets/css/styles-bootstrap.css">&ndash;&gt;-->
+<!--&lt;!&ndash;</head>&ndash;&gt;-->
+<!--&lt;!&ndash;<body class="d-flex flex-column min-vh-100">&ndash;&gt;-->
+<!--&lt;!&ndash;<header>&ndash;&gt;-->
+<!--&lt;!&ndash;    <nav class="navbar navbar-expand-lg navbar-custom">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="container-fluid">&ndash;&gt;-->
+<!--&lt;!&ndash;            <a class="navbar-brand text-white fw-bold" href="../../index.html">Bitacora Pet</a>&ndash;&gt;-->
+<!--&lt;!&ndash;            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">&ndash;&gt;-->
+<!--&lt;!&ndash;                <span class="navbar-toggler-icon"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;            </button>&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="collapse navbar-collapse" id="navbarNav">&ndash;&gt;-->
+<!--&lt;!&ndash;                <ul class="navbar-nav me-auto">&ndash;&gt;-->
+
+<!--&lt;!&ndash;                    <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <a class="nav-link" href="../pets/my-pets-home.html">Mis mascotas</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <a class="nav-link active" href="vets.html">Veterinarias</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <a class="nav-link" href="../vaccination/vaccination-calendar.html">Calendario de vacunaciones</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;                <ul class="navbar-nav">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <a class="nav-link" href="../../index.html">Inicio</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <a class="nav-link" href="../auth/login.html">Ingresar</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </nav>&ndash;&gt;-->
+<!--&lt;!&ndash;</header>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<main class="flex-grow-1">&ndash;&gt;-->
+<!--&lt;!&ndash;    <nav class="breadcrumb-custom">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="container">&ndash;&gt;-->
+<!--&lt;!&ndash;            <a href="../../index.html" class="text-decoration-none">Home</a>&ndash;&gt;-->
+<!--&lt;!&ndash;            <span class="mx-2">/</span>&ndash;&gt;-->
+<!--&lt;!&ndash;            <a class="active text-decoration-none">Veterinarias</a>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </nav>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <div class="container py-5">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="row g-5">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="col-lg-8">&ndash;&gt;-->
+<!--&lt;!&ndash;                <section>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <h2 class="h3 fw-bold">Veterinarias</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <p class="text-muted mb-4">Veterinarias de turno hoy</p>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                    <div class="vet-card-custom mb-3">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <img src="../../assets/images/logo2.png"&ndash;&gt;-->
+<!--&lt;!&ndash;                             class="card-image-small"&ndash;&gt;-->
+<!--&lt;!&ndash;                             alt="Logo Huella perrito para item veterinaria">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="card-content">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <h3 class="h6 fw-bold">Rio vet</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <p class="mb-0">Descripción de veterinaria</p>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                    <div class="vet-card-custom mb-3">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <img src="../../assets/images/logo2.png"&ndash;&gt;-->
+<!--&lt;!&ndash;                             class="card-image-small"&ndash;&gt;-->
+<!--&lt;!&ndash;                             alt="Logo Huella perrito para item veterinaria">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="card-content">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <h3 class="h6 fw-bold">Arocena</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <p class="mb-0">Descripción de veterinaria</p>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                    <div class="vet-card-custom mb-3">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <img src="../../assets/images/logo2.png"&ndash;&gt;-->
+<!--&lt;!&ndash;                             class="card-image-small"&ndash;&gt;-->
+<!--&lt;!&ndash;                             alt="Logo Huella perrito para item veterinaria">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="card-content">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <h3 class="h6 fw-bold">Huellitas</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <p class="mb-0">Descripción de veterinaria</p>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                </section>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <div class="col-lg-4">&ndash;&gt;-->
+<!--&lt;!&ndash;                <div class="calendar-section-custom">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <h3 class="h5 fw-bold mb-3">Calendario</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <div class="calendar">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="d-flex justify-content-between align-items-center mb-3">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <button class="btn btn-sm btn-outline-custom">‹</button>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <h4 class="h6 mb-0">Octubre 2025</h4>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <button class="btn btn-sm btn-outline-custom">›</button>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="calendar-grid-custom">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="calendar-day">Lun</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="calendar-day">Mar</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="calendar-day">Mié</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="calendar-day">Jue</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="calendar-day">Vie</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="calendar-day">Sáb</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="calendar-day">Dom</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="empty"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="empty"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="empty"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="empty"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="empty"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="calendar-day">4</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="calendar-day">5</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="calendar-day">6</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="calendar-day">7</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="calendar-day">8</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="calendar-day">9</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="calendar-day">10</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="calendar-day">11</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="calendar-day">12</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="calendar-day">13</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="calendar-day">14</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="calendar-day today">15</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="calendar-day">16</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="calendar-day">17</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="calendar-day">18</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="calendar-day">19</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="calendar-day">20</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="calendar-day">21</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="calendar-day">22</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="calendar-day">23</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="calendar-day">24</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="calendar-day">25</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="calendar-day">26</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="calendar-day">27</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="calendar-day">28</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="calendar-day">29</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="calendar-day">30</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="calendar-day">31</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <p class="calendar-date mt-3">15 de Octubre de 2025</p>&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;</main>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<footer class="footer-custom mt-auto">&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="container">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="row">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="col-md-6">&ndash;&gt;-->
+<!--&lt;!&ndash;                <h2 class="h5 fw-bold">Bitacora Pet</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;                <h2 class="h6">Martina Garcia</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="col-md-6 text-md-end">&ndash;&gt;-->
+<!--&lt;!&ndash;                <h2 class="h5 fw-bold">Curso Desarrollo Web</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;                <h2 class="h6">Coderhouse 2025</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;</footer>&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash; Bootstrap JS Bundle &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"&ndash;&gt;-->
+<!--&lt;!&ndash;        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"&ndash;&gt;-->
+<!--&lt;!&ndash;        crossorigin="anonymous"></script>&ndash;&gt;-->
+<!--&lt;!&ndash;</body>&ndash;&gt;-->
+<!--&lt;!&ndash;</html>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<!DOCTYPE html>&ndash;&gt;-->
+<!--&lt;!&ndash;<html lang="es">&ndash;&gt;-->
+<!--&lt;!&ndash;<head>&ndash;&gt;-->
+<!--&lt;!&ndash;    <meta charset="UTF-8">&ndash;&gt;-->
+<!--&lt;!&ndash;    <meta name="viewport" content="width=device-width, initial-scale=1.0">&ndash;&gt;-->
+<!--&lt;!&ndash;    <link rel="shortcut icon" href="../../assets/images/logo2.png">&ndash;&gt;-->
+<!--&lt;!&ndash;    <title>Veterinarias - Bitacora Pet</title>&ndash;&gt;-->
+<!--&lt;!&ndash;    &lt;!&ndash; Bootstrap CSS &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"&ndash;&gt;-->
+<!--&lt;!&ndash;          rel="stylesheet"&ndash;&gt;-->
+<!--&lt;!&ndash;          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"&ndash;&gt;-->
+<!--&lt;!&ndash;          crossorigin="anonymous">&ndash;&gt;-->
+<!--&lt;!&ndash;    &lt;!&ndash; Font Awesome para iconos &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">&ndash;&gt;-->
+<!--&lt;!&ndash;    <link rel="stylesheet" href="../../assets/css/styles-bootstrap.css">&ndash;&gt;-->
+<!--&lt;!&ndash;</head>&ndash;&gt;-->
+<!--&lt;!&ndash;<body class="d-flex flex-column min-vh-100">&ndash;&gt;-->
+<!--&lt;!&ndash;<header>&ndash;&gt;-->
+<!--&lt;!&ndash;    <nav class="navbar navbar-expand-lg navbar-custom">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="container-fluid">&ndash;&gt;-->
+<!--&lt;!&ndash;            <a class="navbar-brand text-white fw-bold" href="../../index.html">Bitacora Pet</a>&ndash;&gt;-->
+<!--&lt;!&ndash;            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">&ndash;&gt;-->
+<!--&lt;!&ndash;                <span class="navbar-toggler-icon"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;            </button>&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="collapse navbar-collapse" id="navbarNav">&ndash;&gt;-->
+<!--&lt;!&ndash;                <ul class="navbar-nav me-auto">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <a class="nav-link" href="../pets/my-pets-home.html">Mis mascotas</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <a class="nav-link active" href="vets.html">Veterinarias</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <a class="nav-link" href="../vaccination/vaccination-calendar.html">Calendario de vacunaciones</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;                <ul class="navbar-nav">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <a class="nav-link" href="../../index.html">Inicio</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <a class="nav-link" href="../auth/login.html">Ingresar</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </nav>&ndash;&gt;-->
+<!--&lt;!&ndash;</header>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<main class="flex-grow-1">&ndash;&gt;-->
+<!--&lt;!&ndash;    <nav class="breadcrumb-custom">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="container">&ndash;&gt;-->
+<!--&lt;!&ndash;            <a href="../../index.html" class="text-decoration-none">Home</a>&ndash;&gt;-->
+<!--&lt;!&ndash;            <span class="mx-2">/</span>&ndash;&gt;-->
+<!--&lt;!&ndash;            <a class="active text-decoration-none">Veterinarias</a>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </nav>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <div class="vets-main-container">&ndash;&gt;-->
+<!--&lt;!&ndash;        <header class="vets-header">&ndash;&gt;-->
+<!--&lt;!&ndash;            <h1>Veterinarias</h1>&ndash;&gt;-->
+<!--&lt;!&ndash;            <p class="vets-subtitle">&ndash;&gt;-->
+<!--&lt;!&ndash;                <i class="fas fa-paw" style="color: #6c23c5;"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                Encuentra las mejores veterinarias y servicios para el cuidado de tus mascotas&ndash;&gt;-->
+<!--&lt;!&ndash;                <i class="fas fa-paw" style="color: #b589ef;"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;            </p>&ndash;&gt;-->
+<!--&lt;!&ndash;        </header>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;        <div class="row g-5">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="col-lg-8">&ndash;&gt;-->
+<!--&lt;!&ndash;                <div class="vets-grid">&ndash;&gt;-->
+<!--&lt;!&ndash;                    &lt;!&ndash; Veterinaria 1 &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                    <div class="vet-card-enhanced">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="vet-on-duty">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <i class="fas fa-clock"></i> DE TURNO&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="vet-logo-container">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <img src="../../assets/images/logo2.png"&ndash;&gt;-->
+<!--&lt;!&ndash;                                 class="vet-logo"&ndash;&gt;-->
+<!--&lt;!&ndash;                                 alt="Logo Veterinaria Rio Vet">&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="vet-card-content">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <h3>Rio Vet</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <span class="vet-specialty">Clínica General & Emergencias</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <p class="vet-description">&ndash;&gt;-->
+<!--&lt;!&ndash;                                Centro veterinario especializado en medicina general, cirugías y atención de emergencias 24/7. Contamos con equipamiento de última generación.&ndash;&gt;-->
+<!--&lt;!&ndash;                            </p>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="vet-contact-info">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="contact-item">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <i class="fas fa-map-marker-alt"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <span>Av. Siempre Viva 123, Montevideo</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="contact-item">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <i class="fas fa-phone"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <span>2400 1234</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="contact-item">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <i class="fas fa-clock"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <span>24/7</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                    &lt;!&ndash; Veterinaria 2 &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                    <div class="vet-card-enhanced">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="vet-on-duty">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <i class="fas fa-clock"></i> DE TURNO&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="vet-logo-container">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <img src="../../assets/images/logo2.png"&ndash;&gt;-->
+<!--&lt;!&ndash;                                 class="vet-logo"&ndash;&gt;-->
+<!--&lt;!&ndash;                                 alt="Logo Veterinaria Arocena">&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="vet-card-content">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <h3>Arocena</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <span class="vet-specialty">Especialistas en Pequeños Animales</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <p class="vet-description">&ndash;&gt;-->
+<!--&lt;!&ndash;                                Clínica veterinaria con más de 20 años de experiencia, especializada en el cuidado de perros y gatos. Servicios de nutrición y rehabilitación.&ndash;&gt;-->
+<!--&lt;!&ndash;                            </p>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="vet-contact-info">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="contact-item">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <i class="fas fa-map-marker-alt"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <span>Bulevar Artigas 456, Montevideo</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="contact-item">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <i class="fas fa-phone"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <span>2400 5678</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="contact-item">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <i class="fas fa-clock"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <span>8:00 - 20:00</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                    &lt;!&ndash; Veterinaria 3 &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                    <div class="vet-card-enhanced">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="vet-logo-container">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <img src="../../assets/images/logo2.png"&ndash;&gt;-->
+<!--&lt;!&ndash;                                 class="vet-logo"&ndash;&gt;-->
+<!--&lt;!&ndash;                                 alt="Logo Veterinaria Huellitas">&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="vet-card-content">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <h3>Huellitas</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <span class="vet-specialty">Medicina Preventiva & Vacunación</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <p class="vet-description">&ndash;&gt;-->
+<!--&lt;!&ndash;                                Centro especializado en medicina preventiva, vacunación y control de parásitos. Atención personalizada para cachorros y mascotas senior.&ndash;&gt;-->
+<!--&lt;!&ndash;                            </p>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="vet-contact-info">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="contact-item">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <i class="fas fa-map-marker-alt"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <span>Calle Petunia 789, Montevideo</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="contact-item">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <i class="fas fa-phone"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <span>2400 9012</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="contact-item">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <i class="fas fa-clock"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <span>9:00 - 19:00</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;             &ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <div class="col-lg-4">&ndash;&gt;-->
+<!--&lt;!&ndash;                <div class="calendar-section-enhanced">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <h3>Calendario</h3>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                    <div class="calendar-controls">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <button class="prev-btn">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <i class="fas fa-chevron-left"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </button>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <h4 class="calendar-title">Octubre 2025</h4>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <button class="next-btn">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <i class="fas fa-chevron-right"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </button>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                    <div class="calendar-grid-enhanced">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="calendar-header">Lun</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="calendar-header">Mar</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="calendar-header">Mié</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="calendar-header">Jue</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="calendar-header">Vie</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="calendar-header">Sáb</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="calendar-header">Dom</div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                        <div class="empty-day"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="empty-day"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="empty-day"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="empty-day"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="empty-day"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="calendar-day-enhanced">4</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="calendar-day-enhanced">5</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="calendar-day-enhanced">6</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="calendar-day-enhanced">7</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="calendar-day-enhanced">8</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="calendar-day-enhanced">9</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="calendar-day-enhanced">10</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="calendar-day-enhanced">11</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="calendar-day-enhanced">12</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="calendar-day-enhanced">13</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="calendar-day-enhanced">14</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="calendar-day-enhanced today">15</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="calendar-day-enhanced">16</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="calendar-day-enhanced">17</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="calendar-day-enhanced">18</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="calendar-day-enhanced">19</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="calendar-day-enhanced">20</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="calendar-day-enhanced">21</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="calendar-day-enhanced">22</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="calendar-day-enhanced">23</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="calendar-day-enhanced">24</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="calendar-day-enhanced">25</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="calendar-day-enhanced">26</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="calendar-day-enhanced">27</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="calendar-day-enhanced">28</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="calendar-day-enhanced">29</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="calendar-day-enhanced">30</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="calendar-day-enhanced">31</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                    <p class="current-date">15 de Octubre de 2025</p>&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;</main>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<footer class="footer-custom mt-auto">&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="container">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="row">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="col-md-6">&ndash;&gt;-->
+<!--&lt;!&ndash;                <h2 class="h5 fw-bold">Bitacora Pet</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;                <h2 class="h6">Martina Garcia</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="col-md-6 text-md-end">&ndash;&gt;-->
+<!--&lt;!&ndash;                <h2 class="h5 fw-bold">Curso Desarrollo Web</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;                <h2 class="h6">Coderhouse 2025</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;</footer>&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash; Bootstrap JS Bundle &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"&ndash;&gt;-->
+<!--&lt;!&ndash;        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"&ndash;&gt;-->
+<!--&lt;!&ndash;        crossorigin="anonymous"></script>&ndash;&gt;-->
+<!--&lt;!&ndash;</body>&ndash;&gt;-->
+<!--&lt;!&ndash;</html>&ndash;&gt;-->
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,6 +447,8 @@
           rel="stylesheet"
           integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
           crossorigin="anonymous">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../../assets/css/styles-bootstrap.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
@@ -22,7 +461,6 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
-
                     <li class="nav-item">
                         <a class="nav-link" href="../pets/my-pets-home.html">Mis mascotas</a>
                     </li>
@@ -30,7 +468,8 @@
                         <a class="nav-link active" href="vets.html">Veterinarias</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../vaccination/vaccination-calendar.html">Calendario de vacunaciones</a>
+                        <a class="nav-link" href="../vaccination/vaccination-calendar.html">Calendario de
+                            vacunaciones</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav">
@@ -55,101 +494,190 @@
         </div>
     </nav>
 
-    <div class="container py-5">
-        <div class="row g-5">
-            <div class="col-lg-8">
-                <section>
-                    <h2 class="h3 fw-bold">Veterinarias</h2>
-                    <p class="text-muted mb-4">Veterinarias de turno hoy</p>
+    <div class="vets-main-container">
+        <header class="vets-header">
+            <h1>Veterinarias</h1>
+            <p class="vets-subtitle">
+                <i class="fas fa-paw" style="color: #6c23c5;"></i>
+                Veterinarias de turno hoy - Cuidamos a tus mascotas como tú lo harías
+                <i class="fas fa-paw" style="color: #b589ef;"></i>
+            </p>
+        </header>
 
-                    <div class="vet-card-custom mb-3">
-                        <img src="../../assets/images/logo2.png"
-                             class="card-image-small"
-                             alt="Logo Huella perrito para item veterinaria">
-                        <div class="card-content">
-                            <h3 class="h6 fw-bold">Rio vet</h3>
-                            <p class="mb-0">Descripción de veterinaria</p>
-                        </div>
-                    </div>
+        <div class="container py-4">
+            <div class="row g-5">
 
-                    <div class="vet-card-custom mb-3">
-                        <img src="../../assets/images/logo2.png"
-                             class="card-image-small"
-                             alt="Logo Huella perrito para item veterinaria">
-                        <div class="card-content">
-                            <h3 class="h6 fw-bold">Arocena</h3>
-                            <p class="mb-0">Descripción de veterinaria</p>
-                        </div>
-                    </div>
+                <!-- Columna izquierda: Lista de veterinarias -->
+                <div class="col-lg-6">
+                    <section>
+                        <h2 class="h4 fw-bold mb-4" style="color: var(--primary-color);">Veterinarias
+                            Disponibles</h2>
 
-                    <div class="vet-card-custom mb-3">
-                        <img src="../../assets/images/logo2.png"
-                             class="card-image-small"
-                             alt="Logo Huella perrito para item veterinaria">
-                        <div class="card-content">
-                            <h3 class="h6 fw-bold">Huellitas</h3>
-                            <p class="mb-0">Descripción de veterinaria</p>
+                        <div class="vet-card-custom">
+                            <div class="card-image-small">
+                                <img src="../../assets/images/logo2.png"
+                                     alt="Logo Huella perrito para item veterinaria">
+                            </div>
+                            <div class="vet-on-duty">
+                                <i class="fas fa-clock"></i> DE TURNO
+                            </div>
+                            <div class="vet-card-content">
+                                <div class="vet-on-duty">
+                                    <i class="fas fa-clock"></i> DE TURNO
+                                </div>
+                                <h3>Rio Vet</h3>
+                                <span class="vet-specialty">Clínica General & Emergencias</span>
+                                <p class="vet-description">
+                                    Centro veterinario especializado en medicina general, cirugías y atención de
+                                    emergencias
+                                    24/7. Contamos con equipamiento de última generación.
+                                </p>
+                                <div class="vet-contact-info">
+                                    <div class="contact-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Av. Siempre Viva 123, Montevideo</span>
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fas fa-phone"></i>
+                                        <span>2400 1234</span>
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fas fa-clock"></i>
+                                        <span>24/7</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </section>
-            </div>
 
-            <div class="col-lg-4">
-                <div class="calendar-section-custom">
-                    <h3 class="h5 fw-bold mb-3">Calendario</h3>
-                    <div class="calendar">
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <button class="btn btn-sm btn-outline-custom">‹</button>
-                            <h4 class="h6 mb-0">Octubre 2025</h4>
-                            <button class="btn btn-sm btn-outline-custom">›</button>
+                        <div class="vet-card-custom">
+                            <div class="card-image-small">
+                                <img src="../../assets/images/logo2.png"
+                                     alt="Logo Huella perrito para item veterinaria">
+                            </div>
+                            <div class="vet-card-content">
+                                <h3>Arocena</h3>
+                                <span class="vet-specialty">Especialistas en Pequeños Animales</span>
+                                <p class="vet-description">
+                                    Clínica veterinaria con más de 20 años de experiencia, especializada en el cuidado
+                                    de
+                                    perros y gatos. Servicios de nutrición y rehabilitación.
+                                </p>
+                                <div class="vet-contact-info">
+                                    <div class="contact-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Bulevar Artigas 456, Montevideo</span>
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fas fa-phone"></i>
+                                        <span>2400 5678</span>
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fas fa-clock"></i>
+                                        <span>8:00 - 20:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--                                <div class="card-content">-->
+                            <!--                                    <h3>Arocena</h3>-->
+                            <!--                                    <p class="mb-0">Medicina general - Vacunación - Consultas</p>-->
+                            <!--                                </div>-->
                         </div>
-                        <div class="calendar-grid-custom">
-                            <div class="calendar-day">Lun</div>
-                            <div class="calendar-day">Mar</div>
-                            <div class="calendar-day">Mié</div>
-                            <div class="calendar-day">Jue</div>
-                            <div class="calendar-day">Vie</div>
-                            <div class="calendar-day">Sáb</div>
-                            <div class="calendar-day">Dom</div>
-                            <div class="empty"></div>
-                            <div class="empty"></div>
-                            <div class="empty"></div>
-                            <div class="empty"></div>
-                            <div class="empty"></div>
-                            <div class="calendar-day">4</div>
-                            <div class="calendar-day">5</div>
-                            <div class="calendar-day">6</div>
-                            <div class="calendar-day">7</div>
-                            <div class="calendar-day">8</div>
-                            <div class="calendar-day">9</div>
-                            <div class="calendar-day">10</div>
-                            <div class="calendar-day">11</div>
-                            <div class="calendar-day">12</div>
-                            <div class="calendar-day">13</div>
-                            <div class="calendar-day">14</div>
-                            <div class="calendar-day today">15</div>
-                            <div class="calendar-day">16</div>
-                            <div class="calendar-day">17</div>
-                            <div class="calendar-day">18</div>
-                            <div class="calendar-day">19</div>
-                            <div class="calendar-day">20</div>
-                            <div class="calendar-day">21</div>
-                            <div class="calendar-day">22</div>
-                            <div class="calendar-day">23</div>
-                            <div class="calendar-day">24</div>
-                            <div class="calendar-day">25</div>
-                            <div class="calendar-day">26</div>
-                            <div class="calendar-day">27</div>
-                            <div class="calendar-day">28</div>
-                            <div class="calendar-day">29</div>
-                            <div class="calendar-day">30</div>
-                            <div class="calendar-day">31</div>
+
+                        <div class="vet-card-custom">
+                            <div class="card-image-small">
+                                <img src="../../assets/images/logo2.png"
+                                     alt="Logo Huella perrito para item veterinaria">
+                            </div>
+                            <div class="vet-card-content">
+                                <h3>Huellitas</h3>
+                                <span class="vet-specialty">Medicina Preventiva & Vacunación</span>
+                                <p class="vet-description">
+                                    Centro especializado en medicina preventiva, vacunación y control de parásitos.
+                                    Atención
+                                    personalizada para cachorros y mascotas senior.
+                                </p>
+                                <div class="vet-contact-info">
+                                    <div class="contact-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Calle Petunia 789, Montevideo</span>
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fas fa-phone"></i>
+                                        <span>2400 9012</span>
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fas fa-clock"></i>
+                                        <span>9:00 - 19:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--                                <div class="card-content">-->
+                            <!--                                    <h3>Huellitas</h3>-->
+                            <!--                                    <p class="mb-0">Cuidado preventivo - Nutrición - Rehabilitación</p>-->
+                            <!--                                </div>-->
                         </div>
+                    </section>
+                </div>
+
+                <!-- Columna derecha: Calendario -->
+                <div class="col-lg-6">
+                    <div class="calendar-section-custom">
+                        <h3>Calendario</h3>
+                        <div class="calendar">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <button class="btn btn-sm btn-outline-custom">‹</button>
+                                <h4 class="h6 mb-0">Octubre 2025</h4>
+                                <button class="btn btn-sm btn-outline-custom">›</button>
+                            </div>
+                            <div class="calendar-grid-custom">
+                                <div class="calendar-day">Lun</div>
+                                <div class="calendar-day">Mar</div>
+                                <div class="calendar-day">Mié</div>
+                                <div class="calendar-day">Jue</div>
+                                <div class="calendar-day">Vie</div>
+                                <div class="calendar-day">Sáb</div>
+                                <div class="calendar-day">Dom</div>
+                                <div class="calendar-day">29</div>
+                                <div class="calendar-day">30</div>
+                                <div class="calendar-day">1</div>
+                                <div class="calendar-day">2</div>
+                                <div class="calendar-day">3</div>
+                                <div class="calendar-day">4</div>
+                                <div class="calendar-day">5</div>
+                                <div class="calendar-day">6</div>
+                                <div class="calendar-day">7</div>
+                                <div class="calendar-day">8</div>
+                                <div class="calendar-day">9</div>
+                                <div class="calendar-day">10</div>
+                                <div class="calendar-day">11</div>
+                                <div class="calendar-day">12</div>
+                                <div class="calendar-day">13</div>
+                                <div class="calendar-day">14</div>
+                                <div class="calendar-day today">15</div>
+                                <div class="calendar-day">16</div>
+                                <div class="calendar-day">17</div>
+                                <div class="calendar-day">18</div>
+                                <div class="calendar-day">19</div>
+                                <div class="calendar-day">20</div>
+                                <div class="calendar-day">21</div>
+                                <div class="calendar-day">22</div>
+                                <div class="calendar-day">23</div>
+                                <div class="calendar-day">24</div>
+                                <div class="calendar-day">25</div>
+                                <div class="calendar-day">26</div>
+                                <div class="calendar-day">27</div>
+                                <div class="calendar-day">28</div>
+                                <div class="calendar-day">29</div>
+                                <div class="calendar-day">30</div>
+                                <div class="calendar-day">31</div>
+                            </div>
+                        </div>
+                        <p class="calendar-date mt-3">15 de Octubre de 2025</p>
                     </div>
-                    <p class="calendar-date mt-3">15 de Octubre de 2025</p>
                 </div>
             </div>
         </div>
+
     </div>
 </main>
 
