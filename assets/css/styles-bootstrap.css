@@ -1937,3 +1937,1036 @@ main {
         min-height: 32px;
     }
 }
+
+/***********************************************************************/
+/**************************    VACCINATION PAGE UPDATE  ****************/
+/***********************************************************************/
+
+/* Contenedor principal para vacunación */
+.vaccination-main-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 30px auto;
+    padding: 40px 20px;
+    background: linear-gradient(145deg, #f8f4ff 0%, #ffffff 100%);
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(108, 35, 197, 0.1),
+    0 5px 15px rgba(108, 35, 197, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(181, 137, 239, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.vaccination-main-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(to right, #6c23c5, #b589ef, #6c23c5);
+    z-index: 1;
+}
+
+/* Header de vacunación */
+.vaccination-header {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.vaccination-header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    background: linear-gradient(to right, #6c23c5, #b589ef);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 4px 8px rgba(108, 35, 197, 0.1);
+    letter-spacing: -0.5px;
+}
+
+.vaccination-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    background: rgba(181, 137, 239, 0.08);
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid rgba(181, 137, 239, 0.2);
+    box-shadow: 0 4px 12px rgba(108, 35, 197, 0.05);
+}
+
+/* Grid de vacunas */
+.vaccination-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+/* Tarjetas de vacunas mejoradas */
+.vaccination-card-enhanced {
+    display: flex;
+    align-items: flex-start;
+    border: 2px solid rgba(181, 137, 239, 0.3);
+    border-radius: 16px;
+    padding: 1.5rem;
+    background: white;
+    transition: all 0.3s ease;
+    position: relative;
+    box-shadow: 0 8px 20px rgba(108, 35, 197, 0.1);
+    min-height: 160px;
+}
+
+.vaccination-card-enhanced:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(108, 35, 197, 0.2);
+    border-color: rgba(108, 35, 197, 0.4);
+}
+
+/* Imagen de vacuna */
+.vaccination-card-enhanced .card-image-small {
+    width: 70px;
+    height: 70px;
+    border-radius: 12px;
+    margin-right: 1.5rem;
+    flex-shrink: 0;
+    background: linear-gradient(145deg, #6c23c5, #8a4cd3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 20px rgba(108, 35, 197, 0.25);
+    overflow: hidden;
+}
+
+.vaccination-card-enhanced .card-image-small img {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+/* Contenido de la tarjeta */
+.vaccination-card-content {
+    flex: 1;
+}
+
+.vaccination-card-content h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.vaccination-date {
+    display: inline-block;
+    background: linear-gradient(to right, rgba(108, 35, 197, 0.1), rgba(181, 137, 239, 0.1));
+    color: #6c23c5;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    border: 1px solid rgba(108, 35, 197, 0.2);
+}
+
+.vaccination-description {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Badge de próxima aplicación */
+.vaccination-next {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(to right, #ba0069, #d63384);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    box-shadow: 0 4px 8px rgba(186, 0, 105, 0.3);
+    z-index: 2;
+    white-space: nowrap;
+}
+
+/* Alerta informativa mejorada */
+.vaccination-alert {
+    background: linear-gradient(145deg, rgba(108, 35, 197, 0.08), rgba(181, 137, 239, 0.12));
+    border: 2px solid rgba(181, 137, 239, 0.3);
+    border-radius: 16px;
+    padding: 25px;
+    margin-top: 40px;
+    box-shadow: 0 8px 20px rgba(108, 35, 197, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.vaccination-alert::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, #6c23c5, #b589ef);
+}
+
+.vaccination-alert h4 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.vaccination-alert p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.vaccination-alert p:last-child {
+    margin-bottom: 0;
+}
+
+.vaccination-alert strong {
+    color: var(--primary-color);
+}
+
+/* Paw decorativo */
+.vaccination-paw {
+    color: #6c23c5;
+    font-size: 1.2rem;
+    margin: 0 6px;
+    text-shadow: 0 2px 4px rgba(108, 35, 197, 0.2);
+}
+
+/* Responsive para vacunación */
+@media (max-width: 768px) {
+    .vaccination-main-container {
+        padding: 25px 15px;
+        margin: 20px auto;
+    }
+
+    .vaccination-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .vaccination-subtitle {
+        font-size: 1.1rem;
+        padding: 15px;
+    }
+
+    .vaccination-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .vaccination-card-enhanced {
+        padding: 1.2rem;
+    }
+
+    .vaccination-card-enhanced .card-image-small {
+        width: 60px;
+        height: 60px;
+        margin-right: 1rem;
+    }
+
+    .vaccination-card-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .vaccination-description {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .vaccination-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .vaccination-card-enhanced {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .vaccination-card-enhanced .card-image-small {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .vaccination-next {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-bottom: 10px;
+        align-self: center;
+    }
+
+    .vaccination-alert {
+        padding: 20px;
+    }
+}
+
+/***********************************************************************/
+/**************************    LOGIN PAGE UPDATE  **********************/
+/***********************************************************************/
+
+/* Contenedor principal para login */
+.login-main-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 40px auto;
+    padding: 40px 20px;
+    background: linear-gradient(145deg, #f8f4ff 0%, #ffffff 100%);
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(108, 35, 197, 0.1),
+    0 5px 15px rgba(108, 35, 197, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(181, 137, 239, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.login-main-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(to right, #6c23c5, #b589ef, #6c23c5);
+    z-index: 1;
+}
+
+/* Header de login */
+.login-header {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.login-header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    background: linear-gradient(to right, #6c23c5, #b589ef);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 4px 8px rgba(108, 35, 197, 0.1);
+    letter-spacing: -0.5px;
+}
+
+.login-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    background: rgba(181, 137, 239, 0.08);
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid rgba(181, 137, 239, 0.2);
+    box-shadow: 0 4px 12px rgba(108, 35, 197, 0.05);
+}
+
+/* Tarjeta de login mejorada */
+.login-card {
+    background: white;
+    border: 2px solid rgba(181, 137, 239, 0.3);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(108, 35, 197, 0.1);
+    position: relative;
+    overflow: hidden;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.login-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(to right, #6c23c5, #b589ef);
+}
+
+/* Icono decorativo */
+.login-icon {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.login-icon i {
+    font-size: 3.5rem;
+    background: linear-gradient(to right, #6c23c5, #b589ef);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Formulario de login */
+.login-form label {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    display: block;
+}
+
+.login-form .form-control {
+    border: 2px solid rgba(181, 137, 239, 0.3);
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+.login-form .form-control:focus {
+    border-color: #6c23c5;
+    box-shadow: 0 0 0 3px rgba(108, 35, 197, 0.1);
+    outline: none;
+}
+
+.login-form .form-control:hover {
+    border-color: rgba(108, 35, 197, 0.5);
+}
+
+/* Botón de login mejorado */
+.login-btn {
+    background: linear-gradient(to right, #6c23c5, #8a4cd3);
+    border: none;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 14px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+    box-shadow: 0 8px 20px rgba(108, 35, 197, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.login-btn:hover {
+    background: linear-gradient(to right, #8a4cd3, #b589ef);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(108, 35, 197, 0.35);
+    color: white;
+}
+
+.login-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Enlaces adicionales */
+.login-links {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(181, 137, 239, 0.2);
+}
+
+.login-links a {
+    color: #6c23c5;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.login-links a:hover {
+    color: #8a4cd3;
+    text-decoration: underline;
+}
+
+/* Paw decorativo */
+.login-paw {
+    color: #6c23c5;
+    font-size: 1.2rem;
+    margin: 0 6px;
+    text-shadow: 0 2px 4px rgba(108, 35, 197, 0.2);
+}
+
+/* Mensaje de bienvenida */
+.login-welcome {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsive para login */
+@media (max-width: 768px) {
+    .login-main-container {
+        padding: 25px 15px;
+        margin: 20px auto;
+    }
+
+    .login-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .login-subtitle {
+        font-size: 1.1rem;
+        padding: 15px;
+    }
+
+    .login-card {
+        padding: 30px 25px;
+    }
+
+    .login-icon i {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .login-card {
+        padding: 25px 20px;
+    }
+
+    .login-form .form-control {
+        padding: 10px 14px;
+    }
+
+    .login-btn {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+}
+
+
+/***********************************************************************/
+/**************************    PET DETAIL PAGE UPDATE  *****************/
+/***********************************************************************/
+
+/* Contenedor principal para detalle de mascota */
+.pet-detail-main-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 30px auto;
+    padding: 40px 20px;
+    background: linear-gradient(145deg, #f8f4ff 0%, #ffffff 100%);
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(108, 35, 197, 0.1),
+    0 5px 15px rgba(108, 35, 197, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(181, 137, 239, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.pet-detail-main-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(to right, #6c23c5, #b589ef, #6c23c5);
+    z-index: 1;
+}
+
+/* Header de detalle de mascota */
+.pet-detail-header {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.pet-detail-header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    background: linear-gradient(to right, #6c23c5, #b589ef);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 4px 8px rgba(108, 35, 197, 0.1);
+    letter-spacing: -0.5px;
+}
+
+.pet-detail-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    background: rgba(181, 137, 239, 0.08);
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid rgba(181, 137, 239, 0.2);
+    box-shadow: 0 4px 12px rgba(108, 35, 197, 0.05);
+}
+
+/* Contenido del detalle */
+.pet-detail-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Sección de imagen mejorada */
+.pet-image-section {
+    background: white;
+    border: 2px solid rgba(181, 137, 239, 0.3);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 10px 25px rgba(108, 35, 197, 0.1);
+    margin-bottom: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.pet-image-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(to right, #6c23c5, #b589ef);
+}
+
+.image-box-enhanced {
+    width: 100%;
+    height: 300px;
+    border: 2px solid rgba(181, 137, 239, 0.3);
+    border-radius: 16px;
+    margin-bottom: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(181, 137, 239, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #666;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Botón de cambiar imagen */
+.btn-change-image {
+    background: linear-gradient(to right, #6c23c5, #8a4cd3);
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-bottom: 10px;
+    box-shadow: 0 6px 15px rgba(108, 35, 197, 0.25);
+}
+
+.btn-change-image:hover {
+    background: linear-gradient(to right, #8a4cd3, #b589ef);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(108, 35, 197, 0.35);
+}
+
+/* Formulario mejorado */
+.pet-form-enhanced {
+    background: white;
+    border: 2px solid rgba(181, 137, 239, 0.3);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(108, 35, 197, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.pet-form-enhanced::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(to right, #6c23c5, #b589ef);
+}
+
+.form-group-custom label {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-group-custom .form-control {
+    border: 2px solid rgba(181, 137, 239, 0.3);
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+.form-group-custom .form-control:focus {
+    border-color: #6c23c5;
+    box-shadow: 0 0 0 3px rgba(108, 35, 197, 0.1);
+    outline: none;
+}
+
+.form-group-custom .form-control:hover {
+    border-color: rgba(108, 35, 197, 0.5);
+}
+
+/* Checkbox personalizado */
+.form-check-input {
+    width: 20px;
+    height: 20px;
+    margin-top: 0.25rem;
+    margin-right: 0.5rem;
+    border: 2px solid rgba(181, 137, 239, 0.5);
+}
+
+.form-check-input:checked {
+    background-color: #6c23c5;
+    border-color: #6c23c5;
+}
+
+.form-check-input:focus {
+    box-shadow: 0 0 0 3px rgba(108, 35, 197, 0.25);
+}
+
+.form-check-label {
+    font-weight: 600;
+    color: #555;
+}
+
+.tooltip {
+    font-size: 0.85rem;
+    color: #777;
+    margin-top: 5px;
+    display: block;
+    line-height: 1.4;
+}
+
+/* Botón de actualizar mejorado */
+.btn-update-pet {
+    background: linear-gradient(to right, #6c23c5, #8a4cd3);
+    border: none;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 14px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 15px;
+    box-shadow: 0 8px 20px rgba(108, 35, 197, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-update-pet:hover {
+    background: linear-gradient(to right, #8a4cd3, #b589ef);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(108, 35, 197, 0.35);
+    color: white;
+}
+
+/* Sección de eliminar mejorada */
+.delete-section-enhanced {
+    background: white;
+    border: 2px solid rgba(181, 137, 239, 0.3);
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 40px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(108, 35, 197, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.delete-section-enhanced::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(to right, #e21f1f, #ff6b6b);
+}
+
+.btn-delete-enhanced {
+    background: none;
+    border: 2px solid #e21f1f;
+    color: #e21f1f;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-delete-enhanced:hover {
+    background: #e21f1f;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(226, 31, 31, 0.25);
+}
+
+.delete-section-enhanced p {
+    color: #666;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+/* Paw decorativo */
+.pet-detail-paw {
+    color: #6c23c5;
+    font-size: 1.2rem;
+    margin: 0 6px;
+    text-shadow: 0 2px 4px rgba(108, 35, 197, 0.2);
+}
+
+/* Responsive para detalle de mascota */
+@media (max-width: 768px) {
+    .pet-detail-main-container {
+        padding: 25px 15px;
+        margin: 20px auto;
+    }
+
+    .pet-detail-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .pet-detail-subtitle {
+        font-size: 1.1rem;
+        padding: 15px;
+    }
+
+    .pet-image-section,
+    .pet-form-enhanced,
+    .delete-section-enhanced {
+        padding: 20px;
+    }
+
+    .image-box-enhanced {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pet-detail-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .image-box-enhanced {
+        height: 200px;
+    }
+
+    .btn-update-pet {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+
+    .form-group-custom .form-control {
+        padding: 10px 14px;
+    }
+}
+
+/***********************************************************************/
+/**************************    PET FORM PAGE UPDATE  *******************/
+/***********************************************************************/
+
+/* Contenedor principal para registro de mascota */
+.pet-form-main-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 30px auto;
+    padding: 40px 20px;
+    background: linear-gradient(145deg, #f8f4ff 0%, #ffffff 100%);
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(108, 35, 197, 0.1),
+    0 5px 15px rgba(108, 35, 197, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(181, 137, 239, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.pet-form-main-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(to right, #6c23c5, #b589ef, #6c23c5);
+    z-index: 1;
+}
+
+/* Header de registro de mascota */
+.pet-form-header {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.pet-form-header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    background: linear-gradient(to right, #6c23c5, #b589ef);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 4px 8px rgba(108, 35, 197, 0.1);
+    letter-spacing: -0.5px;
+}
+
+.pet-form-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    background: rgba(181, 137, 239, 0.08);
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid rgba(181, 137, 239, 0.2);
+    box-shadow: 0 4px 12px rgba(108, 35, 197, 0.05);
+}
+
+/* Contenido del formulario */
+.pet-form-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Botón de guardar específico para registro */
+.btn-save-pet {
+    background: linear-gradient(to right, #6c23c5, #8a4cd3);
+    border: none;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 14px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 15px;
+    box-shadow: 0 8px 20px rgba(108, 35, 197, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-save-pet:hover {
+    background: linear-gradient(to right, #8a4cd3, #b589ef);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(108, 35, 197, 0.35);
+    color: white;
+}
+
+/* Paw decorativo específico */
+.pet-form-paw {
+    color: #6c23c5;
+    font-size: 1.2rem;
+    margin: 0 6px;
+    text-shadow: 0 2px 4px rgba(108, 35, 197, 0.2);
+}
+
+/* Mensaje de éxito (opcional para después del guardado) */
+.pet-form-success {
+    background: linear-gradient(145deg, rgba(108, 197, 35, 0.08), rgba(181, 239, 137, 0.12));
+    border: 2px solid rgba(108, 197, 35, 0.3);
+    border-radius: 16px;
+    padding: 20px;
+    margin-top: 30px;
+    text-align: center;
+    display: none;
+}
+
+.pet-form-success.show {
+    display: block;
+}
+
+.pet-form-success i {
+    font-size: 2.5rem;
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+.pet-form-success h3 {
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+/* Para quitar los elementos que no necesitamos en registro */
+.pet-form-content .toggle-group,
+.pet-form-content .delete-section-enhanced {
+    display: none;
+}
+
+/* Responsive para formulario de registro */
+@media (max-width: 768px) {
+    .pet-form-main-container {
+        padding: 25px 15px;
+        margin: 20px auto;
+    }
+
+    .pet-form-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .pet-form-subtitle {
+        font-size: 1.1rem;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pet-form-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .btn-save-pet {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+}

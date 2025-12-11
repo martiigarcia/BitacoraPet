@@ -1,3 +1,165 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="es">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <link rel="shortcut icon" href="../../assets/images/logo2.png">-->
+<!--    <title>Registrar Mascota - Bitacora Pet</title>-->
+<!--    &lt;!&ndash; Bootstrap CSS &ndash;&gt;-->
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"-->
+<!--          rel="stylesheet"-->
+<!--          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"-->
+<!--          crossorigin="anonymous">-->
+<!--    <link rel="stylesheet" href="../../assets/css/styles-bootstrap.css">-->
+<!--</head>-->
+<!--<body class="d-flex flex-column min-vh-100">-->
+<!--<header>-->
+<!--    <nav class="navbar navbar-expand-lg navbar-custom">-->
+<!--        <div class="container-fluid">-->
+<!--            <a class="navbar-brand text-white fw-bold" href="../../index.html">Bitacora Pet</a>-->
+<!--            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">-->
+<!--                <span class="navbar-toggler-icon"></span>-->
+<!--            </button>-->
+<!--            <div class="collapse navbar-collapse" id="navbarNav">-->
+<!--                <ul class="navbar-nav me-auto">-->
+
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="../pets/my-pets-home.html">Mis mascotas</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="../vet/vets.html">Veterinarias</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="../vaccination/vaccination.html">Calendario de vacunaciones</a>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--                <ul class="navbar-nav">-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="../../index.html">Inicio</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="../auth/login.html">Salir</a>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </nav>-->
+<!--</header>-->
+
+<!--<main class="flex-grow-1">-->
+<!--    <nav class="breadcrumb-custom">-->
+<!--        <div class="container">-->
+<!--            <a href="../../index.html" class="text-decoration-none">Home</a>-->
+<!--            <span class="mx-2">/</span>-->
+<!--            <a href="../pets/my-pets-home.html" class="text-decoration-none">Mis mascotas</a>-->
+<!--            <span class="mx-2">/</span>-->
+<!--            <a class="active text-decoration-none">Registrar mascota</a>-->
+<!--        </div>-->
+<!--    </nav>-->
+
+<!--    <div class="container py-5">-->
+<!--        <h2 class="h3 fw-bold mb-4">Registrar nueva mascota</h2>-->
+
+<!--        <div class="row g-5">-->
+<!--            <div class="col-lg-5">-->
+<!--                <div class="image-box mb-3" style="background-image: url('https://media.istockphoto.com/id/1503385646/es/foto/retrato-divertido-y-feliz-perro-cachorro-shiba-inu-asom%C3%A1ndose-detr%C3%A1s-de-una-pancarta-azul.jpg?s=612x612&w=0&k=20&c=mMZ1Dvy0J8iNpF2boWkL8bo45vYYPi_AvZ1aYr9oO8w=')"></div>-->
+<!--                <button class="btn btn-outline-custom w-100 mb-2">Cambiar imagen</button>-->
+<!--                <p class="hint">Suba una nueva imagen desde la galería</p>-->
+<!--            </div>-->
+
+<!--            <div class="col-lg-7">-->
+<!--                <form class="pet-form">-->
+<!--                    <div class="row g-3">-->
+<!--                        <div class="col-md-6">-->
+<!--                            <div class="form-group-custom">-->
+<!--                                <label for="pet-name" class="form-label">Nombre:</label>-->
+<!--                                <input type="text" id="pet-name" name="pet-name" class="form-control" value="Pichicho">-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+<!--                        <div class="col-md-6">-->
+<!--                            <div class="form-group-custom">-->
+<!--                                <label for="pet-type" class="form-label">Tipo de animal:</label>-->
+<!--                                <input type="text" id="pet-type" name="pet-type" class="form-control" value="Perro">-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+<!--                        <div class="col-md-6">-->
+<!--                            <div class="form-group-custom">-->
+<!--                                <label for="pet-breed" class="form-label">Raza del animal:</label>-->
+<!--                                <input type="text" id="pet-breed" name="pet-breed" class="form-control" value="Bulldog">-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+<!--                        <div class="col-md-6">-->
+<!--                            <div class="form-group-custom">-->
+<!--                                <label for="pet-gender" class="form-label">Género:</label>-->
+<!--                                <input type="text" id="pet-gender" name="pet-gender" class="form-control" value="Macho">-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+<!--                        <div class="col-md-6">-->
+<!--                            <div class="form-group-custom">-->
+<!--                                <label for="pet-birthdate" class="form-label">Fecha de nacimiento:</label>-->
+<!--                                <input type="date" id="pet-birthdate" name="pet-birthdate" class="form-control" value="2023-12-23">-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+<!--                        <div class="col-md-6">-->
+<!--                            <div class="form-group-custom">-->
+<!--                                <label for="pet-adoption" class="form-label">Fecha de adopción:</label>-->
+<!--                                <input type="date" id="pet-adoption" name="pet-adoption" class="form-control" value="2024-02-02">-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+<!--                        <div class="col-12">-->
+<!--                            <div class="form-check toggle-group">-->
+<!--                                <input class="form-check-input" type="checkbox" id="deactivate">-->
+<!--                                <label class="form-check-label" for="deactivate">-->
+<!--                                    Desactivar-->
+<!--                                </label>-->
+<!--                                <span class="tooltip">La información de la mascota seguirá guardada pero no se verá su información en el menú principal ni opciones de selección.</span>-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+<!--                        <div class="col-12">-->
+<!--                            <button type="submit" class="btn btn-primary-custom" onclick="window.alert('Guardando..')">Guardar datos</button>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </form>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <div class="delete-section mt-5">-->
+<!--            <button class="btn-delete-custom">Eliminar mascota 🗑</button>-->
+<!--            <p class="text-muted mt-2">Si se elimina no se podrá recuperar la mascota</p>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</main>-->
+
+<!--<footer class="footer-custom mt-auto">-->
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-6">-->
+<!--                <h2 class="h5 fw-bold">Bitacora Pet</h2>-->
+<!--                <h2 class="h6">Martina Garcia</h2>-->
+<!--            </div>-->
+<!--            <div class="col-md-6 text-md-end">-->
+<!--                <h2 class="h5 fw-bold">Curso Desarrollo Web</h2>-->
+<!--                <h2 class="h6">Coderhouse 2025</h2>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</footer>-->
+
+<!--&lt;!&ndash; Bootstrap JS Bundle &ndash;&gt;-->
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"-->
+<!--        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"-->
+<!--        crossorigin="anonymous"></script>-->
+<!--</body>-->
+<!--</html>-->
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,6 +172,8 @@
           rel="stylesheet"
           integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
           crossorigin="anonymous">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../../assets/css/styles-bootstrap.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
@@ -22,7 +186,6 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
-
                     <li class="nav-item">
                         <a class="nav-link" href="../pets/my-pets-home.html">Mis mascotas</a>
                     </li>
@@ -30,7 +193,7 @@
                         <a class="nav-link" href="../vet/vets.html">Veterinarias</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../vaccination/vaccination-calendar.html">Calendario de vacunaciones</a>
+                        <a class="nav-link" href="../vaccination/vaccination.html">Calendario de vacunaciones</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav">
@@ -57,82 +220,126 @@
         </div>
     </nav>
 
-    <div class="container py-5">
-        <h2 class="h3 fw-bold mb-4">Registrar nueva mascota</h2>
+    <div class="pet-form-main-container">
+        <header class="pet-form-header">
+            <h1>Registrar Nueva Mascota</h1>
+            <p class="pet-form-subtitle">
+                <i class="fas fa-paw pet-form-paw"></i>
+                Completa los datos para registrar a tu nuevo compañero peludo
+                <i class="fas fa-paw pet-form-paw"></i>
+            </p>
+        </header>
 
-        <div class="row g-5">
-            <div class="col-lg-5">
-                <div class="image-box mb-3" style="background-image: url('https://media.istockphoto.com/id/1503385646/es/foto/retrato-divertido-y-feliz-perro-cachorro-shiba-inu-asom%C3%A1ndose-detr%C3%A1s-de-una-pancarta-azul.jpg?s=612x612&w=0&k=20&c=mMZ1Dvy0J8iNpF2boWkL8bo45vYYPi_AvZ1aYr9oO8w=')"></div>
-                <button class="btn btn-outline-custom w-100 mb-2">Cambiar imagen</button>
-                <p class="hint">Suba una nueva imagen desde la galería</p>
-            </div>
-
-            <div class="col-lg-7">
-                <form class="pet-form">
-                    <div class="row g-3">
-                        <div class="col-md-6">
-                            <div class="form-group-custom">
-                                <label for="pet-name" class="form-label">Nombre:</label>
-                                <input type="text" id="pet-name" name="pet-name" class="form-control" value="Pichicho">
+        <div class="pet-form-content">
+            <div class="container py-4">
+                <div class="row g-5">
+                    <!-- Columna de imagen -->
+                    <div class="col-lg-5">
+                        <div class="pet-image-section">
+                            <div class="image-box-enhanced"
+                                 style="background-image: url('https://media.istockphoto.com/id/1503385646/es/foto/retrato-divertido-y-feliz-perro-cachorro-shiba-inu-asom%C3%A1ndose-detr%C3%A1s-de-una-pancarta-azul.jpg?s=612x612&w=0&k=20&c=mMZ1Dvy0J8iNpF2boWkL8bo45vYYPi_AvZ1aYr9oO8w=')">
                             </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="form-group-custom">
-                                <label for="pet-type" class="form-label">Tipo de animal:</label>
-                                <input type="text" id="pet-type" name="pet-type" class="form-control" value="Perro">
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="form-group-custom">
-                                <label for="pet-breed" class="form-label">Raza del animal:</label>
-                                <input type="text" id="pet-breed" name="pet-breed" class="form-control" value="Bulldog">
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="form-group-custom">
-                                <label for="pet-gender" class="form-label">Género:</label>
-                                <input type="text" id="pet-gender" name="pet-gender" class="form-control" value="Macho">
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="form-group-custom">
-                                <label for="pet-birthdate" class="form-label">Fecha de nacimiento:</label>
-                                <input type="date" id="pet-birthdate" name="pet-birthdate" class="form-control" value="2023-12-23">
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="form-group-custom">
-                                <label for="pet-adoption" class="form-label">Fecha de adopción:</label>
-                                <input type="date" id="pet-adoption" name="pet-adoption" class="form-control" value="2024-02-02">
-                            </div>
-                        </div>
-
-                        <div class="col-12">
-                            <div class="form-check toggle-group">
-                                <input class="form-check-input" type="checkbox" id="deactivate">
-                                <label class="form-check-label" for="deactivate">
-                                    Desactivar
-                                </label>
-                                <span class="tooltip">La información de la mascota seguirá guardada pero no se verá su información en el menú principal ni opciones de selección.</span>
-                            </div>
-                        </div>
-
-                        <div class="col-12">
-                            <button type="submit" class="btn btn-primary-custom" onclick="window.alert('Guardando..')">Guardar datos</button>
+                            <button class="btn-change-image" type="button">
+                                <i class="fas fa-camera"></i> Seleccionar imagen
+                            </button>
+                            <p class="hint">Suba una imagen desde la galería</p>
                         </div>
                     </div>
-                </form>
-            </div>
-        </div>
 
-        <div class="delete-section mt-5">
-            <button class="btn-delete-custom">Eliminar mascota 🗑</button>
-            <p class="text-muted mt-2">Si se elimina no se podrá recuperar la mascota</p>
+                    <!-- Columna de formulario -->
+                    <div class="col-lg-7">
+                        <form class="pet-form-enhanced" id="registerPetForm">
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="form-group-custom">
+                                        <label for="pet-name" class="form-label">
+                                            <i class="fas fa-tag"></i> Nombre *
+                                        </label>
+                                        <input type="text" id="pet-name" name="pet-name" class="form-control"
+                                               value="Pichicho" placeholder="Nombre de la mascota" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group-custom">
+                                        <label for="pet-type" class="form-label">
+                                            <i class="fas fa-paw"></i> Tipo de animal *
+                                        </label>
+                                        <input type="text" id="pet-type" name="pet-type" class="form-control"
+                                               value="Perro" placeholder="Ej: Perro, Gato, etc." required>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group-custom">
+                                        <label for="pet-breed" class="form-label">
+                                            <i class="fas fa-dna"></i> Raza del animal
+                                        </label>
+                                        <input type="text" id="pet-breed" name="pet-breed" class="form-control"
+                                               value="Bulldog" placeholder="Raza de la mascota">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group-custom">
+                                        <label for="pet-gender" class="form-label">
+                                            <i class="fas fa-venus-mars"></i> Género *
+                                        </label>
+                                        <select id="pet-gender" name="pet-gender" class="form-control" required>
+                                            <option value="">Seleccionar género</option>
+                                            <option value="Macho" selected>Macho</option>
+                                            <option value="Hembra">Hembra</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group-custom">
+                                        <label for="pet-birthdate" class="form-label">
+                                            <i class="fas fa-birthday-cake"></i> Fecha de nacimiento
+                                        </label>
+                                        <input type="date" id="pet-birthdate" name="pet-birthdate" class="form-control"
+                                               value="2023-12-23">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group-custom">
+                                        <label for="pet-adoption" class="form-label">
+                                            <i class="fas fa-home"></i> Fecha de adopción
+                                        </label>
+                                        <input type="date" id="pet-adoption" name="pet-adoption" class="form-control"
+                                               value="2024-02-02">
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-group-custom">
+                                        <label for="pet-notes" class="form-label">
+                                            <i class="fas fa-sticky-note"></i> Notas adicionales
+                                        </label>
+                                        <textarea id="pet-notes" name="pet-notes" class="form-control"
+                                                  rows="3" placeholder="Cualquier información adicional sobre tu mascota..."></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <button type="submit" class="btn-save-pet" onclick="window.alert('Guardando nueva mascota...')">
+                                        <i class="fas fa-plus-circle"></i> Registrar Mascota
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Mensaje de campos requeridos -->
+                <div class="mt-4 text-center">
+                    <p class="text-muted">
+                        <small>* Campos requeridos</small>
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </main>

@@ -1,0 +1,402 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="es">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <link rel="shortcut icon" href="../../assets/images/logo2.png">-->
+<!--    <title>Calendario de Vacunación - Bitacora Pet</title>-->
+<!--    &lt;!&ndash; Bootstrap CSS &ndash;&gt;-->
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"-->
+<!--          rel="stylesheet"-->
+<!--          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"-->
+<!--          crossorigin="anonymous">-->
+<!--    <link rel="stylesheet" href="../../assets/css/styles-bootstrap.css">-->
+<!--</head>-->
+<!--<body class="d-flex flex-column min-vh-100">-->
+<!--<header>-->
+<!--    <nav class="navbar navbar-expand-lg navbar-custom">-->
+<!--        <div class="container-fluid">-->
+<!--            <a class="navbar-brand text-white fw-bold" href="../../index.html">Bitacora Pet</a>-->
+<!--            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">-->
+<!--                <span class="navbar-toggler-icon"></span>-->
+<!--            </button>-->
+<!--            <div class="collapse navbar-collapse" id="navbarNav">-->
+<!--                <ul class="navbar-nav me-auto">-->
+
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="../pets/my-pets-home.html">Mis mascotas</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="../vet/vets.html">Veterinarias</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link active" href="vaccination.html">Calendario de vacunaciones</a>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--                <ul class="navbar-nav">-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="../../index.html">Inicio</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="../auth/login.html">Ingresar</a>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </nav>-->
+<!--</header>-->
+
+<!--<main class="flex-grow-1">-->
+<!--    <nav class="breadcrumb-custom">-->
+<!--        <div class="container">-->
+<!--            <a href="../../index.html" class="text-decoration-none">Home</a>-->
+<!--            <span class="mx-2">/</span>-->
+<!--            <a class="active text-decoration-none">Calendario de vacunación</a>-->
+<!--        </div>-->
+<!--    </nav>-->
+
+<!--    <div class="container py-5">-->
+<!--        <div class="row">-->
+<!--            <div class="col-12">-->
+<!--                <h2 class="h3 fw-bold mb-2">Calendario de vacunación</h2>-->
+<!--                <p class="text-muted mb-4">Calendario de vacunación de las mascotas</p>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        &lt;!&ndash; Dos columnas para las cards de vacunas &ndash;&gt;-->
+<!--        <div class="row row-cols-1 row-cols-md-2 g-4">-->
+<!--            &lt;!&ndash; Columna 1 &ndash;&gt;-->
+<!--            <div class="col">-->
+<!--                <div class="vaccination-card-custom h-100">-->
+<!--                    <div class="d-flex align-items-start">-->
+<!--                        <img src="../../assets/images/logo2.png"-->
+<!--                             class="card-image-small me-3"-->
+<!--                             alt="Logo Huella perrito para item vacuna">-->
+<!--                        <div class="card-content flex-grow-1">-->
+<!--                            <h3 class="h6 fw-bold mb-2">Séxtuple</h3>-->
+<!--                            <p class="mb-1"><strong>Fecha aplicación:</strong> Semana 4 de vida</p>-->
+<!--                            <p class="mb-0 text-muted small">Vacuna combinada que protege contra seis enfermedades-->
+<!--                                diferentes.</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="col">-->
+<!--                <div class="vaccination-card-custom h-100">-->
+<!--                    <div class="d-flex align-items-start">-->
+<!--                        <img src="../../assets/images/logo2.png"-->
+<!--                             class="card-image-small me-3"-->
+<!--                             alt="Logo Huella perrito para item vacuna">-->
+<!--                        <div class="card-content flex-grow-1">-->
+<!--                            <h3 class="h6 fw-bold mb-2">Bordetella</h3>-->
+<!--                            <p class="mb-1"><strong>Fecha aplicación:</strong> Semana 6 de vida</p>-->
+<!--                            <p class="mb-0 text-muted small">Protege contra la tos de las perreras, recomendada-->
+<!--                                anual.</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="col">-->
+<!--                <div class="vaccination-card-custom h-100">-->
+<!--                    <div class="d-flex align-items-start">-->
+<!--                        <img src="../../assets/images/logo2.png"-->
+<!--                             class="card-image-small me-3"-->
+<!--                             alt="Logo Huella perrito para item vacuna">-->
+<!--                        <div class="card-content flex-grow-1">-->
+<!--                            <h3 class="h6 fw-bold mb-2">Quíntuple</h3>-->
+<!--                            <p class="mb-1"><strong>Fecha aplicación:</strong> Semana 8 de vida</p>-->
+<!--                            <p class="mb-0 text-muted small">Vacuna esencial para cachorros, protege contra cinco-->
+<!--                                enfermedades.</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            &lt;!&ndash; Columna 2 &ndash;&gt;-->
+<!--            <div class="col">-->
+<!--                <div class="vaccination-card-custom h-100">-->
+<!--                    <div class="d-flex align-items-start">-->
+<!--                        <img src="../../assets/images/logo2.png"-->
+<!--                             class="card-image-small me-3"-->
+<!--                             alt="Logo Huella perrito para item vacuna">-->
+<!--                        <div class="card-content flex-grow-1">-->
+<!--                            <h3 class="h6 fw-bold mb-2">Trivalente</h3>-->
+<!--                            <p class="mb-1"><strong>Fecha aplicación:</strong> Semana 5 de vida</p>-->
+<!--                            <p class="mb-0 text-muted small">Para gatos, protege contra panleucopenia, calicivirus y-->
+<!--                                rinotraqueitis.</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="col">-->
+<!--                <div class="vaccination-card-custom h-100">-->
+<!--                    <div class="d-flex align-items-start">-->
+<!--                        <img src="../../assets/images/logo2.png"-->
+<!--                             class="card-image-small me-3"-->
+<!--                             alt="Logo Huella perrito para item vacuna">-->
+<!--                        <div class="card-content flex-grow-1">-->
+<!--                            <h3 class="h6 fw-bold mb-2">Antirrábica</h3>-->
+<!--                            <p class="mb-1"><strong>Fecha aplicación:</strong> A los 3 meses de vida. Luego una vez al-->
+<!--                                año</p>-->
+<!--                            <p class="mb-0 text-muted small">Obligatoria por ley, protege contra la rabia, aplicación-->
+<!--                                anual.</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="col">-->
+<!--                <div class="vaccination-card-custom h-100">-->
+<!--                    <div class="d-flex align-items-start">-->
+<!--                        <img src="../../assets/images/logo2.png"-->
+<!--                             class="card-image-small me-3"-->
+<!--                             alt="Logo Huella perrito para item vacuna">-->
+<!--                        <div class="card-content flex-grow-1">-->
+<!--                            <h3 class="h6 fw-bold mb-2">FeLV</h3>-->
+<!--                            <p class="mb-1"><strong>Fecha aplicación:</strong> A los 3 meses. Luego, una vez al año</p>-->
+<!--                            <p class="mb-0 text-muted small">Para gatos, protege contra la leucemia felina.</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        &lt;!&ndash; Nota informativa NUEVA no la habia puesto en las otras entregas ni en wireframes&ndash;&gt;-->
+<!--        <div class="row mt-5">-->
+<!--            <div class="col-12">-->
+<!--                <div class="alert alert-info">-->
+<!--                    <h4 class="alert-heading h6 mb-2">📋 Información importante</h4>-->
+<!--                    <p class="mb-2">Este calendario muestra las fechas de vacunación registradas.</p>-->
+<!--                    <p class="mb-0"><strong>Recomendación:</strong> Consulta siempre con tu veterinario para el-->
+<!--                        calendario específico de cada mascota.</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</main>-->
+
+<!--<footer class="footer-custom mt-auto">-->
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-6">-->
+<!--                <h2 class="h5 fw-bold">Bitacora Pet</h2>-->
+<!--                <h2 class="h6">Martina Garcia</h2>-->
+<!--            </div>-->
+<!--            <div class="col-md-6 text-md-end">-->
+<!--                <h2 class="h5 fw-bold">Curso Desarrollo Web</h2>-->
+<!--                <h2 class="h6">Coderhouse 2025</h2>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</footer>-->
+
+<!--&lt;!&ndash; Bootstrap JS Bundle &ndash;&gt;-->
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"-->
+<!--        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"-->
+<!--        crossorigin="anonymous"></script>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../assets/images/logo2.png">
+    <title>Calendario de Vacunación - Bitacora Pet</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+          crossorigin="anonymous">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/css/styles-bootstrap.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+<header>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white fw-bold" href="../../index.html">Bitacora Pet</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pets/my-pets-home.html">Mis mascotas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../vet/vets.html">Veterinarias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="vaccination.html">Calendario de vacunaciones</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../auth/login.html">Ingresar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="flex-grow-1">
+    <nav class="breadcrumb-custom">
+        <div class="container">
+            <a href="../../index.html" class="text-decoration-none">Home</a>
+            <span class="mx-2">/</span>
+            <a class="active text-decoration-none">Calendario de vacunación</a>
+        </div>
+    </nav>
+
+    <div class="vaccination-main-container">
+        <header class="vaccination-header">
+            <h1>Calendario de Vacunación</h1>
+            <p class="vaccination-subtitle">
+                <i class="fas fa-paw vaccination-paw"></i>
+                Mantén al día la salud de tus mascotas con nuestro calendario de vacunación
+                <i class="fas fa-paw vaccination-paw"></i>
+            </p>
+        </header>
+
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="h4 fw-bold mb-4" style="color: var(--primary-color);">Vacunas Registradas</h2>
+                </div>
+            </div>
+
+            <!-- Grid de vacunas -->
+            <div class="vaccination-grid">
+                <!-- Vacuna 1 -->
+                <div class="vaccination-card-enhanced">
+                    <div class="card-image-small">
+                        <img src="../../assets/images/logo2.png"
+                             alt="Logo vacuna séxtuple">
+                    </div>
+                    <div class="vaccination-card-content">
+                        <h3>Séxtuple</h3>
+                        <span class="vaccination-date">Semana 4 de vida</span>
+                        <p class="vaccination-description">
+                            Vacuna combinada que protege contra seis enfermedades diferentes.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Vacuna 2 -->
+                <div class="vaccination-card-enhanced">
+                    <div class="card-image-small">
+                        <img src="../../assets/images/logo2.png"
+                             alt="Logo vacuna bordetella">
+                    </div>
+                    <div class="vaccination-card-content">
+                        <h3>Bordetella</h3>
+                        <span class="vaccination-date">Semana 6 de vida</span>
+                        <p class="vaccination-description">
+                            Protege contra la tos de las perreras, recomendada anual.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Vacuna 3 -->
+                <div class="vaccination-card-enhanced">
+                    <div class="card-image-small">
+                        <img src="../../assets/images/logo2.png"
+                             alt="Logo vacuna quíntuple">
+                    </div>
+                    <div class="vaccination-card-content">
+                        <h3>Quíntuple</h3>
+                        <span class="vaccination-date">Semana 8 de vida</span>
+                        <p class="vaccination-description">
+                            Vacuna esencial para cachorros, protege contra cinco enfermedades.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Vacuna 4 -->
+                <div class="vaccination-card-enhanced">
+                    <div class="card-image-small">
+                        <img src="../../assets/images/logo2.png"
+                             alt="Logo vacuna trivalente">
+                    </div>
+                    <div class="vaccination-card-content">
+                        <h3>Trivalente</h3>
+                        <span class="vaccination-date">Semana 5 de vida</span>
+                        <p class="vaccination-description">
+                            Para gatos, protege contra panleucopenia, calicivirus y rinotraqueitis.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Vacuna 5 -->
+                <div class="vaccination-card-enhanced">
+                    <div class="card-image-small">
+                        <img src="../../assets/images/logo2.png"
+                             alt="Logo vacuna antirrábica">
+                    </div>
+                    <div class="vaccination-card-content">
+
+                        <h3>Antirrábica</h3>
+                        <span class="vaccination-date">A los 3 meses de vida</span>
+                        <p class="vaccination-description">
+                            Obligatoria por ley, protege contra la rabia, aplicación anual.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Vacuna 6 -->
+                <div class="vaccination-card-enhanced">
+                    <div class="card-image-small">
+                        <img src="../../assets/images/logo2.png"
+                             alt="Logo vacuna FeLV">
+                    </div>
+                    <div class="vaccination-card-content">
+                        <h3>FeLV</h3>
+                        <span class="vaccination-date">A los 3 meses</span>
+                        <p class="vaccination-description">
+                            Para gatos, protege contra la leucemia felina.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nota informativa mejorada -->
+            <div class="vaccination-alert">
+                <h4><i class="fas fa-info-circle"></i> Información importante</h4>
+                <p>Este calendario muestra las fechas de vacunación registradas para tus mascotas.</p>
+                <p><strong>Recomendación:</strong> Consulta siempre con tu veterinario para el calendario específico de cada mascota, ya que pueden variar según la raza, edad y estado de salud.</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer-custom mt-auto">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="h5 fw-bold">Bitacora Pet</h2>
+                <h2 class="h6">Martina Garcia</h2>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <h2 class="h5 fw-bold">Curso Desarrollo Web</h2>
+                <h2 class="h6">Coderhouse 2025</h2>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+</html>
