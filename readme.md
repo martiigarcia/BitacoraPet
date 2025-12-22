@@ -6,6 +6,9 @@
 
 [Bitacora Pet - Github Pages](https://martiigarcia.github.io/BitacoraPet/)
 
+[Bitacora Pet - Deploy en Vercel](https://bitacora-3yb0rabvh-martiigarcias-projects.vercel.app/)
+
+
 ## Imagen de evolucion del sitio
 
 ### Version 1:
