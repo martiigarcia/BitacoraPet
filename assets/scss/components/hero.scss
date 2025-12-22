@@ -1,0 +1,67 @@
+
+/***********************************************************************/
+/**************************    HERO SECTIONS   *************************/
+/***********************************************************************/
+
+.front-page {
+  text-align: center;
+  padding: 4rem 1rem 2rem;
+  color: $text-color;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height: 500px;
+  position: relative;
+  @include flex-column;
+  @include flex-center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.6);
+  }
+
+  h1 {
+    margin-bottom: 0.5rem;
+    color: $text-color;
+  }
+
+  p {
+    color: #666;
+    font-size: 1rem;
+  }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, $primary-color, $accent-color);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 4px 8px rgba(108, 35, 197, 0.15);
+    letter-spacing: -1px;
+  }
+
+  p {
+    font-size: 1.5rem;
+    color: #555;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.8);
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    backdrop-filter: blur(5px);
+    border: $border-medium;
+    box-shadow: 0 4px 15px rgba(108, 35, 197, 0.1);
+  }
+}

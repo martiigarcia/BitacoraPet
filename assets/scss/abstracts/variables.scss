@@ -1,0 +1,23 @@
+// Variables
+$primary-color: #6c23c5;
+$secondary-color: #ba0069;
+$accent-color: #b589ef;
+$text-color: #333;
+$light-bg: #f9f9f9;
+$border-color: #ddd;
+$danger-color: #e21f1f;
+
+// Colores adicionales
+$primary-gradient: linear-gradient(to right, $primary-color, $accent-color);
+$secondary-gradient: linear-gradient(to right, $secondary-color, #d63384);
+$danger-gradient: linear-gradient(to right, $danger-color, #ff6b6b);
+
+// Sombras
+$shadow-light: 0 4px 12px rgba(108, 35, 197, 0.05);
+$shadow-medium: 0 8px 20px rgba(108, 35, 197, 0.1);
+$shadow-heavy: 0 20px 40px rgba(108, 35, 197, 0.1);
+
+// Bordes
+$border-light: 1px solid rgba(181, 137, 239, 0.2);
+$border-medium: 2px solid rgba(181, 137, 239, 0.3);
+$border-strong: 3px solid rgba(181, 137, 239, 0.3);

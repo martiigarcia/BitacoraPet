@@ -1,0 +1,248 @@
+
+/***********************************************************************/
+/**************************    CARDS   *********************************/
+/***********************************************************************/
+
+/* Cards de la home */
+.home-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.home-card-custom {
+  border: $border-medium;
+  border-radius: 20px;
+  text-align: center;
+  padding: 2rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  background: white;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(108, 35, 197, 0.1);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: $primary-gradient;
+    transition: height 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(108, 35, 197, 0.2);
+    text-decoration: none;
+    color: inherit;
+    border-color: rgba(108, 35, 197, 0.5);
+
+    &::before {
+      height: 8px;
+    }
+
+    .home-card-image {
+      transform: scale(1.05);
+      border-color: rgba(108, 35, 197, 0.4);
+    }
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: $primary-color;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 10px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 3px;
+      background: linear-gradient(to right, $primary-color, $accent-color);
+      border-radius: 2px;
+    }
+  }
+
+  p {
+    font-size: 1rem;
+    color: $text-color;
+    line-height: 1.5;
+    margin: 0;
+  }
+}
+
+// Imágenes de cards
+.home-card-image {
+  width: 100%;
+  height: 250px;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: $border-strong;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+
+  &-vet {
+    background-image: url("../images/pages-images/vet.jpg");
+  }
+
+  &-vac {
+    background-image: url("https://i0.wp.com/puppis.blog/wp-content/uploads/2022/04/%C2%BFPor-que-es-importante-que-vacunemos-a-los-cachorros_-min.jpg?resize=900%2C600&ssl=1");
+  }
+}
+
+// Iconos de cards
+.card-icon {
+  font-size: 2.5rem;
+  color: $primary-color;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+/* Cards de veterinarias y vacunas */
+.vet-card-custom,
+.vaccination-card-enhanced {
+  display: flex;
+  align-items: flex-start;
+  border: $border-medium;
+  border-radius: 16px;
+  padding: 1.5rem;
+  background: white;
+  transition: all 0.3s ease;
+  position: relative;
+  box-shadow: $shadow-medium;
+  min-height: 160px;
+
+  &:hover {
+    @include card-hover-effect;
+  }
+
+  .card-image-small {
+    width: 70px;
+    height: 70px;
+    border-radius: 12px;
+    margin-right: 1.5rem;
+    flex-shrink: 0;
+    background: linear-gradient(145deg, $primary-color, #8a4cd3);
+    @include flex-center;
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 20px rgba(108, 35, 197, 0.25);
+    overflow: hidden;
+
+    img {
+      width: 50%;
+      height: 50%;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+    }
+  }
+}
+
+// Contenido de cards
+.vet-card-content,
+.vaccination-card-content {
+  flex: 1;
+
+  h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+    color: $primary-color;
+    font-weight: 700;
+  }
+}
+
+
+// Badges especiales
+.vet-on-duty,
+.vaccination-next {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: $secondary-gradient;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  @include flex-center;
+  gap: 4px;
+  box-shadow: 0 4px 8px rgba(186, 0, 105, 0.3);
+  z-index: 2;
+  white-space: nowrap;
+}
+
+// Especialidades y fechas
+.vet-specialty,
+.vaccination-date {
+  display: inline-block;
+  background: linear-gradient(to right, rgba(108, 35, 197, 0.1), rgba(181, 137, 239, 0.1));
+  color: $primary-color;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  border: 1px solid rgba(108, 35, 197, 0.2);
+}
+
+// Descripciones
+.vet-description,
+.vaccination-description {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+// Info de contacto para veterinarias
+.vet-contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: #555;
+
+  i {
+    color: $primary-color;
+    font-size: 0.9rem;
+  }
+}
+
+// Grids
+.vets-grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.vets-column {
+  @include flex-column;
+  gap: 20px;
+}
+
+.vaccination-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}

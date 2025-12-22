@@ -31,3 +31,7 @@ Comando ejecutado para estilos:
 ```
 sass --watch .\assets\scss\styles.scss .\assets\css\style.css
 ```
+
+```
+sass --watch .\assets\scss\main.scss .\assets\css\styles-mod.css
+```

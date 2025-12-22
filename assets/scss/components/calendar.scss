@@ -1,0 +1,88 @@
+
+/***********************************************************************/
+/**************************    CALENDARIO   ****************************/
+/***********************************************************************/
+
+.calendar-section-custom {
+  background: linear-gradient(145deg, #f8f4ff, #ffffff);
+  padding: 1.5rem;
+  border-radius: 16px;
+  height: 100%;
+  border: $border-medium;
+  box-shadow: 0 10px 25px rgba(108, 35, 197, 0.1);
+  position: sticky;
+  top: 20px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: $primary-gradient;
+    border-radius: 16px 16px 0 0;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    color: $primary-color;
+    font-weight: 700;
+    text-align: center;
+  }
+}
+
+.calendar {
+  .d-flex {
+    margin-bottom: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: $primary-color;
+    margin: 0;
+  }
+}
+
+.calendar-grid-custom {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+
+  div {
+    padding: 8px;
+    font-size: 0.85rem;
+    text-align: center;
+    border-radius: 6px;
+    min-height: 36px;
+    @include flex-center;
+  }
+}
+
+.calendar-day {
+  color: #333;
+  background: white;
+  border: 1px solid rgba(181, 137, 239, 0.1);
+
+  &.today {
+    background: linear-gradient(to right, $primary-color, #8a4cd3);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 8px rgba(108, 35, 197, 0.3);
+    font-weight: 700;
+  }
+}
+
+.calendar-date {
+  margin-top: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: $primary-color;
+  padding: 10px;
+  background: rgba(181, 137, 239, 0.1);
+  border-radius: 10px;
+  border: $border-light;
+  font-size: 0.9rem;
+}

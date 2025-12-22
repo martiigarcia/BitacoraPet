@@ -1,0 +1,374 @@
+
+/***********************************************************************/
+/**************************    RESPONSIVE   ****************************/
+/***********************************************************************/
+
+// Tablet (768px)
+@include responsive(tablet) {
+  // Contenedores principales
+  .main-container,
+  .home-main-container,
+  .main-container-custom,
+  .vets-main-container,
+  .vaccination-main-container,
+  .login-main-container,
+  .pet-detail-main-container,
+  .pet-form-main-container {
+    padding: 25px 15px;
+    margin: 20px auto;
+  }
+
+  // Headers
+  .page-header h1,
+  .home-header h1,
+  .vets-header h1,
+  .vaccination-header h1,
+  .login-header h1,
+  .pet-detail-header h1,
+  .pet-form-header h1 {
+    font-size: 2.2rem;
+  }
+
+  // Subtítulos
+  .page-subtitle,
+  .home-subtitle,
+  .vets-subtitle,
+  .vaccination-subtitle,
+  .login-subtitle,
+  .pet-detail-subtitle,
+  .pet-form-subtitle {
+    font-size: 1.1rem;
+    padding: 15px;
+  }
+
+  // Hero de home
+  .hero-content {
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+
+  // Cards de home
+  .home-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .home-card-custom {
+    padding: 1.5rem;
+  }
+
+  .home-card-image {
+    height: 200px;
+  }
+
+  // Carrusel
+  .pets-carousel-container {
+    height: 350px;
+    margin: 20px 0 30px;
+  }
+
+  .carousel-content {
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+    }
+  }
+
+  .carousel-arrow {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+
+    &.prev {
+      left: 15px;
+    }
+
+    &.next {
+      right: 15px;
+    }
+  }
+
+  // Avatares
+  .pets-avatar-group {
+    gap: 20px;
+    padding: 20px;
+    margin: 0 0 30px;
+  }
+
+  .pet-avatar-btn {
+    width: 80px;
+    height: 80px;
+    font-size: 0.9rem;
+  }
+
+  // Contenido de mascotas
+  .pets-content-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .pet-info-container,
+  .pet-image-container {
+    min-width: 100%;
+    padding: 25px;
+  }
+
+  .pet-info-title {
+    font-size: 1.6rem;
+  }
+
+  .pet-info-content {
+    font-size: 1.1rem;
+  }
+
+  .pet-info-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.7rem;
+    margin-right: 15px;
+  }
+
+  // Cards de vet/vac
+  .vet-card-custom,
+  .vaccination-card-enhanced {
+    padding: 1.2rem;
+
+    .card-image-small {
+      width: 60px;
+      height: 60px;
+      margin-right: 1rem;
+    }
+  }
+
+  .vet-card-content h3,
+  .vaccination-card-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .vet-description,
+  .vaccination-description {
+    font-size: 0.85rem;
+  }
+
+  // Formularios
+  .login-card {
+    padding: 30px 25px;
+  }
+
+  .login-icon i {
+    font-size: 3rem;
+  }
+
+  .pet-image-section,
+  .pet-form-enhanced,
+  .delete-section-enhanced {
+    padding: 20px;
+  }
+
+  .image-box-enhanced {
+    height: 250px;
+  }
+
+  // Footer
+  .footer-custom {
+    padding: 2rem 0 1.5rem;
+  }
+
+  .footer-brand h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .footer-course h2 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .footer-paws i {
+    font-size: 1.2rem;
+    margin: 0 8px;
+  }
+
+  // Navbar
+  .navbar-custom {
+    padding: 0.75rem 0;
+  }
+
+  .navbar-brand {
+    font-size: 1.1rem;
+  }
+
+  .navbar-nav.me-auto::after {
+    display: none;
+  }
+
+  .navbar-custom .navbar-nav .nav-link {
+    margin: 0.25rem 0;
+    text-align: center;
+  }
+
+  .navbar-custom .navbar-nav .nav-link.active::before,
+  .navbar-custom .navbar-nav .nav-link.active::after {
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+// Desktop (992px)
+@include responsive(desktop) {
+  .vets-grid-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .calendar-section-custom {
+    position: relative;
+    top: 0;
+    margin-top: 20px;
+  }
+}
+
+// Mobile (480px)
+@include responsive(mobile) {
+  // Headers
+  .page-header h1,
+  .home-header h1,
+  .vets-header h1,
+  .vaccination-header h1,
+  .login-header h1,
+  .pet-detail-header h1,
+  .pet-form-header h1 {
+    font-size: 1.8rem;
+  }
+
+  // Hero de home
+  .hero-content {
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  // Carrusel
+  .pets-carousel-container {
+    height: 280px;
+  }
+
+  .carousel-content {
+    h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  .carousel-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  // Avatares
+  .pets-avatar-group {
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .pet-avatar-btn {
+    width: 70px;
+    height: 70px;
+    font-size: 0.8rem;
+  }
+
+  // Cards de vet/vac
+  .vet-card-custom,
+  .vaccination-card-enhanced {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .card-image-small {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .vet-on-duty,
+  .vaccination-next {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-bottom: 10px;
+    align-self: center;
+  }
+
+  .vet-contact-info {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  // Estadísticas
+  .pet-stat {
+    min-width: 100%;
+  }
+
+  .pet-stat-value {
+    font-size: 1.4rem;
+  }
+
+  // Botones
+  .pet-action-btn {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+
+  .login-btn,
+  .btn-update-pet,
+  .btn-save-pet {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+
+  // Formularios
+  .form-group-custom .form-control,
+  .login-form .form-control {
+    padding: 10px 14px;
+  }
+
+  .login-card {
+    padding: 25px 20px;
+  }
+
+  .vaccination-alert {
+    padding: 20px;
+  }
+
+  .image-box-enhanced {
+    height: 200px;
+  }
+
+  // Grids
+  .vaccination-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -13,7 +13,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/styles-mod.css">
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -21,7 +21,7 @@
     <nav class="navbar navbar-expand-lg navbar-custom">
         <div class="container-fluid">
             <a class="navbar-brand text-white fw-bold" href="../../index.html">Bitacora Pet</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" role="button">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -72,11 +72,11 @@
             </div>
 
             <!-- Flechas de navegación -->
-            <button class="carousel-arrow prev" id="prevBtn">
-                <i class="fas fa-chevron-left"></i>
+            <button class="carousel-arrow prev" id="prevBtn" role="button">
+                <i class="fas fa-chevron-left" role="img" aria-hidden="true"></i>
             </button>
-            <button class="carousel-arrow next" id="nextBtn">
-                <i class="fas fa-chevron-right"></i>
+            <button class="carousel-arrow next" id="nextBtn" role="button">
+                <i class="fas fa-chevron-right" role="img" aria-hidden="true"></i>
             </button>
 
             <div class="carousel-indicators" id="carouselIndicators"></div>
@@ -87,7 +87,7 @@
             <p class="page-subtitle">
                 Explora tus mascotas
                 <br>
-                <span class="dog-paw"><i class="fas fa-paw"></i></span>
+                <span class="dog-paw"><i class="fas fa-paw" role="img" aria-hidden="true" ></i></span>
                 Selecciona una mascota para ver sus datos y fotos adorables
                 <span class="dog-paw"><i class="fas fa-paw"></i></span>
             </p>
@@ -95,16 +95,16 @@
 
         <!-- Grupo de avatares de mascotas -->
         <div class="pets-avatar-group">
-            <button class="pet-avatar-btn active" data-pet-id="mora" data-name="Mora">
+            <button class="pet-avatar-btn active" data-pet-id="mora" data-name="Mora" role="button">
                 <span>MORA</span>
             </button>
-            <button class="pet-avatar-btn" data-pet-id="negra" data-name="Negra">
+            <button class="pet-avatar-btn" data-pet-id="negra" data-name="Negra" role="button">
                 <span>NEGRA</span>
             </button>
-            <button class="pet-avatar-btn" data-pet-id="thor" data-name="Thor">
+            <button class="pet-avatar-btn" data-pet-id="thor" data-name="Thor" role="button">
                 <span>THOR</span>
             </button>
-            <button class="pet-avatar-btn" data-pet-id="rocko" data-name="Rocko">
+            <button class="pet-avatar-btn" data-pet-id="rocko" data-name="Rocko" role="button">
                 <span>ROCKO</span>
             </button>
         </div>
@@ -113,13 +113,13 @@
         <div class="pets-content-wrapper">
             <!-- Panel de información de la mascota -->
             <div class="pet-info-container">
-                <div class="pet-bone" style="top: 20px; left: 20px;"><i class="fas fa-bone"></i></div>
-                <div class="pet-bone" style="bottom: 30px; right: 25px;"><i class="fas fa-bone"></i></div>
-                <div class="pet-bone" style="top: 50%; left: 10px;"><i class="fas fa-bone"></i></div>
+                <div class="pet-bone" style="top: 20px; left: 20px;"><i class="fas fa-bone" role="img" aria-hidden="true"></i></div>
+                <div class="pet-bone" style="bottom: 30px; right: 25px;"><i class="fas fa-bone" role="img" aria-hidden="true"></i></div>
+                <div class="pet-bone" style="top: 50%; left: 10px;"><i class="fas fa-bone" role="img" aria-hidden="true"></i></div>
 
                 <div class="pet-info-header">
                     <div class="pet-info-icon">
-                        <i class="fas fa-paw"></i>
+                        <i class="fas fa-paw" role="img" aria-hidden="true"></i>
                     </div>
                     <div class="pet-info-title" id="pet-name">Mora</div>
                 </div>
@@ -149,19 +149,19 @@
 
                 <div class="pet-action-buttons">
                     <a href="../pets/pet-detail.html" class="pet-action-btn btn-edit-pet">
-                        <i class="fas fa-edit"></i> Editar datos de mascota
+                        <i class="fas fa-edit" role="img" aria-hidden="true"></i> Editar datos de mascota
                     </a>
                 </div>
             </div>
 
             <!-- Panel de imagen de la mascota -->
             <div class="pet-image-container">
-                <div class="pet-bone" style="top: 25px; right: 30px;"><i class="fas fa-bone"></i></div>
-                <div class="pet-bone" style="bottom: 40px; left: 15px;"><i class="fas fa-bone"></i></div>
-                <div class="pet-bone" style="top: 30%; right: 15px;"><i class="fas fa-bone"></i></div>
+                <div class="pet-bone" style="top: 25px; right: 30px;"><i class="fas fa-bone" role="img" aria-hidden="true"></i></div>
+                <div class="pet-bone" style="bottom: 40px; left: 15px;"><i class="fas fa-bone" role="img" aria-hidden="true"></i></div>
+                <div class="pet-bone" style="top: 30%; right: 15px;"><i class="fas fa-bone" role="img" aria-hidden="true"></i></div>
 
                 <div class="pet-image-placeholder" id="pet-image-placeholder">
-                    <i class="fas fa-dog"></i>
+                    <i class="fas fa-dog" role="img" aria-hidden="true"></i>
                     <p>¡Selecciona una mascota para ver su información!</p>
                 </div>
 

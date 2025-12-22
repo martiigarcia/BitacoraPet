@@ -1,0 +1,31 @@
+/***********************************************************************/
+/**************************    BASE STYLES   ***************************/
+/***********************************************************************/
+
+:root {
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --accent-color: #{$accent-color};
+  --text-color: #{$text-color};
+  --light-bg: #{$light-bg};
+  --border-color: #{$border-color};
+  --danger-color: #{$danger-color};
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: $text-color;
+  min-height: 100vh;
+  @include flex-column;
+}
+
+main {
+  flex: 1;
+}

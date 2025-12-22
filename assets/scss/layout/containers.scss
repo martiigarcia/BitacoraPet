@@ -1,0 +1,81 @@
+// Contenedores principales
+.main-container,
+.home-main-container,
+.main-container-custom,
+.vets-main-container,
+.vaccination-main-container,
+.login-main-container,
+.pet-detail-main-container,
+.pet-form-main-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 30px auto;
+  padding: 40px 20px;
+  background: linear-gradient(145deg, #f8f4ff 0%, #ffffff 100%);
+  border-radius: 24px;
+  box-shadow: $shadow-heavy,
+  0 5px 15px rgba(108, 35, 197, 0.05),
+  inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border: $border-medium;
+  position: relative;
+  overflow: hidden;
+
+  @include gradient-border-top;
+}
+
+// Headers de página
+.page-header,
+.home-header,
+.vets-header,
+.vaccination-header,
+.login-header,
+.pet-detail-header,
+.pet-form-header {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
+
+  h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    background: $primary-gradient;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 4px 8px rgba(108, 35, 197, 0.1);
+    letter-spacing: -0.5px;
+  }
+}
+
+// Subtítulos
+.page-subtitle,
+.home-subtitle,
+.vets-subtitle,
+.vaccination-subtitle,
+.login-subtitle,
+.pet-detail-subtitle,
+.pet-form-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  background: rgba(181, 137, 239, 0.08);
+  padding: 20px;
+  border-radius: 16px;
+  border: $border-light;
+  box-shadow: $shadow-light;
+}
+
+// Elementos decorativos comunes
+.dog-paw,
+.vaccination-paw,
+.login-paw,
+.pet-detail-paw,
+.pet-form-paw {
+  color: $primary-color;
+  font-size: 1.2rem;
+  margin: 0 6px;
+  text-shadow: 0 2px 4px rgba(108, 35, 197, 0.2);
+}

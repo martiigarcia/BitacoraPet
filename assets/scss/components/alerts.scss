@@ -1,0 +1,50 @@
+
+/***********************************************************************/
+/**************************    ALERTAS/INFO   **************************/
+/***********************************************************************/
+
+.vaccination-alert {
+  background: linear-gradient(145deg, rgba(108, 35, 197, 0.08), rgba(181, 137, 239, 0.12));
+  border: $border-medium;
+  border-radius: 16px;
+  padding: 25px;
+  margin-top: 40px;
+  box-shadow: $shadow-medium;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: $primary-gradient;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+    color: $primary-color;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    strong {
+      color: $primary-color;
+    }
+  }
+}

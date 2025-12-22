@@ -1,0 +1,140 @@
+
+/***********************************************************************/
+/**************************    FORMULARIOS   ***************************/
+/***********************************************************************/
+
+// Formularios generales
+.pet-form-enhanced,
+.login-form {
+  background: white;
+  border: $border-medium;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(108, 35, 197, 0.1);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: $primary-gradient;
+  }
+}
+
+.form-group-custom {
+  label {
+    font-weight: 600;
+    color: $primary-color;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .form-control {
+    @include form-control-styles;  // ← USAMOS EL MIXIN EN VEZ DE LOS ESTILOS DIRECTOS
+  }
+}
+
+
+.login-form .form-control {
+  @include form-control-styles;  // ← USAMOS EL MIXIN EN VEZ DEL @extend
+}
+
+// Checkbox personalizado
+.form-check-input {
+  width: 20px;
+  height: 20px;
+  margin-top: 0.25rem;
+  margin-right: 0.5rem;
+  border: 2px solid rgba(181, 137, 239, 0.5);
+
+  &:checked {
+    background-color: $primary-color;
+    border-color: $primary-color;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 3px rgba(108, 35, 197, 0.25);
+  }
+}
+
+.form-check-label {
+  font-weight: 600;
+  color: #555;
+}
+
+.tooltip {
+  font-size: 0.85rem;
+  color: #777;
+  margin-top: 5px;
+  display: block;
+  line-height: 1.4;
+}
+
+// Tarjeta de login específica
+.login-card {
+  background: white;
+  border: $border-medium;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 15px 35px rgba(108, 35, 197, 0.1);
+  position: relative;
+  overflow: hidden;
+  max-width: 450px;
+  margin: 0 auto;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: $primary-gradient;
+  }
+}
+
+.login-icon {
+  text-align: center;
+  margin-bottom: 25px;
+
+  i {
+    font-size: 3.5rem;
+    background: $primary-gradient;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+.login-welcome {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.login-links {
+  text-align: center;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(181, 137, 239, 0.2);
+
+  a {
+    color: $primary-color;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin: 0 10px;
+
+    &:hover {
+      color: #8a4cd3;
+      text-decoration: underline;
+    }
+  }
+}
