@@ -452,7 +452,7 @@ main {
   transition: transform 0.3s ease, border-color 0.3s ease;
 }
 .home-card-image-vet {
-  background-image: url("../images/vet.jpg");
+  background-image: url("../images/pages-images/vet.jpg");
 }
 .home-card-image-vac {
   background-image: url("https://i0.wp.com/puppis.blog/wp-content/uploads/2022/04/%C2%BFPor-que-es-importante-que-vacunemos-a-los-cachorros_-min.jpg?resize=900%2C600&ssl=1");
